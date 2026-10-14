@@ -1,0 +1,498 @@
+{
+  "question": "How does OpenCode search and select files?",
+  "repository": "githubrepo_pulls/opencode",
+  "repository_summary": {
+    "candidate_files": 3950,
+    "selected_files": 20,
+    "broad_estimated_tokens": 10314702,
+    "focused_estimated_tokens": 61676,
+    "estimated_token_reduction_percent": 99.4
+  },
+  "selected_evidence": [
+    {
+      "path": "packages/opencode/src/tool/task.txt",
+      "score": 5,
+      "matches": [
+        "files",
+        "opencode",
+        "search",
+        "select"
+      ],
+      "reason": "matched: files, opencode, search, select",
+      "bytes": 2305,
+      "estimated_tokens": 576,
+      "imports": [],
+      "preview": "Launch a new agent to handle complex, multistep tasks autonomously. When using the Task tool, you must specify a subagent_type parameter to select which agent type to use. When NOT to use the Task tool: - If you want to read a specific file"
+    },
+    {
+      "path": ".github/workflows/docs-locale-sync.yml",
+      "score": 4,
+      "matches": [
+        "files",
+        "opencode",
+        "search"
+      ],
+      "reason": "matched: files, opencode, search",
+      "bytes": 3969,
+      "estimated_tokens": 992,
+      "imports": [],
+      "preview": "name: docs-locale-sync on: push: branches: - dev paths: - packages/web/src/content/docs/*.mdx jobs: sync-locales: if: false #if: github.actor != 'opencode-agent[bot]' runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: write steps:"
+    },
+    {
+      "path": ".github/workflows/duplicate-issues.yml",
+      "score": 4,
+      "matches": [
+        "opencode",
+        "search",
+        "select"
+      ],
+      "reason": "matched: opencode, search, select",
+      "bytes": 9845,
+      "estimated_tokens": 2461,
+      "imports": [],
+      "preview": "name: duplicate-issues on: issues: types: [opened, edited] jobs: check-duplicates: if: github.event.action == 'opened' runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: read issues: write steps: - name: Checkout repository uses: "
+    },
+    {
+      "path": ".opencode/skills/effect/SKILL.md",
+      "score": 4,
+      "matches": [
+        "files",
+        "opencode",
+        "search"
+      ],
+      "reason": "matched: files, opencode, search",
+      "bytes": 2794,
+      "estimated_tokens": 698,
+      "imports": [],
+      "preview": "--- name: effect description: Work with Effect v4 / effect-smol TypeScript code in this repo --- # Effect This codebase uses Effect for typed, composable TypeScript services, schemas, and workflows. ## Source Of Truth Use the current Effect"
+    },
+    {
+      "path": "CONTEXT.md",
+      "score": 4,
+      "matches": [
+        "files",
+        "opencode",
+        "select"
+      ],
+      "reason": "matched: files, opencode, select",
+      "bytes": 32094,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "# OpenCode Session Runtime OpenCode sessions preserve durable conversational history while assembling the runtime context an agent needs to act correctly in its current environment. ## Language **System Context**: The structured collection "
+    },
+    {
+      "path": "github/README.md",
+      "score": 4,
+      "matches": [
+        "files",
+        "opencode",
+        "select"
+      ],
+      "reason": "matched: files, opencode, select",
+      "bytes": 6017,
+      "estimated_tokens": 1504,
+      "imports": [],
+      "preview": "# opencode GitHub Action A GitHub Action that integrates [opencode](https://opencode.ai) directly into your GitHub workflow. Mention `/opencode` in your comment, and opencode will execute tasks within your GitHub Actions runner. ## Features"
+    },
+    {
+      "path": "packages/app/src/components/command-palette.ts",
+      "score": 4,
+      "matches": [
+        "files",
+        "opencode",
+        "search",
+        "select"
+      ],
+      "reason": "matched: files, opencode, search, select",
+      "bytes": 9221,
+      "estimated_tokens": 2305,
+      "imports": [
+        "import { getFilename } from \"@opencode-ai/core/util/path\"",
+        "import type { Project } from \"@opencode-ai/sdk/v2/client\"",
+        "import type { SessionInfo } from \"@opencode-ai/client/promise\"",
+        "import { useDialog } from \"@opencode-ai/ui/context/dialog\"",
+        "import { createMemo, onCleanup } from \"solid-js\"",
+        "import { commandPaletteOptions, useCommand, type CommandOption } from \"@/context/command\"",
+        "import { useFile } from \"@/context/file\"",
+        "import { useGlobal } from \"@/context/global\"",
+        "import { useLanguage } from \"@/context/language\"",
+        "import { useLayout, type LocalProject } from \"@/context/layout\""
+      ],
+      "preview": "import { getFilename } from \"@opencode-ai/core/util/path\" import type { Project } from \"@opencode-ai/sdk/v2/client\" import type { SessionInfo } from \"@opencode-ai/client/promise\" import { useDialog } from \"@opencode-ai/ui/context/dialog\" im"
+    },
+    {
+      "path": "packages/app/src/components/dialog-command-palette-v2.tsx",
+      "score": 4,
+      "matches": [
+        "files",
+        "opencode",
+        "search",
+        "select"
+      ],
+      "reason": "matched: files, opencode, search, select",
+      "bytes": 12767,
+      "estimated_tokens": 3191,
+      "imports": [
+        "import { getDirectory, getFilename } from \"@opencode-ai/core/util/path\"",
+        "import { FileIcon } from \"@opencode-ai/ui/file-icon\"",
+        "import { ScrollView } from \"@opencode-ai/ui/scroll-view\"",
+        "import { Dialog, DialogBody } from \"@opencode-ai/ui/v2/dialog-v2\"",
+        "import { Icon } from \"@opencode-ai/ui/v2/icon\"",
+        "import { KeybindV2 } from \"@opencode-ai/ui/v2/keybind-v2\"",
+        "import { TextInputV2 } from \"@opencode-ai/ui/v2/text-input-v2\"",
+        "import { useDialog } from \"@opencode-ai/ui/context/dialog\"",
+        "import { createEffect, createMemo, createResource, createSignal, For, Match, onCleanup, Show, Switch } from \"solid-js\"",
+        "import { commandPaletteOptions, formatKeybindParts, useCommand } from \"@/context/command\""
+      ],
+      "preview": "import { getDirectory, getFilename } from \"@opencode-ai/core/util/path\" import { FileIcon } from \"@opencode-ai/ui/file-icon\" import { ScrollView } from \"@opencode-ai/ui/scroll-view\" import { Dialog, DialogBody } from \"@opencode-ai/ui/v2/dia"
+    },
+    {
+      "path": "packages/app/src/components/dialog-select-file.tsx",
+      "score": 4,
+      "matches": [
+        "files",
+        "opencode",
+        "search",
+        "select"
+      ],
+      "reason": "matched: files, opencode, search, select",
+      "bytes": 7798,
+      "estimated_tokens": 1949,
+      "imports": [
+        "import { Dialog } from \"@opencode-ai/ui/dialog\"",
+        "import { FileIcon } from \"@opencode-ai/ui/file-icon\"",
+        "import { Icon } from \"@opencode-ai/ui/icon\"",
+        "import { Keybind } from \"@opencode-ai/ui/keybind\"",
+        "import { List } from \"@opencode-ai/ui/list\"",
+        "import { getDirectory, getFilename } from \"@opencode-ai/core/util/path\"",
+        "import { createMemo, createSignal, lazy, Match, Show, Switch } from \"solid-js\"",
+        "import { formatKeybind } from \"@/context/command\"",
+        "import { useServerSDK } from \"@/context/server-sdk\"",
+        "import { useLanguage } from \"@/context/language\""
+      ],
+      "preview": "import { Dialog } from \"@opencode-ai/ui/dialog\" import { FileIcon } from \"@opencode-ai/ui/file-icon\" import { Icon } from \"@opencode-ai/ui/icon\" import { Keybind } from \"@opencode-ai/ui/keybind\" import { List } from \"@opencode-ai/ui/list\" i"
+    },
+    {
+      "path": "packages/app/src/i18n/am.ts",
+      "score": 4,
+      "matches": [
+        "files",
+        "opencode",
+        "search",
+        "select"
+      ],
+      "reason": "matched: files, opencode, search, select",
+      "bytes": 83847,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "export const dict = { \"desktop.menu.app\": \"OpenCode\", \"desktop.menu.file\": \"\u134b\u12ed\u120d\", \"desktop.menu.edit\": \"\u12a0\u122d\u1275\u12d5\", \"desktop.menu.view\": \"\u12a5\u12ed\u1273\", \"desktop.menu.go\": \"\u1202\u12f5\", \"desktop.menu.window\": \"\u1218\u1235\u12ae\u1275\", \"desktop.menu.help\": \"\u12a5\u1308\u12db\", \"desktop.menu.che"
+    },
+    {
+      "path": "packages/app/src/i18n/ar.ts",
+      "score": 4,
+      "matches": [
+        "files",
+        "opencode",
+        "search",
+        "select"
+      ],
+      "reason": "matched: files, opencode, search, select",
+      "bytes": 82465,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "export const dict = { \"desktop.menu.app\": \"OpenCode\", \"desktop.menu.file\": \"\u0645\u0644\u0641\", \"desktop.menu.edit\": \"\u062a\u062d\u0631\u064a\u0631\", \"desktop.menu.view\": \"\u0639\u0631\u0636\", \"desktop.menu.go\": \"\u0627\u0646\u062a\u0642\u0627\u0644\", \"desktop.menu.window\": \"\u0646\u0627\u0641\u0630\u0629\", \"desktop.menu.help\": \"\u0645\u0633\u0627\u0639\u062f\u0629\", \"desktop"
+    },
+    {
+      "path": "packages/app/src/i18n/az.ts",
+      "score": 4,
+      "matches": [
+        "files",
+        "opencode",
+        "search",
+        "select"
+      ],
+      "reason": "matched: files, opencode, search, select",
+      "bytes": 72245,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "export const dict = { \"desktop.menu.app\": \"OpenCode\", \"desktop.menu.file\": \"Fayl\", \"desktop.menu.edit\": \"Redakt\u0259\", \"desktop.menu.view\": \"G\u00f6r\u00fcn\u00fc\u015f\", \"desktop.menu.go\": \"Ke\u00e7id\", \"desktop.menu.window\": \"P\u0259nc\u0259r\u0259\", \"desktop.menu.help\": \"K\u00f6m\u0259k\", \""
+    },
+    {
+      "path": "packages/app/src/i18n/bg.ts",
+      "score": 4,
+      "matches": [
+        "files",
+        "opencode",
+        "search",
+        "select"
+      ],
+      "reason": "matched: files, opencode, search, select",
+      "bytes": 93331,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "export const dict = { \"desktop.menu.app\": \"OpenCode\", \"desktop.menu.file\": \"\u0424\u0430\u0439\u043b\", \"desktop.menu.edit\": \"\u0420\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u0430\u043d\u0435\", \"desktop.menu.view\": \"\u041f\u0440\u0435\u0433\u043b\u0435\u0434\", \"desktop.menu.go\": \"\u0432\u044a\u0440\u0432\u0438\", \"desktop.menu.window\": \"\u043f\u0440\u043e\u0437\u043e\u0440\u0435\u0446\", \"desktop.menu.help\": \"\u041f\u043e\u043c\u043e"
+    },
+    {
+      "path": "packages/app/src/i18n/bn.ts",
+      "score": 4,
+      "matches": [
+        "files",
+        "opencode",
+        "search",
+        "select"
+      ],
+      "reason": "matched: files, opencode, search, select",
+      "bytes": 106961,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "export const dict: Record<string, string> = { \"desktop.menu.app\": \"OpenCode\", \"desktop.menu.file\": \"\u09ab\u09be\u0987\u09b2\", \"desktop.menu.edit\": \"\u09b8\u09ae\u09cd\u09aa\u09be\u09a6\u09a8\u09be \u0995\u09b0\u09c1\u09a8\", \"desktop.menu.view\": \"\u09a6\u09c7\u0996\u09c1\u09a8\", \"desktop.menu.go\": \"\u09af\u09be\u0993\", \"desktop.menu.window\": \"\u099c\u09be\u09a8\u09be\u09b2\u09be\", \"deskt"
+    },
+    {
+      "path": "packages/app/src/i18n/br.ts",
+      "score": 4,
+      "matches": [
+        "files",
+        "opencode",
+        "search",
+        "select"
+      ],
+      "reason": "matched: files, opencode, search, select",
+      "bytes": 71232,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "export const dict = { \"desktop.menu.app\": \"OpenCode\", \"desktop.menu.file\": \"Arquivo\", \"desktop.menu.edit\": \"Editar\", \"desktop.menu.view\": \"Visualizar\", \"desktop.menu.go\": \"Ir\", \"desktop.menu.window\": \"Janela\", \"desktop.menu.help\": \"Ajuda\", "
+    },
+    {
+      "path": "packages/app/src/i18n/bs.ts",
+      "score": 4,
+      "matches": [
+        "files",
+        "opencode",
+        "search",
+        "select"
+      ],
+      "reason": "matched: files, opencode, search, select",
+      "bytes": 69782,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "export const dict = { \"desktop.menu.app\": \"OpenCode\", \"desktop.menu.file\": \"Datoteka\", \"desktop.menu.edit\": \"Uredi\", \"desktop.menu.view\": \"Prikaz\", \"desktop.menu.go\": \"Idi\", \"desktop.menu.window\": \"Prozor\", \"desktop.menu.help\": \"Pomo\u0107\", \"de"
+    },
+    {
+      "path": "packages/app/src/i18n/ca.ts",
+      "score": 4,
+      "matches": [
+        "files",
+        "opencode",
+        "search",
+        "select"
+      ],
+      "reason": "matched: files, opencode, search, select",
+      "bytes": 72149,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "export const dict = { \"desktop.menu.app\": \"OpenCode\", \"desktop.menu.file\": \"Fitxer\", \"desktop.menu.edit\": \"Edita\", \"desktop.menu.view\": \"Veure\", \"desktop.menu.go\": \"V\u00e9s\", \"desktop.menu.window\": \"Finestra\", \"desktop.menu.help\": \"Ajuda\", \"des"
+    },
+    {
+      "path": "packages/app/src/i18n/cs.ts",
+      "score": 4,
+      "matches": [
+        "files",
+        "opencode",
+        "search",
+        "select"
+      ],
+      "reason": "matched: files, opencode, search, select",
+      "bytes": 71047,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "export const dict = { \"desktop.menu.app\": \"OpenCode\", \"desktop.menu.file\": \"Soubor\", \"desktop.menu.edit\": \"Upravit\", \"desktop.menu.view\": \"Zobrazit\", \"desktop.menu.go\": \"Jdi\", \"desktop.menu.window\": \"okno\", \"desktop.menu.help\": \"Pomoc\", \"de"
+    },
+    {
+      "path": "packages/app/src/i18n/da.ts",
+      "score": 4,
+      "matches": [
+        "files",
+        "opencode",
+        "search",
+        "select"
+      ],
+      "reason": "matched: files, opencode, search, select",
+      "bytes": 68260,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "export const dict = { \"command.category.suggested\": \"Foresl\u00e5et\", \"command.category.view\": \"Vis\", \"command.category.project\": \"Projekt\", \"command.category.provider\": \"Udbyder\", \"command.category.server\": \"Server\", \"command.category.session\":"
+    },
+    {
+      "path": "packages/app/src/i18n/de.ts",
+      "score": 4,
+      "matches": [
+        "files",
+        "opencode",
+        "search",
+        "select"
+      ],
+      "reason": "matched: files, opencode, search, select",
+      "bytes": 72362,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import { dict as en } from \"./en\""
+      ],
+      "preview": "import { dict as en } from \"./en\" type Keys = keyof typeof en export const dict = { \"command.category.suggested\": \"Vorgeschlagen\", \"command.category.view\": \"Ansicht\", \"command.category.project\": \"Projekt\", \"command.category.provider\": \"Anbi"
+    }
+  ],
+  "roles": {
+    "explore": {
+      "goal": "Trace implementation, agents, tools, commands, and permissions.",
+      "files": [
+        {
+          "path": "packages/opencode/src/tool/task.txt",
+          "score": 5,
+          "matches": [
+            "files",
+            "opencode",
+            "search",
+            "select"
+          ],
+          "reason": "matched: files, opencode, search, select",
+          "bytes": 2305,
+          "estimated_tokens": 576,
+          "imports": [],
+          "preview": "Launch a new agent to handle complex, multistep tasks autonomously. When using the Task tool, you must specify a subagent_type parameter to select which agent type to use. When NOT to use the Task tool: - If you want to read a specific file"
+        }
+      ]
+    },
+    "scout": {
+      "goal": "Compare documentation and configuration with the implementation.",
+      "files": [
+        {
+          "path": "github/README.md",
+          "score": 4,
+          "matches": [
+            "files",
+            "opencode",
+            "select"
+          ],
+          "reason": "matched: files, opencode, select",
+          "bytes": 6017,
+          "estimated_tokens": 1504,
+          "imports": [],
+          "preview": "# opencode GitHub Action A GitHub Action that integrates [opencode](https://opencode.ai) directly into your GitHub workflow. Mention `/opencode` in your comment, and opencode will execute tasks within your GitHub Actions runner. ## Features"
+        }
+      ]
+    },
+    "review": {
+      "goal": "Inspect tests, integrations, APIs, and supporting modules.",
+      "files": [
+        {
+          "path": ".github/workflows/docs-locale-sync.yml",
+          "score": 4,
+          "matches": [
+            "files",
+            "opencode",
+            "search"
+          ],
+          "reason": "matched: files, opencode, search",
+          "bytes": 3969,
+          "estimated_tokens": 992,
+          "imports": [],
+          "preview": "name: docs-locale-sync on: push: branches: - dev paths: - packages/web/src/content/docs/*.mdx jobs: sync-locales: if: false #if: github.actor != 'opencode-agent[bot]' runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: write steps:"
+        },
+        {
+          "path": ".github/workflows/duplicate-issues.yml",
+          "score": 4,
+          "matches": [
+            "opencode",
+            "search",
+            "select"
+          ],
+          "reason": "matched: opencode, search, select",
+          "bytes": 9845,
+          "estimated_tokens": 2461,
+          "imports": [],
+          "preview": "name: duplicate-issues on: issues: types: [opened, edited] jobs: check-duplicates: if: github.event.action == 'opened' runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: read issues: write steps: - name: Checkout repository uses: "
+        },
+        {
+          "path": ".opencode/skills/effect/SKILL.md",
+          "score": 4,
+          "matches": [
+            "files",
+            "opencode",
+            "search"
+          ],
+          "reason": "matched: files, opencode, search",
+          "bytes": 2794,
+          "estimated_tokens": 698,
+          "imports": [],
+          "preview": "--- name: effect description: Work with Effect v4 / effect-smol TypeScript code in this repo --- # Effect This codebase uses Effect for typed, composable TypeScript services, schemas, and workflows. ## Source Of Truth Use the current Effect"
+        },
+        {
+          "path": "CONTEXT.md",
+          "score": 4,
+          "matches": [
+            "files",
+            "opencode",
+            "select"
+          ],
+          "reason": "matched: files, opencode, select",
+          "bytes": 32094,
+          "estimated_tokens": 4000,
+          "imports": [],
+          "preview": "# OpenCode Session Runtime OpenCode sessions preserve durable conversational history while assembling the runtime context an agent needs to act correctly in its current environment. ## Language **System Context**: The structured collection "
+        },
+        {
+          "path": "packages/app/src/components/command-palette.ts",
+          "score": 4,
+          "matches": [
+            "files",
+            "opencode",
+            "search",
+            "select"
+          ],
+          "reason": "matched: files, opencode, search, select",
+          "bytes": 9221,
+          "estimated_tokens": 2305,
+          "imports": [
+            "import { getFilename } from \"@opencode-ai/core/util/path\"",
+            "import type { Project } from \"@opencode-ai/sdk/v2/client\"",
+            "import type { SessionInfo } from \"@opencode-ai/client/promise\"",
+            "import { useDialog } from \"@opencode-ai/ui/context/dialog\"",
+            "import { createMemo, onCleanup } from \"solid-js\"",
+            "import { commandPaletteOptions, useCommand, type CommandOption } from \"@/context/command\"",
+            "import { useFile } from \"@/context/file\"",
+            "import { useGlobal } from \"@/context/global\"",
+            "import { useLanguage } from \"@/context/language\"",
+            "import { useLayout, type LocalProject } from \"@/context/layout\""
+          ],
+          "preview": "import { getFilename } from \"@opencode-ai/core/util/path\" import type { Project } from \"@opencode-ai/sdk/v2/client\" import type { SessionInfo } from \"@opencode-ai/client/promise\" import { useDialog } from \"@opencode-ai/ui/context/dialog\" im"
+        },
+        {
+          "path": "packages/app/src/components/dialog-command-palette-v2.tsx",
+          "score": 4,
+          "matches": [
+            "files",
+            "opencode",
+            "search",
+            "select"
+          ],
+          "reason": "matched: files, opencode, search, select",
+          "bytes": 12767,
+          "estimated_tokens": 3191,
+          "imports": [
+            "import { getDirectory, getFilename } from \"@opencode-ai/core/util/path\"",
+            "import { FileIcon } from \"@opencode-ai/ui/file-icon\"",
+            "import { ScrollView } from \"@opencode-ai/ui/scroll-view\"",
+            "import { Dialog, DialogBody } from \"@opencode-ai/ui/v2/dialog-v2\"",
+            "import { Icon } from \"@opencode-ai/ui/v2/icon\"",
+            "import { KeybindV2 } from \"@opencode-ai/ui/v2/keybind-v2\"",
+            "import { TextInputV2 } from \"@opencode-ai/ui/v2/text-input-v2\"",
+            "import { useDialog } from \"@opencode-ai/ui/context/dialog\"",
+            "import { createEffect, createMemo, createResource, createSignal, For, Match, onCleanup, Show, Switch } from \"solid-js\"",
+            "import { commandPaletteOptions, formatKeybindParts, useCommand } from \"@/context/command\""
+          ],
+          "preview": "import { getDirectory, getFilename } from \"@opencode-ai/core/util/path\" import { FileIcon } from \"@opencode-ai/ui/file-icon\" import { ScrollView } from \"@opencode-ai/ui/scroll-view\" import { Dialog, DialogBody } from \"@opencode-ai/ui/v2/dia"
+        }
+      ]
+    }
+  },
+  "next_action": "Give each role its assigned evidence, collect findings, and compare overlap."
+}

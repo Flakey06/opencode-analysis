@@ -1,0 +1,515 @@
+{
+  "question": "How does OpenCode handle failed tool calls?",
+  "repository": "githubrepo_pulls/opencode",
+  "repository_summary": {
+    "candidate_files": 3950,
+    "selected_files": 20,
+    "broad_estimated_tokens": 10314702,
+    "focused_estimated_tokens": 62747,
+    "estimated_token_reduction_percent": 99.4
+  },
+  "selected_evidence": [
+    {
+      "path": "packages/opencode/src/session/prompt/anthropic.txt",
+      "score": 6,
+      "matches": [
+        "calls",
+        "failed",
+        "handle",
+        "opencode",
+        "tool"
+      ],
+      "reason": "matched: calls, failed, handle, opencode, tool",
+      "bytes": 8212,
+      "estimated_tokens": 2053,
+      "imports": [],
+      "preview": "You are OpenCode, the best coding agent on the planet. You are an interactive CLI tool that helps users with software engineering tasks. Use the instructions below and the tools available to you to assist the user. IMPORTANT: You must NEVER"
+    },
+    {
+      "path": "packages/core/src/github-copilot/chat/openai-compatible-chat-language-model.ts",
+      "score": 5,
+      "matches": [
+        "calls",
+        "failed",
+        "handle",
+        "opencode",
+        "tool"
+      ],
+      "reason": "matched: calls, failed, handle, opencode, tool",
+      "bytes": 27972,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import {",
+        "import {",
+        "import { z } from \"zod/v4\"",
+        "import { convertToOpenAICompatibleChatMessages } from \"./convert-to-openai-compatible-chat-messages\"",
+        "import { getResponseMetadata } from \"./get-response-metadata\"",
+        "import { mapOpenAICompatibleFinishReason } from \"./map-openai-compatible-finish-reason\"",
+        "import { type OpenAICompatibleChatModelId, openaiCompatibleProviderOptions } from \"./openai-compatible-chat-options\"",
+        "import { defaultOpenAICompatibleErrorStructure, type ProviderErrorStructure } from \"../openai-compatible-error\"",
+        "import type { MetadataExtractor } from \"./openai-compatible-metadata-extractor\"",
+        "import { prepareTools } from \"./openai-compatible-prepare-tools\""
+      ],
+      "preview": "import { APICallError, InvalidResponseDataError, type LanguageModelV3, type LanguageModelV3CallOptions, type LanguageModelV3Content, type LanguageModelV3StreamPart, type SharedV3ProviderMetadata, type SharedV3Warning, } from \"@ai-sdk/provid"
+    },
+    {
+      "path": "packages/llm/DESIGN.md",
+      "score": 5,
+      "matches": [
+        "calls",
+        "failed",
+        "opencode",
+        "tool"
+      ],
+      "reason": "matched: calls, failed, opencode, tool",
+      "bytes": 33051,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import { Effect } from \"effect\"",
+        "import { LLM } from \"@opencode-ai/ai\"",
+        "import { OpenAI } from \"@opencode-ai/ai/providers/openai\"",
+        "import { OpenAI } from \"@opencode-ai/ai/providers/openai\"",
+        "import { Message } from \"@opencode-ai/ai\"",
+        "import { Effect, Schema } from \"effect\"",
+        "import { LLM, Tool } from \"@opencode-ai/ai\""
+      ],
+      "preview": "# AI Library Design > Discussion draft. This document describes the intended replacement for the > current private `@opencode-ai/llm` API. Names and exact TypeScript signatures > are illustrative until implementation, but the domain boundar"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/beast.txt",
+      "score": 5,
+      "matches": [
+        "calls",
+        "handle",
+        "opencode",
+        "tool"
+      ],
+      "reason": "matched: calls, handle, opencode, tool",
+      "bytes": 11080,
+      "estimated_tokens": 2769,
+      "imports": [],
+      "preview": "You are opencode, an agent - please keep going until the user\u2019s query is completely resolved, before ending your turn and yielding back to the user. Your thinking should be thorough and so it's fine if it's very long. However, avoid unneces"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/copilot-gpt-5.txt",
+      "score": 5,
+      "matches": [
+        "calls",
+        "handle",
+        "opencode",
+        "tool"
+      ],
+      "reason": "matched: calls, handle, opencode, tool",
+      "bytes": 14241,
+      "estimated_tokens": 3558,
+      "imports": [],
+      "preview": "You are an expert AI programming assistant Your name is opencode Keep your answers short and impersonal. <gptAgentInstructions> You are a highly sophisticated coding agent with expert-level knowledge across programming languages and framewo"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/default.txt",
+      "score": 5,
+      "matches": [
+        "calls",
+        "failed",
+        "opencode",
+        "tool"
+      ],
+      "reason": "matched: calls, failed, opencode, tool",
+      "bytes": 8528,
+      "estimated_tokens": 2132,
+      "imports": [],
+      "preview": "You are opencode, an interactive CLI tool that helps users with software engineering tasks. Use the instructions below and the tools available to you to assist the user. IMPORTANT: You must NEVER generate or guess URLs for the user unless y"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/kimi.txt",
+      "score": 5,
+      "matches": [
+        "calls",
+        "failed",
+        "opencode",
+        "tool"
+      ],
+      "reason": "matched: calls, failed, opencode, tool",
+      "bytes": 8695,
+      "estimated_tokens": 2170,
+      "imports": [],
+      "preview": "You are OpenCode, an interactive general AI agent running on a user's computer. Your primary goal is to help users with software engineering tasks by taking action \u2014 use the tools available to you to make real changes on the user's system. "
+    },
+    {
+      "path": "packages/opencode/test/acp/event.test.ts",
+      "score": 5,
+      "matches": [
+        "calls",
+        "failed",
+        "handle",
+        "opencode",
+        "tool"
+      ],
+      "reason": "matched: calls, failed, handle, opencode, tool",
+      "bytes": 26117,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import { describe, expect, it } from \"bun:test\"",
+        "import type { AgentSideConnection } from \"@agentclientprotocol/sdk\"",
+        "import { LayerNode } from \"@opencode-ai/core/effect/layer-node\"",
+        "import type { Event, Message, OpencodeClient, Part, SessionMessageResponse, ToolPart } from \"@opencode-ai/sdk/v2\"",
+        "import { Effect, ManagedRuntime } from \"effect\"",
+        "import { ACPEvent } from \"@/acp/event\"",
+        "import * as ACPService from \"@/acp/service\"",
+        "import { Directory } from \"@/acp/directory\"",
+        "import { ACPSession } from \"@/acp/session\""
+      ],
+      "preview": "import { describe, expect, it } from \"bun:test\" import type { AgentSideConnection } from \"@agentclientprotocol/sdk\" import { LayerNode } from \"@opencode-ai/core/effect/layer-node\" import type { Event, Message, OpencodeClient, Part, SessionM"
+    },
+    {
+      "path": "perf/test-suite.md",
+      "score": 5,
+      "matches": [
+        "calls",
+        "failed",
+        "opencode",
+        "tool"
+      ],
+      "reason": "matched: calls, failed, opencode, tool",
+      "bytes": 20306,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "# Test Suite Speed ## Goal Speed up the `packages/opencode` test suite without reducing coverage or hiding failures. ## Benchmark Command Run from `packages/opencode`: ```sh bun run bench:test ``` The full-suite benchmark defaults to one me"
+    },
+    {
+      "path": "specs/storage/remove-opencode-db.md",
+      "score": 5,
+      "matches": [
+        "calls",
+        "handle",
+        "opencode",
+        "tool"
+      ],
+      "reason": "matched: calls, handle, opencode, tool",
+      "bytes": 11835,
+      "estimated_tokens": 2958,
+      "imports": [],
+      "preview": "# Remove `packages/opencode/src/storage/db.ts` ## Goal Remove all production usages of the legacy `packages/opencode/src/storage/db.ts` module. This means eliminating imports from `@/storage/db` or `./storage/db`, including: - `Database.use"
+    },
+    {
+      "path": "specs/v2/schema-changelog.md",
+      "score": 5,
+      "matches": [
+        "calls",
+        "failed",
+        "opencode",
+        "tool"
+      ],
+      "reason": "matched: calls, failed, opencode, tool",
+      "bytes": 40158,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "# V2 Schema Changelog ## 2026-06-26: Add Finite Session History - Add `GET /api/session/:sessionID/history` and generated Promise, Effect, and legacy JavaScript client methods. - Page public durable Session events after an optional exclusiv"
+    },
+    {
+      "path": ".github/workflows/docs-locale-sync.yml",
+      "score": 4,
+      "matches": [
+        "calls",
+        "opencode",
+        "tool"
+      ],
+      "reason": "matched: calls, opencode, tool",
+      "bytes": 3969,
+      "estimated_tokens": 992,
+      "imports": [],
+      "preview": "name: docs-locale-sync on: push: branches: - dev paths: - packages/web/src/content/docs/*.mdx jobs: sync-locales: if: false #if: github.actor != 'opencode-agent[bot]' runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: write steps:"
+    },
+    {
+      "path": "CONTEXT.md",
+      "score": 4,
+      "matches": [
+        "failed",
+        "opencode",
+        "tool"
+      ],
+      "reason": "matched: failed, opencode, tool",
+      "bytes": 32094,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "# OpenCode Session Runtime OpenCode sessions preserve durable conversational history while assembling the runtime context an agent needs to act correctly in its current environment. ## Language **System Context**: The structured collection "
+    },
+    {
+      "path": "github/index.ts",
+      "score": 4,
+      "matches": [
+        "failed",
+        "handle",
+        "opencode",
+        "tool"
+      ],
+      "reason": "matched: failed, handle, opencode, tool",
+      "bytes": 30235,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import { $ } from \"bun\"",
+        "import path from \"node:path\"",
+        "import { Octokit } from \"@octokit/rest\"",
+        "import { graphql } from \"@octokit/graphql\"",
+        "import * as core from \"@actions/core\"",
+        "import * as github from \"@actions/github\"",
+        "import type { Context as GitHubContext } from \"@actions/github/lib/context\"",
+        "import type { IssueCommentEvent, PullRequestReviewCommentEvent } from \"@octokit/webhooks-types\"",
+        "import { createOpencodeClient } from \"@opencode-ai/sdk\"",
+        "import { spawn } from \"node:child_process\""
+      ],
+      "preview": "import { $ } from \"bun\" import path from \"node:path\" import { Octokit } from \"@octokit/rest\" import { graphql } from \"@octokit/graphql\" import * as core from \"@actions/core\" import * as github from \"@actions/github\" import type { Context as"
+    },
+    {
+      "path": "packages/app/AGENTS.md",
+      "score": 4,
+      "matches": [
+        "calls",
+        "opencode",
+        "tool"
+      ],
+      "reason": "matched: calls, opencode, tool",
+      "bytes": 4570,
+      "estimated_tokens": 1141,
+      "imports": [],
+      "preview": "## Priorities - Prioritise, in this order: stability, simplicity, performance. - Before changing session or timeline code, record a production benchmark baseline and compare it after the change. ## Debugging - NEVER try to restart the app, "
+    },
+    {
+      "path": "packages/app/create-effect-simplification-spec.md",
+      "score": 4,
+      "matches": [
+        "calls",
+        "handle",
+        "opencode"
+      ],
+      "reason": "matched: calls, handle, opencode",
+      "bytes": 18928,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "# CreateEffect Simplification Implementation Spec Reduce reactive misuse across `packages/app`. --- ## Context This work targets `packages/app/src`, which currently has 101 `createEffect` calls across 37 files. The biggest clusters are `pag"
+    },
+    {
+      "path": "packages/codemode/README.md",
+      "score": 4,
+      "matches": [
+        "calls",
+        "opencode",
+        "tool"
+      ],
+      "reason": "matched: calls, opencode, tool",
+      "bytes": 27705,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import { CodeMode, Tool } from \"@opencode-ai/codemode\"",
+        "import { Effect, Schema } from \"effect\"",
+        "import { CodeMode, OpenAPI } from \"@opencode-ai/codemode\"",
+        "import { Effect } from \"effect\"",
+        "import { FetchHttpClient } from \"effect/unstable/http\""
+      ],
+      "preview": "# @opencode-ai/codemode Effect-native confined code execution over explicit, schema-described tools. CodeMode lets a model write a small JavaScript program that can call only the tools supplied by the host. The program can sequence calls, t"
+    },
+    {
+      "path": "packages/codemode/codemode.md",
+      "score": 4,
+      "matches": [
+        "calls",
+        "opencode",
+        "tool"
+      ],
+      "reason": "matched: calls, opencode, tool",
+      "bytes": 13243,
+      "estimated_tokens": 3310,
+      "imports": [],
+      "preview": "# CodeMode Design and Status This is the living design and status document for `@opencode-ai/codemode` and its existing V2 OpenCode adapter. It records current behavior, intentional boundaries, durable rationale, and material remaining work"
+    },
+    {
+      "path": "packages/codemode/src/codemode.ts",
+      "score": 4,
+      "matches": [
+        "calls",
+        "failed",
+        "opencode",
+        "tool"
+      ],
+      "reason": "matched: calls, failed, opencode, tool",
+      "bytes": 6658,
+      "estimated_tokens": 1664,
+      "imports": [
+        "import { Effect, Schema } from \"effect\"",
+        "import { executeWithLimits } from \"./interpreter/runtime.js\"",
+        "import { type HostTools, type Services, type ToolDescription, ToolRuntime } from \"./tool-runtime.js\"",
+        "import type { Definition } from \"./tool.js\""
+      ],
+      "preview": "import { Effect, Schema } from \"effect\" import { executeWithLimits } from \"./interpreter/runtime.js\" import { type HostTools, type Services, type ToolDescription, ToolRuntime } from \"./tool-runtime.js\" import type { Definition } from \"./too"
+    },
+    {
+      "path": "packages/codemode/src/tool-runtime.ts",
+      "score": 4,
+      "matches": [
+        "calls",
+        "failed",
+        "opencode",
+        "tool"
+      ],
+      "reason": "matched: calls, failed, opencode, tool",
+      "bytes": 33711,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import { Cause, Effect, Schema } from \"effect\"",
+        "import { ToolError, toolError } from \"./tool-error.js\"",
+        "import {",
+        "import { isDefinition as isToolDefinition, type Definition } from \"./tool.js\"",
+        "import {"
+      ],
+      "preview": "import { Cause, Effect, Schema } from \"effect\" import { ToolError, toolError } from \"./tool-error.js\" import { decodeInput as decodeToolInput, decodeOutput as decodeToolOutput, identifierSegment, inputProperties, inputTypeScript, outputType"
+    }
+  ],
+  "roles": {
+    "explore": {
+      "goal": "Trace implementation, agents, tools, commands, and permissions.",
+      "files": []
+    },
+    "scout": {
+      "goal": "Compare documentation and configuration with the implementation.",
+      "files": [
+        {
+          "path": "packages/codemode/README.md",
+          "score": 4,
+          "matches": [
+            "calls",
+            "opencode",
+            "tool"
+          ],
+          "reason": "matched: calls, opencode, tool",
+          "bytes": 27705,
+          "estimated_tokens": 4000,
+          "imports": [
+            "import { CodeMode, Tool } from \"@opencode-ai/codemode\"",
+            "import { Effect, Schema } from \"effect\"",
+            "import { CodeMode, OpenAPI } from \"@opencode-ai/codemode\"",
+            "import { Effect } from \"effect\"",
+            "import { FetchHttpClient } from \"effect/unstable/http\""
+          ],
+          "preview": "# @opencode-ai/codemode Effect-native confined code execution over explicit, schema-described tools. CodeMode lets a model write a small JavaScript program that can call only the tools supplied by the host. The program can sequence calls, t"
+        }
+      ]
+    },
+    "review": {
+      "goal": "Inspect tests, integrations, APIs, and supporting modules.",
+      "files": [
+        {
+          "path": "packages/opencode/src/session/prompt/anthropic.txt",
+          "score": 6,
+          "matches": [
+            "calls",
+            "failed",
+            "handle",
+            "opencode",
+            "tool"
+          ],
+          "reason": "matched: calls, failed, handle, opencode, tool",
+          "bytes": 8212,
+          "estimated_tokens": 2053,
+          "imports": [],
+          "preview": "You are OpenCode, the best coding agent on the planet. You are an interactive CLI tool that helps users with software engineering tasks. Use the instructions below and the tools available to you to assist the user. IMPORTANT: You must NEVER"
+        },
+        {
+          "path": "packages/core/src/github-copilot/chat/openai-compatible-chat-language-model.ts",
+          "score": 5,
+          "matches": [
+            "calls",
+            "failed",
+            "handle",
+            "opencode",
+            "tool"
+          ],
+          "reason": "matched: calls, failed, handle, opencode, tool",
+          "bytes": 27972,
+          "estimated_tokens": 4000,
+          "imports": [
+            "import {",
+            "import {",
+            "import { z } from \"zod/v4\"",
+            "import { convertToOpenAICompatibleChatMessages } from \"./convert-to-openai-compatible-chat-messages\"",
+            "import { getResponseMetadata } from \"./get-response-metadata\"",
+            "import { mapOpenAICompatibleFinishReason } from \"./map-openai-compatible-finish-reason\"",
+            "import { type OpenAICompatibleChatModelId, openaiCompatibleProviderOptions } from \"./openai-compatible-chat-options\"",
+            "import { defaultOpenAICompatibleErrorStructure, type ProviderErrorStructure } from \"../openai-compatible-error\"",
+            "import type { MetadataExtractor } from \"./openai-compatible-metadata-extractor\"",
+            "import { prepareTools } from \"./openai-compatible-prepare-tools\""
+          ],
+          "preview": "import { APICallError, InvalidResponseDataError, type LanguageModelV3, type LanguageModelV3CallOptions, type LanguageModelV3Content, type LanguageModelV3StreamPart, type SharedV3ProviderMetadata, type SharedV3Warning, } from \"@ai-sdk/provid"
+        },
+        {
+          "path": "packages/llm/DESIGN.md",
+          "score": 5,
+          "matches": [
+            "calls",
+            "failed",
+            "opencode",
+            "tool"
+          ],
+          "reason": "matched: calls, failed, opencode, tool",
+          "bytes": 33051,
+          "estimated_tokens": 4000,
+          "imports": [
+            "import { Effect } from \"effect\"",
+            "import { LLM } from \"@opencode-ai/ai\"",
+            "import { OpenAI } from \"@opencode-ai/ai/providers/openai\"",
+            "import { OpenAI } from \"@opencode-ai/ai/providers/openai\"",
+            "import { Message } from \"@opencode-ai/ai\"",
+            "import { Effect, Schema } from \"effect\"",
+            "import { LLM, Tool } from \"@opencode-ai/ai\""
+          ],
+          "preview": "# AI Library Design > Discussion draft. This document describes the intended replacement for the > current private `@opencode-ai/llm` API. Names and exact TypeScript signatures > are illustrative until implementation, but the domain boundar"
+        },
+        {
+          "path": "packages/opencode/src/session/prompt/beast.txt",
+          "score": 5,
+          "matches": [
+            "calls",
+            "handle",
+            "opencode",
+            "tool"
+          ],
+          "reason": "matched: calls, handle, opencode, tool",
+          "bytes": 11080,
+          "estimated_tokens": 2769,
+          "imports": [],
+          "preview": "You are opencode, an agent - please keep going until the user\u2019s query is completely resolved, before ending your turn and yielding back to the user. Your thinking should be thorough and so it's fine if it's very long. However, avoid unneces"
+        },
+        {
+          "path": "packages/opencode/src/session/prompt/copilot-gpt-5.txt",
+          "score": 5,
+          "matches": [
+            "calls",
+            "handle",
+            "opencode",
+            "tool"
+          ],
+          "reason": "matched: calls, handle, opencode, tool",
+          "bytes": 14241,
+          "estimated_tokens": 3558,
+          "imports": [],
+          "preview": "You are an expert AI programming assistant Your name is opencode Keep your answers short and impersonal. <gptAgentInstructions> You are a highly sophisticated coding agent with expert-level knowledge across programming languages and framewo"
+        },
+        {
+          "path": "packages/opencode/src/session/prompt/default.txt",
+          "score": 5,
+          "matches": [
+            "calls",
+            "failed",
+            "opencode",
+            "tool"
+          ],
+          "reason": "matched: calls, failed, opencode, tool",
+          "bytes": 8528,
+          "estimated_tokens": 2132,
+          "imports": [],
+          "preview": "You are opencode, an interactive CLI tool that helps users with software engineering tasks. Use the instructions below and the tools available to you to assist the user. IMPORTANT: You must NEVER generate or guess URLs for the user unless y"
+        }
+      ]
+    }
+  },
+  "next_action": "Give each role its assigned evidence, collect findings, and compare overlap."
+}

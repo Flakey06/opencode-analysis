@@ -1,0 +1,445 @@
+{
+  "question": "How are agent actions shown to the user?",
+  "repository": "githubrepo_pulls/opencode",
+  "repository_summary": {
+    "candidate_files": 3950,
+    "selected_files": 20,
+    "broad_estimated_tokens": 10314702,
+    "focused_estimated_tokens": 44248,
+    "estimated_token_reduction_percent": 99.6
+  },
+  "selected_evidence": [
+    {
+      "path": "README.md",
+      "score": 5,
+      "matches": [
+        "actions",
+        "agent",
+        "are",
+        "user"
+      ],
+      "reason": "matched: actions, agent, are, user",
+      "bytes": 5402,
+      "estimated_tokens": 1329,
+      "imports": [],
+      "preview": "<p align=\"center\"> <a href=\"https://opencode.ai\"> <picture> <source srcset=\"packages/console/app/src/asset/logo-ornate-dark.svg\" media=\"(prefers-color-scheme: dark)\"> <source srcset=\"packages/console/app/src/asset/logo-ornate-light.svg\" med"
+    },
+    {
+      "path": "SECURITY.md",
+      "score": 5,
+      "matches": [
+        "actions",
+        "agent",
+        "are",
+        "user"
+      ],
+      "reason": "matched: actions, agent, are, user",
+      "bytes": 2661,
+      "estimated_tokens": 665,
+      "imports": [],
+      "preview": "# Security ## IMPORTANT We do not accept AI generated security reports. We receive a large number of these and we absolutely do not have the resources to review them all. If you submit one that will be an automatic ban from the project. ## "
+    },
+    {
+      "path": "packages/core/src/plugin/skill/customize-opencode.md",
+      "score": 5,
+      "matches": [
+        "actions",
+        "agent",
+        "are",
+        "user"
+      ],
+      "reason": "matched: actions, agent, are, user",
+      "bytes": 16072,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import type { Plugin } from \"@opencode-ai/plugin\""
+      ],
+      "preview": "<!-- Built-in skill. Name and description are registered in code at packages/core/src/plugin/skill.ts and CUSTOMIZE_OPENCODE_SKILL_DESCRIPTION). The body below becomes the skill's content. --> # Customizing opencode opencode validates its o"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/anthropic.txt",
+      "score": 5,
+      "matches": [
+        "actions",
+        "agent",
+        "are",
+        "user"
+      ],
+      "reason": "matched: actions, agent, are, user",
+      "bytes": 8212,
+      "estimated_tokens": 2053,
+      "imports": [],
+      "preview": "You are OpenCode, the best coding agent on the planet. You are an interactive CLI tool that helps users with software engineering tasks. Use the instructions below and the tools available to you to assist the user. IMPORTANT: You must NEVER"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/codex.txt",
+      "score": 5,
+      "matches": [
+        "actions",
+        "agent",
+        "are",
+        "user"
+      ],
+      "reason": "matched: actions, agent, are, user",
+      "bytes": 7390,
+      "estimated_tokens": 1840,
+      "imports": [],
+      "preview": "You are OpenCode, the best coding agent on the planet. You are an interactive CLI tool that helps users with software engineering tasks. Use the instructions below and the tools available to you to assist the user. ## Editing constraints - "
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/copilot-gpt-5.txt",
+      "score": 5,
+      "matches": [
+        "actions",
+        "agent",
+        "are",
+        "user"
+      ],
+      "reason": "matched: actions, agent, are, user",
+      "bytes": 14241,
+      "estimated_tokens": 3558,
+      "imports": [],
+      "preview": "You are an expert AI programming assistant Your name is opencode Keep your answers short and impersonal. <gptAgentInstructions> You are a highly sophisticated coding agent with expert-level knowledge across programming languages and framewo"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/gemini.txt",
+      "score": 5,
+      "matches": [
+        "actions",
+        "agent",
+        "are",
+        "user"
+      ],
+      "reason": "matched: actions, agent, are, user",
+      "bytes": 15372,
+      "estimated_tokens": 3843,
+      "imports": [],
+      "preview": "You are opencode, an interactive CLI agent specializing in software engineering tasks. Your primary goal is to help users safely and efficiently, adhering strictly to the following instructions and utilizing your available tools. # Core Man"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/kimi.txt",
+      "score": 5,
+      "matches": [
+        "actions",
+        "agent",
+        "are",
+        "user"
+      ],
+      "reason": "matched: actions, agent, are, user",
+      "bytes": 8695,
+      "estimated_tokens": 2170,
+      "imports": [],
+      "preview": "You are OpenCode, an interactive general AI agent running on a user's computer. Your primary goal is to help users with software engineering tasks by taking action \u2014 use the tools available to you to make real changes on the user's system. "
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/plan-mode.txt",
+      "score": 5,
+      "matches": [
+        "actions",
+        "agent",
+        "are",
+        "user"
+      ],
+      "reason": "matched: actions, agent, are, user",
+      "bytes": 4547,
+      "estimated_tokens": 1136,
+      "imports": [],
+      "preview": "<system-reminder> Plan mode is active. The user indicated that they do not want you to execute yet -- you MUST NOT make any edits (with the exception of the plan file mentioned below), run any non-readonly tools (including changing configs "
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/plan-reminder-anthropic.txt",
+      "score": 5,
+      "matches": [
+        "actions",
+        "agent",
+        "are",
+        "user"
+      ],
+      "reason": "matched: actions, agent, are, user",
+      "bytes": 4056,
+      "estimated_tokens": 1014,
+      "imports": [],
+      "preview": "<system-reminder> # Plan Mode - System Reminder Plan mode is active. The user indicated that they do not want you to execute yet -- you MUST NOT make any edits (with the exception of the plan file mentioned below), run any non-readonly tool"
+    },
+    {
+      "path": "specs/v2/session.md",
+      "score": 5,
+      "matches": [
+        "agent",
+        "are",
+        "shown",
+        "user"
+      ],
+      "reason": "matched: agent, are, shown, user",
+      "bytes": 28965,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "# Session API ## Current V2 Core Slice The Effect-native core facade treats prompt recording and execution as separate responsibilities: ```text sessions.create({ id?, location, ... }) -> omitted ID generates one internal Session ID -> supp"
+    },
+    {
+      "path": ".github/workflows/docs-locale-sync.yml",
+      "score": 4,
+      "matches": [
+        "actions",
+        "agent",
+        "are"
+      ],
+      "reason": "matched: actions, agent, are",
+      "bytes": 3969,
+      "estimated_tokens": 992,
+      "imports": [],
+      "preview": "name: docs-locale-sync on: push: branches: - dev paths: - packages/web/src/content/docs/*.mdx jobs: sync-locales: if: false #if: github.actor != 'opencode-agent[bot]' runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: write steps:"
+    },
+    {
+      "path": ".github/workflows/docs-update.yml",
+      "score": 4,
+      "matches": [
+        "actions",
+        "agent",
+        "are"
+      ],
+      "reason": "matched: actions, agent, are",
+      "bytes": 2896,
+      "estimated_tokens": 724,
+      "imports": [],
+      "preview": "name: docs-update on: schedule: - cron: \"0 */12 * * *\" workflow_dispatch: env: LOOKBACK_HOURS: 4 jobs: update-docs: if: github.repository == 'sst/opencode' runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: id-token: write contents: write p"
+    },
+    {
+      "path": ".github/workflows/duplicate-issues.yml",
+      "score": 4,
+      "matches": [
+        "actions",
+        "are",
+        "user"
+      ],
+      "reason": "matched: actions, are, user",
+      "bytes": 9845,
+      "estimated_tokens": 2461,
+      "imports": [],
+      "preview": "name: duplicate-issues on: issues: types: [opened, edited] jobs: check-duplicates: if: github.event.action == 'opened' runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: read issues: write steps: - name: Checkout repository uses: "
+    },
+    {
+      "path": ".github/workflows/pr-standards.yml",
+      "score": 4,
+      "matches": [
+        "actions",
+        "are",
+        "user"
+      ],
+      "reason": "matched: actions, are, user",
+      "bytes": 14743,
+      "estimated_tokens": 3685,
+      "imports": [],
+      "preview": "name: pr-standards on: pull_request_target: types: [opened, edited, synchronize] jobs: check-standards: runs-on: ubuntu-latest permissions: contents: read pull-requests: write steps: - name: Check PR standards uses: actions/github-script@f2"
+    },
+    {
+      "path": ".github/workflows/triage.yml",
+      "score": 4,
+      "matches": [
+        "actions",
+        "agent",
+        "user"
+      ],
+      "reason": "matched: actions, agent, user",
+      "bytes": 1739,
+      "estimated_tokens": 434,
+      "imports": [],
+      "preview": "name: triage on: issues: types: [opened] jobs: triage: runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: read issues: write steps: - name: Checkout repository uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3"
+    },
+    {
+      "path": ".opencode/command/commit.md",
+      "score": 4,
+      "matches": [
+        "agent",
+        "are",
+        "user"
+      ],
+      "reason": "matched: agent, are, user",
+      "bytes": 628,
+      "estimated_tokens": 157,
+      "imports": [],
+      "preview": "--- description: git commit and push model: opencode/kimi-k2.5 subtask: true --- commit and push make sure it includes a prefix like docs: tui: core: ci: ignore: wip: For anything in the packages/web use the docs: prefix. prefer to explain "
+    },
+    {
+      "path": "AGENTS.md",
+      "score": 4,
+      "matches": [
+        "agent",
+        "are",
+        "user"
+      ],
+      "reason": "matched: agent, are, user",
+      "bytes": 8748,
+      "estimated_tokens": 2187,
+      "imports": [],
+      "preview": "- To regenerate the legacy JavaScript SDK, run `./packages/sdk/js/script/build.ts`. - After changing the public Protocol or Server `HttpApi`, run `bun run generate` from `packages/client`. Do not edit `src/generated` or `src/generated-effec"
+    },
+    {
+      "path": "CONTEXT.md",
+      "score": 4,
+      "matches": [
+        "agent",
+        "are",
+        "user"
+      ],
+      "reason": "matched: agent, are, user",
+      "bytes": 32094,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "# OpenCode Session Runtime OpenCode sessions preserve durable conversational history while assembling the runtime context an agent needs to act correctly in its current environment. ## Language **System Context**: The structured collection "
+    },
+    {
+      "path": "packages/app/create-effect-simplification-spec.md",
+      "score": 4,
+      "matches": [
+        "actions",
+        "are",
+        "user"
+      ],
+      "reason": "matched: actions, are, user",
+      "bytes": 18928,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "# CreateEffect Simplification Implementation Spec Reduce reactive misuse across `packages/app`. --- ## Context This work targets `packages/app/src`, which currently has 101 `createEffect` calls across 37 files. The biggest clusters are `pag"
+    }
+  ],
+  "roles": {
+    "explore": {
+      "goal": "Trace implementation, agents, tools, commands, and permissions.",
+      "files": [
+        {
+          "path": ".opencode/command/commit.md",
+          "score": 4,
+          "matches": [
+            "agent",
+            "are",
+            "user"
+          ],
+          "reason": "matched: agent, are, user",
+          "bytes": 628,
+          "estimated_tokens": 157,
+          "imports": [],
+          "preview": "--- description: git commit and push model: opencode/kimi-k2.5 subtask: true --- commit and push make sure it includes a prefix like docs: tui: core: ci: ignore: wip: For anything in the packages/web use the docs: prefix. prefer to explain "
+        }
+      ]
+    },
+    "scout": {
+      "goal": "Compare documentation and configuration with the implementation.",
+      "files": [
+        {
+          "path": "README.md",
+          "score": 5,
+          "matches": [
+            "actions",
+            "agent",
+            "are",
+            "user"
+          ],
+          "reason": "matched: actions, agent, are, user",
+          "bytes": 5402,
+          "estimated_tokens": 1329,
+          "imports": [],
+          "preview": "<p align=\"center\"> <a href=\"https://opencode.ai\"> <picture> <source srcset=\"packages/console/app/src/asset/logo-ornate-dark.svg\" media=\"(prefers-color-scheme: dark)\"> <source srcset=\"packages/console/app/src/asset/logo-ornate-light.svg\" med"
+        }
+      ]
+    },
+    "review": {
+      "goal": "Inspect tests, integrations, APIs, and supporting modules.",
+      "files": [
+        {
+          "path": "SECURITY.md",
+          "score": 5,
+          "matches": [
+            "actions",
+            "agent",
+            "are",
+            "user"
+          ],
+          "reason": "matched: actions, agent, are, user",
+          "bytes": 2661,
+          "estimated_tokens": 665,
+          "imports": [],
+          "preview": "# Security ## IMPORTANT We do not accept AI generated security reports. We receive a large number of these and we absolutely do not have the resources to review them all. If you submit one that will be an automatic ban from the project. ## "
+        },
+        {
+          "path": "packages/core/src/plugin/skill/customize-opencode.md",
+          "score": 5,
+          "matches": [
+            "actions",
+            "agent",
+            "are",
+            "user"
+          ],
+          "reason": "matched: actions, agent, are, user",
+          "bytes": 16072,
+          "estimated_tokens": 4000,
+          "imports": [
+            "import type { Plugin } from \"@opencode-ai/plugin\""
+          ],
+          "preview": "<!-- Built-in skill. Name and description are registered in code at packages/core/src/plugin/skill.ts and CUSTOMIZE_OPENCODE_SKILL_DESCRIPTION). The body below becomes the skill's content. --> # Customizing opencode opencode validates its o"
+        },
+        {
+          "path": "packages/opencode/src/session/prompt/anthropic.txt",
+          "score": 5,
+          "matches": [
+            "actions",
+            "agent",
+            "are",
+            "user"
+          ],
+          "reason": "matched: actions, agent, are, user",
+          "bytes": 8212,
+          "estimated_tokens": 2053,
+          "imports": [],
+          "preview": "You are OpenCode, the best coding agent on the planet. You are an interactive CLI tool that helps users with software engineering tasks. Use the instructions below and the tools available to you to assist the user. IMPORTANT: You must NEVER"
+        },
+        {
+          "path": "packages/opencode/src/session/prompt/codex.txt",
+          "score": 5,
+          "matches": [
+            "actions",
+            "agent",
+            "are",
+            "user"
+          ],
+          "reason": "matched: actions, agent, are, user",
+          "bytes": 7390,
+          "estimated_tokens": 1840,
+          "imports": [],
+          "preview": "You are OpenCode, the best coding agent on the planet. You are an interactive CLI tool that helps users with software engineering tasks. Use the instructions below and the tools available to you to assist the user. ## Editing constraints - "
+        },
+        {
+          "path": "packages/opencode/src/session/prompt/copilot-gpt-5.txt",
+          "score": 5,
+          "matches": [
+            "actions",
+            "agent",
+            "are",
+            "user"
+          ],
+          "reason": "matched: actions, agent, are, user",
+          "bytes": 14241,
+          "estimated_tokens": 3558,
+          "imports": [],
+          "preview": "You are an expert AI programming assistant Your name is opencode Keep your answers short and impersonal. <gptAgentInstructions> You are a highly sophisticated coding agent with expert-level knowledge across programming languages and framewo"
+        },
+        {
+          "path": "packages/opencode/src/session/prompt/gemini.txt",
+          "score": 5,
+          "matches": [
+            "actions",
+            "agent",
+            "are",
+            "user"
+          ],
+          "reason": "matched: actions, agent, are, user",
+          "bytes": 15372,
+          "estimated_tokens": 3843,
+          "imports": [],
+          "preview": "You are opencode, an interactive CLI agent specializing in software engineering tasks. Your primary goal is to help users safely and efficiently, adhering strictly to the following instructions and utilizing your available tools. # Core Man"
+        }
+      ]
+    }
+  },
+  "next_action": "Give each role its assigned evidence, collect findings, and compare overlap."
+}

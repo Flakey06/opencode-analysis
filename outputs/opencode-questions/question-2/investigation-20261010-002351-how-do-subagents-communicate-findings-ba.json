@@ -1,0 +1,499 @@
+{
+  "question": "How do subagents communicate findings back to the main agent?",
+  "repository": "githubrepo_pulls/opencode",
+  "repository_summary": {
+    "candidate_files": 3950,
+    "selected_files": 20,
+    "broad_estimated_tokens": 10314702,
+    "focused_estimated_tokens": 46248,
+    "estimated_token_reduction_percent": 99.6
+  },
+  "selected_evidence": [
+    {
+      "path": "packages/opencode/src/session/prompt/gpt-astra.txt",
+      "score": 5,
+      "matches": [
+        "agent",
+        "back",
+        "main",
+        "subagents"
+      ],
+      "reason": "matched: agent, back, main, subagents",
+      "bytes": 4078,
+      "estimated_tokens": 1019,
+      "imports": [],
+      "preview": "You are an AI agent powered by OpenCode, a coding agent harness. Help the user accomplish their goals using the tools you have available. # Harness - Responses are rendered as GitHub-flavored Markdown. - `<system-reminder>` blocks are harne"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/meta.txt",
+      "score": 5,
+      "matches": [
+        "agent",
+        "communicate",
+        "findings",
+        "subagents"
+      ],
+      "reason": "matched: agent, communicate, findings, subagents",
+      "bytes": 9159,
+      "estimated_tokens": 2280,
+      "imports": [],
+      "preview": "You are OpenCode, a coding agent that helps users with software engineering tasks. You are powered by {{MODEL_NAME}}, a large language model trained by Meta MSL. Use the instructions below and the tools available to assist the user. # Commu"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/beast.txt",
+      "score": 4,
+      "matches": [
+        "agent",
+        "back",
+        "communicate"
+      ],
+      "reason": "matched: agent, back, communicate",
+      "bytes": 11080,
+      "estimated_tokens": 2769,
+      "imports": [],
+      "preview": "You are opencode, an agent - please keep going until the user\u2019s query is completely resolved, before ending your turn and yielding back to the user. Your thinking should be thorough and so it's fine if it's very long. However, avoid unneces"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/copilot-gpt-5.txt",
+      "score": 4,
+      "matches": [
+        "agent",
+        "back",
+        "communicate"
+      ],
+      "reason": "matched: agent, back, communicate",
+      "bytes": 14241,
+      "estimated_tokens": 3558,
+      "imports": [],
+      "preview": "You are an expert AI programming assistant Your name is opencode Keep your answers short and impersonal. <gptAgentInstructions> You are a highly sophisticated coding agent with expert-level knowledge across programming languages and framewo"
+    },
+    {
+      "path": "specs/tui-package.md",
+      "score": 4,
+      "matches": [
+        "agent",
+        "back",
+        "main"
+      ],
+      "reason": "matched: agent, back, main",
+      "bytes": 25002,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "# TUI Package Extraction ## Goal Move the canonical OpenCode terminal application from `packages/opencode/src/cli/cmd/tui` into a self-contained workspace package while the legacy CLI and the new CLI continue to use the same implementation."
+    },
+    {
+      "path": ".github/workflows/docs-locale-sync.yml",
+      "score": 3,
+      "matches": [
+        "agent",
+        "subagents"
+      ],
+      "reason": "matched: agent, subagents",
+      "bytes": 3969,
+      "estimated_tokens": 992,
+      "imports": [],
+      "preview": "name: docs-locale-sync on: push: branches: - dev paths: - packages/web/src/content/docs/*.mdx jobs: sync-locales: if: false #if: github.actor != 'opencode-agent[bot]' runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: write steps:"
+    },
+    {
+      "path": ".opencode/command/ai-deps.md",
+      "score": 3,
+      "matches": [
+        "findings",
+        "subagents"
+      ],
+      "reason": "matched: findings, subagents",
+      "bytes": 1033,
+      "estimated_tokens": 258,
+      "imports": [],
+      "preview": "--- description: \"Bump AI sdk dependencies minor / patch versions only\" --- Please read @package.json and @packages/opencode/package.json. Your job is to look into AI SDK dependencies, figure out if they have versions that can be upgraded ("
+    },
+    {
+      "path": "AGENTS.md",
+      "score": 3,
+      "matches": [
+        "agent",
+        "main"
+      ],
+      "reason": "matched: agent, main",
+      "bytes": 8748,
+      "estimated_tokens": 2187,
+      "imports": [],
+      "preview": "- To regenerate the legacy JavaScript SDK, run `./packages/sdk/js/script/build.ts`. - After changing the public Protocol or Server `HttpApi`, run `bun run generate` from `packages/client`. Do not edit `src/generated` or `src/generated-effec"
+    },
+    {
+      "path": "SECURITY.md",
+      "score": 3,
+      "matches": [
+        "agent",
+        "findings"
+      ],
+      "reason": "matched: agent, findings",
+      "bytes": 2661,
+      "estimated_tokens": 665,
+      "imports": [],
+      "preview": "# Security ## IMPORTANT We do not accept AI generated security reports. We receive a large number of these and we absolutely do not have the resources to review them all. If you submit one that will be an automatic ban from the project. ## "
+    },
+    {
+      "path": "github/action.yml",
+      "score": 3,
+      "matches": [
+        "agent",
+        "back"
+      ],
+      "reason": "matched: agent, back",
+      "bytes": 2451,
+      "estimated_tokens": 612,
+      "imports": [],
+      "preview": "name: \"opencode GitHub Action\" description: \"Run opencode in GitHub Actions workflows\" branding: icon: \"code\" color: \"orange\" inputs: model: description: \"Model to use\" required: true agent: description: \"Agent to use. Must be a primary age"
+    },
+    {
+      "path": "packages/app/src/i18n/en.ts",
+      "score": 3,
+      "matches": [
+        "agent",
+        "back",
+        "main"
+      ],
+      "reason": "matched: agent, back, main",
+      "bytes": 60564,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import { DESKTOP_NATIVE_ENGLISH } from \"./desktop-native\""
+      ],
+      "preview": "import { DESKTOP_NATIVE_ENGLISH } from \"./desktop-native\" export const dict = { ...DESKTOP_NATIVE_ENGLISH, \"command.category.suggested\": \"Suggested\", \"command.category.view\": \"View\", \"command.category.project\": \"Project\", \"command.category."
+    },
+    {
+      "path": "packages/app/src/i18n/lv.ts",
+      "score": 3,
+      "matches": [
+        "agent",
+        "back",
+        "main"
+      ],
+      "reason": "matched: agent, back, main",
+      "bytes": 70388,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "export const dict = { \"desktop.menu.app\": \"OpenCode\", \"desktop.menu.file\": \"Fails\", \"desktop.menu.edit\": \"Redi\u0123\u0113t\", \"desktop.menu.view\": \"Skats\", \"desktop.menu.go\": \"Iet\", \"desktop.menu.window\": \"Logs\", \"desktop.menu.help\": \"Pal\u012bdz\u012bba\", \"de"
+    },
+    {
+      "path": "packages/codemode/codemode.md",
+      "score": 3,
+      "matches": [
+        "agent",
+        "findings"
+      ],
+      "reason": "matched: agent, findings",
+      "bytes": 13243,
+      "estimated_tokens": 3310,
+      "imports": [],
+      "preview": "# CodeMode Design and Status This is the living design and status document for `@opencode-ai/codemode` and its existing V2 OpenCode adapter. It records current behavior, intentional boundaries, durable rationale, and material remaining work"
+    },
+    {
+      "path": "packages/core/src/plugin/agent.ts",
+      "score": 3,
+      "matches": [
+        "agent",
+        "findings",
+        "main"
+      ],
+      "reason": "matched: agent, findings, main",
+      "bytes": 9835,
+      "estimated_tokens": 2458,
+      "imports": [
+        "import path from \"path\"",
+        "import { define } from \"./internal\"",
+        "import { Effect } from \"effect\"",
+        "import { AgentV2 } from \"../agent\"",
+        "import { Global } from \"../global\"",
+        "import { Location } from \"../location\"",
+        "import { PermissionV2 } from \"../permission\""
+      ],
+      "preview": "export * as AgentPlugin from \"./agent\" import path from \"path\" import { define } from \"./internal\" import { Effect } from \"effect\" import { AgentV2 } from \"../agent\" import { Global } from \"../global\" import { Location } from \"../location\" "
+    },
+    {
+      "path": "packages/core/src/plugin/command/review.txt",
+      "score": 3,
+      "matches": [
+        "agent",
+        "communicate"
+      ],
+      "reason": "matched: agent, communicate",
+      "bytes": 4550,
+      "estimated_tokens": 1136,
+      "imports": [],
+      "preview": "You are a code reviewer. Your job is to review code changes and provide actionable feedback. --- Input: $ARGUMENTS --- ## Determining What to Review Based on the input provided, determine which type of review to perform: 1. **No arguments ("
+    },
+    {
+      "path": "packages/core/src/plugin/skill/customize-opencode.md",
+      "score": 3,
+      "matches": [
+        "agent",
+        "main"
+      ],
+      "reason": "matched: agent, main",
+      "bytes": 16072,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import type { Plugin } from \"@opencode-ai/plugin\""
+      ],
+      "preview": "<!-- Built-in skill. Name and description are registered in code at packages/core/src/plugin/skill.ts and CUSTOMIZE_OPENCODE_SKILL_DESCRIPTION). The body below becomes the skill's content. --> # Customizing opencode opencode validates its o"
+    },
+    {
+      "path": "packages/core/src/v1/config/config.ts",
+      "score": 3,
+      "matches": [
+        "agent",
+        "back",
+        "subagents"
+      ],
+      "reason": "matched: agent, back, subagents",
+      "bytes": 9934,
+      "estimated_tokens": 2483,
+      "imports": [
+        "import { Schema } from \"effect\"",
+        "import { NonNegativeInt, PositiveInt, type DeepMutable } from \"../../schema\"",
+        "import { ConfigExperimental } from \"../../config/experimental\"",
+        "import { ConfigReference } from \"../../config/reference\"",
+        "import { ConfigAgentV1 } from \"./agent\"",
+        "import { ConfigAttachmentV1 } from \"./attachment\"",
+        "import { ConfigCommandV1 } from \"./command\"",
+        "import { ConfigFormatterV1 } from \"./formatter\"",
+        "import { ConfigLayoutV1 } from \"./layout\"",
+        "import { ConfigLSPV1 } from \"./lsp\""
+      ],
+      "preview": "export * as ConfigV1 from \"./config\" import { Schema } from \"effect\" import { NonNegativeInt, PositiveInt, type DeepMutable } from \"../../schema\" import { ConfigExperimental } from \"../../config/experimental\" import { ConfigReference } from"
+    },
+    {
+      "path": "packages/opencode/specs/effect/facades.md",
+      "score": 3,
+      "matches": [
+        "agent",
+        "back"
+      ],
+      "reason": "matched: agent, back",
+      "bytes": 9216,
+      "estimated_tokens": 2304,
+      "imports": [],
+      "preview": "# Facade removal checklist Concrete inventory of the remaining `makeRuntime(...)`-backed facades in `packages/opencode`. Current status on this branch: - `src/` has 5 `makeRuntime(...)` call sites total. - 2 are intentionally excluded from "
+    },
+    {
+      "path": "packages/opencode/specs/tui-plugins.md",
+      "score": 3,
+      "matches": [
+        "back",
+        "main"
+      ],
+      "reason": "matched: back, main",
+      "bytes": 26987,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import type { TuiPlugin, TuiPluginModule } from \"@opencode-ai/plugin/tui\"",
+        "import { onCleanup } from \"solid-js\""
+      ],
+      "preview": "# TUI plugins Technical reference for the current TUI plugin system. ## Overview - TUI plugin config lives in `tui.json`. - Author package entrypoint is `@opencode-ai/plugin/tui`. - Internal plugins load inside the CLI app the same way exte"
+    },
+    {
+      "path": "packages/opencode/src/agent/prompt/explore.txt",
+      "score": 3,
+      "matches": [
+        "agent",
+        "findings"
+      ],
+      "reason": "matched: agent, findings",
+      "bytes": 871,
+      "estimated_tokens": 217,
+      "imports": [],
+      "preview": "You are a file search specialist. You excel at thoroughly navigating and exploring codebases. Your strengths: - Rapidly finding files using glob patterns - Searching code and text with powerful regex patterns - Reading and analyzing file co"
+    }
+  ],
+  "roles": {
+    "explore": {
+      "goal": "Trace implementation, agents, tools, commands, and permissions.",
+      "files": [
+        {
+          "path": ".opencode/command/ai-deps.md",
+          "score": 3,
+          "matches": [
+            "findings",
+            "subagents"
+          ],
+          "reason": "matched: findings, subagents",
+          "bytes": 1033,
+          "estimated_tokens": 258,
+          "imports": [],
+          "preview": "--- description: \"Bump AI sdk dependencies minor / patch versions only\" --- Please read @package.json and @packages/opencode/package.json. Your job is to look into AI SDK dependencies, figure out if they have versions that can be upgraded ("
+        },
+        {
+          "path": "packages/core/src/plugin/agent.ts",
+          "score": 3,
+          "matches": [
+            "agent",
+            "findings",
+            "main"
+          ],
+          "reason": "matched: agent, findings, main",
+          "bytes": 9835,
+          "estimated_tokens": 2458,
+          "imports": [
+            "import path from \"path\"",
+            "import { define } from \"./internal\"",
+            "import { Effect } from \"effect\"",
+            "import { AgentV2 } from \"../agent\"",
+            "import { Global } from \"../global\"",
+            "import { Location } from \"../location\"",
+            "import { PermissionV2 } from \"../permission\""
+          ],
+          "preview": "export * as AgentPlugin from \"./agent\" import path from \"path\" import { define } from \"./internal\" import { Effect } from \"effect\" import { AgentV2 } from \"../agent\" import { Global } from \"../global\" import { Location } from \"../location\" "
+        },
+        {
+          "path": "packages/core/src/plugin/command/review.txt",
+          "score": 3,
+          "matches": [
+            "agent",
+            "communicate"
+          ],
+          "reason": "matched: agent, communicate",
+          "bytes": 4550,
+          "estimated_tokens": 1136,
+          "imports": [],
+          "preview": "You are a code reviewer. Your job is to review code changes and provide actionable feedback. --- Input: $ARGUMENTS --- ## Determining What to Review Based on the input provided, determine which type of review to perform: 1. **No arguments ("
+        },
+        {
+          "path": "packages/opencode/src/agent/prompt/explore.txt",
+          "score": 3,
+          "matches": [
+            "agent",
+            "findings"
+          ],
+          "reason": "matched: agent, findings",
+          "bytes": 871,
+          "estimated_tokens": 217,
+          "imports": [],
+          "preview": "You are a file search specialist. You excel at thoroughly navigating and exploring codebases. Your strengths: - Rapidly finding files using glob patterns - Searching code and text with powerful regex patterns - Reading and analyzing file co"
+        }
+      ]
+    },
+    "scout": {
+      "goal": "Compare documentation and configuration with the implementation.",
+      "files": [
+        {
+          "path": "packages/core/src/v1/config/config.ts",
+          "score": 3,
+          "matches": [
+            "agent",
+            "back",
+            "subagents"
+          ],
+          "reason": "matched: agent, back, subagents",
+          "bytes": 9934,
+          "estimated_tokens": 2483,
+          "imports": [
+            "import { Schema } from \"effect\"",
+            "import { NonNegativeInt, PositiveInt, type DeepMutable } from \"../../schema\"",
+            "import { ConfigExperimental } from \"../../config/experimental\"",
+            "import { ConfigReference } from \"../../config/reference\"",
+            "import { ConfigAgentV1 } from \"./agent\"",
+            "import { ConfigAttachmentV1 } from \"./attachment\"",
+            "import { ConfigCommandV1 } from \"./command\"",
+            "import { ConfigFormatterV1 } from \"./formatter\"",
+            "import { ConfigLayoutV1 } from \"./layout\"",
+            "import { ConfigLSPV1 } from \"./lsp\""
+          ],
+          "preview": "export * as ConfigV1 from \"./config\" import { Schema } from \"effect\" import { NonNegativeInt, PositiveInt, type DeepMutable } from \"../../schema\" import { ConfigExperimental } from \"../../config/experimental\" import { ConfigReference } from"
+        }
+      ]
+    },
+    "review": {
+      "goal": "Inspect tests, integrations, APIs, and supporting modules.",
+      "files": [
+        {
+          "path": "packages/opencode/src/session/prompt/gpt-astra.txt",
+          "score": 5,
+          "matches": [
+            "agent",
+            "back",
+            "main",
+            "subagents"
+          ],
+          "reason": "matched: agent, back, main, subagents",
+          "bytes": 4078,
+          "estimated_tokens": 1019,
+          "imports": [],
+          "preview": "You are an AI agent powered by OpenCode, a coding agent harness. Help the user accomplish their goals using the tools you have available. # Harness - Responses are rendered as GitHub-flavored Markdown. - `<system-reminder>` blocks are harne"
+        },
+        {
+          "path": "packages/opencode/src/session/prompt/meta.txt",
+          "score": 5,
+          "matches": [
+            "agent",
+            "communicate",
+            "findings",
+            "subagents"
+          ],
+          "reason": "matched: agent, communicate, findings, subagents",
+          "bytes": 9159,
+          "estimated_tokens": 2280,
+          "imports": [],
+          "preview": "You are OpenCode, a coding agent that helps users with software engineering tasks. You are powered by {{MODEL_NAME}}, a large language model trained by Meta MSL. Use the instructions below and the tools available to assist the user. # Commu"
+        },
+        {
+          "path": "packages/opencode/src/session/prompt/beast.txt",
+          "score": 4,
+          "matches": [
+            "agent",
+            "back",
+            "communicate"
+          ],
+          "reason": "matched: agent, back, communicate",
+          "bytes": 11080,
+          "estimated_tokens": 2769,
+          "imports": [],
+          "preview": "You are opencode, an agent - please keep going until the user\u2019s query is completely resolved, before ending your turn and yielding back to the user. Your thinking should be thorough and so it's fine if it's very long. However, avoid unneces"
+        },
+        {
+          "path": "packages/opencode/src/session/prompt/copilot-gpt-5.txt",
+          "score": 4,
+          "matches": [
+            "agent",
+            "back",
+            "communicate"
+          ],
+          "reason": "matched: agent, back, communicate",
+          "bytes": 14241,
+          "estimated_tokens": 3558,
+          "imports": [],
+          "preview": "You are an expert AI programming assistant Your name is opencode Keep your answers short and impersonal. <gptAgentInstructions> You are a highly sophisticated coding agent with expert-level knowledge across programming languages and framewo"
+        },
+        {
+          "path": "specs/tui-package.md",
+          "score": 4,
+          "matches": [
+            "agent",
+            "back",
+            "main"
+          ],
+          "reason": "matched: agent, back, main",
+          "bytes": 25002,
+          "estimated_tokens": 4000,
+          "imports": [],
+          "preview": "# TUI Package Extraction ## Goal Move the canonical OpenCode terminal application from `packages/opencode/src/cli/cmd/tui` into a self-contained workspace package while the legacy CLI and the new CLI continue to use the same implementation."
+        },
+        {
+          "path": ".github/workflows/docs-locale-sync.yml",
+          "score": 3,
+          "matches": [
+            "agent",
+            "subagents"
+          ],
+          "reason": "matched: agent, subagents",
+          "bytes": 3969,
+          "estimated_tokens": 992,
+          "imports": [],
+          "preview": "name: docs-locale-sync on: push: branches: - dev paths: - packages/web/src/content/docs/*.mdx jobs: sync-locales: if: false #if: github.actor != 'opencode-agent[bot]' runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: write steps:"
+        }
+      ]
+    }
+  },
+  "next_action": "Give each role its assigned evidence, collect findings, and compare overlap."
+}

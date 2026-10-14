@@ -1,0 +1,444 @@
+{
+  "question": "Where are permissions enforced in the source code?",
+  "repository": "githubrepo_pulls/opencode",
+  "repository_summary": {
+    "candidate_files": 3950,
+    "selected_files": 20,
+    "broad_estimated_tokens": 10314702,
+    "focused_estimated_tokens": 55808,
+    "estimated_token_reduction_percent": 99.5
+  },
+  "selected_evidence": [
+    {
+      "path": "packages/llm/AGENTS.md",
+      "score": 7,
+      "matches": [
+        "are",
+        "code",
+        "enforced",
+        "permissions",
+        "source",
+        "where"
+      ],
+      "reason": "matched: are, code, enforced, permissions, source, where",
+      "bytes": 24684,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "# LLM Package Guide ## Effect - Prefer `HttpClient.HttpClient` / `HttpClientResponse.HttpClientResponse` over web `fetch` / `Response` at package boundaries. - Use `Stream.Stream` for streaming data flow. Avoid ad hoc async generators or ma"
+    },
+    {
+      "path": "AGENTS.md",
+      "score": 6,
+      "matches": [
+        "are",
+        "code",
+        "permissions",
+        "source",
+        "where"
+      ],
+      "reason": "matched: are, code, permissions, source, where",
+      "bytes": 8748,
+      "estimated_tokens": 2187,
+      "imports": [],
+      "preview": "- To regenerate the legacy JavaScript SDK, run `./packages/sdk/js/script/build.ts`. - After changing the public Protocol or Server `HttpApi`, run `bun run generate` from `packages/client`. Do not edit `src/generated` or `src/generated-effec"
+    },
+    {
+      "path": "packages/core/src/plugin/skill/customize-opencode.md",
+      "score": 6,
+      "matches": [
+        "are",
+        "code",
+        "permissions",
+        "source",
+        "where"
+      ],
+      "reason": "matched: are, code, permissions, source, where",
+      "bytes": 16072,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import type { Plugin } from \"@opencode-ai/plugin\""
+      ],
+      "preview": "<!-- Built-in skill. Name and description are registered in code at packages/core/src/plugin/skill.ts and CUSTOMIZE_OPENCODE_SKILL_DESCRIPTION). The body below becomes the skill's content. --> # Customizing opencode opencode validates its o"
+    },
+    {
+      "path": "specs/v2/catalog-config-plugin-lifecycle.md",
+      "score": 6,
+      "matches": [
+        "are",
+        "code",
+        "permissions",
+        "source",
+        "where"
+      ],
+      "reason": "matched: are, code, permissions, source, where",
+      "bytes": 10851,
+      "estimated_tokens": 2647,
+      "imports": [],
+      "preview": "# Catalog / Config / Plugin Lifecycle Options Status: current core has selected replayable Location-scoped Catalog transforms, aligned with option B. Reload/watch behavior and deferred external plugin activation remain design work; the opti"
+    },
+    {
+      "path": ".github/workflows/docs-locale-sync.yml",
+      "score": 5,
+      "matches": [
+        "are",
+        "code",
+        "permissions",
+        "source"
+      ],
+      "reason": "matched: are, code, permissions, source",
+      "bytes": 3969,
+      "estimated_tokens": 992,
+      "imports": [],
+      "preview": "name: docs-locale-sync on: push: branches: - dev paths: - packages/web/src/content/docs/*.mdx jobs: sync-locales: if: false #if: github.actor != 'opencode-agent[bot]' runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: write steps:"
+    },
+    {
+      "path": ".github/workflows/pr-standards.yml",
+      "score": 5,
+      "matches": [
+        "are",
+        "code",
+        "permissions",
+        "where"
+      ],
+      "reason": "matched: are, code, permissions, where",
+      "bytes": 14743,
+      "estimated_tokens": 3685,
+      "imports": [],
+      "preview": "name: pr-standards on: pull_request_target: types: [opened, edited, synchronize] jobs: check-standards: runs-on: ubuntu-latest permissions: contents: read pull-requests: write steps: - name: Check PR standards uses: actions/github-script@f2"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "score": 5,
+      "matches": [
+        "are",
+        "code",
+        "enforced",
+        "source"
+      ],
+      "reason": "matched: are, code, enforced, source",
+      "bytes": 10347,
+      "estimated_tokens": 2585,
+      "imports": [],
+      "preview": "# Contributing to OpenCode We want to make it easy for you to contribute to OpenCode. Here are the most common type of changes that get merged: - Bug fixes - Additional LSPs / Formatters - Improvements to LLM performance - Support for new p"
+    },
+    {
+      "path": "packages/app/AGENTS.md",
+      "score": 5,
+      "matches": [
+        "are",
+        "code",
+        "source",
+        "where"
+      ],
+      "reason": "matched: are, code, source, where",
+      "bytes": 4570,
+      "estimated_tokens": 1141,
+      "imports": [],
+      "preview": "## Priorities - Prioritise, in this order: stability, simplicity, performance. - Before changing session or timeline code, record a production benchmark baseline and compare it after the change. ## Debugging - NEVER try to restart the app, "
+    },
+    {
+      "path": "packages/app/create-effect-simplification-spec.md",
+      "score": 5,
+      "matches": [
+        "are",
+        "code",
+        "source",
+        "where"
+      ],
+      "reason": "matched: are, code, source, where",
+      "bytes": 18928,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "# CreateEffect Simplification Implementation Spec Reduce reactive misuse across `packages/app`. --- ## Context This work targets `packages/app/src`, which currently has 101 `createEffect` calls across 37 files. The biggest clusters are `pag"
+    },
+    {
+      "path": "packages/console/app/src/routes/legal/terms-of-service/index.tsx",
+      "score": 5,
+      "matches": [
+        "are",
+        "code",
+        "permissions",
+        "source",
+        "where"
+      ],
+      "reason": "matched: are, code, permissions, source, where",
+      "bytes": 35381,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import \"../../brand/index.css\"",
+        "import \"./index.css\"",
+        "import { Title, Meta } from \"@solidjs/meta\"",
+        "import { Header } from \"~/component/header\"",
+        "import { Footer } from \"~/component/footer\"",
+        "import { Legal } from \"~/component/legal\"",
+        "import { LocaleLinks } from \"~/component/locale-links\"",
+        "import { useLanguage } from \"~/context/language\""
+      ],
+      "preview": "import \"../../brand/index.css\" import \"./index.css\" import { Title, Meta } from \"@solidjs/meta\" import { Header } from \"~/component/header\" import { Footer } from \"~/component/footer\" import { Legal } from \"~/component/legal\" import { Local"
+    },
+    {
+      "path": "packages/opencode/specs/effect/todo.md",
+      "score": 5,
+      "matches": [
+        "are",
+        "code",
+        "source",
+        "where"
+      ],
+      "reason": "matched: are, code, source, where",
+      "bytes": 10841,
+      "estimated_tokens": 2699,
+      "imports": [
+        "import it."
+      ],
+      "preview": "# Effect TODO Short roadmap for Effect cleanup in `packages/opencode`. Current patterns and examples live in [`guide.md`](./guide.md). Error boundary migration details live in [`error-boundaries-plan.md`](./error-boundaries-plan.md). Test m"
+    },
+    {
+      "path": "packages/opencode/specs/openapi-translation-cleanup.md",
+      "score": 5,
+      "matches": [
+        "are",
+        "code",
+        "source",
+        "where"
+      ],
+      "reason": "matched: are, code, source, where",
+      "bytes": 11613,
+      "estimated_tokens": 2903,
+      "imports": [],
+      "preview": "# OpenAPI Translation Cleanup Plan ## Goal Trim `packages/opencode/src/server/routes/instance/httpapi/public.ts` until OpenAPI generation is mostly a direct projection of the `HttpApi` route declarations, without breaking the generated SDK "
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/anthropic.txt",
+      "score": 5,
+      "matches": [
+        "are",
+        "code",
+        "source",
+        "where"
+      ],
+      "reason": "matched: are, code, source, where",
+      "bytes": 8212,
+      "estimated_tokens": 2053,
+      "imports": [],
+      "preview": "You are OpenCode, the best coding agent on the planet. You are an interactive CLI tool that helps users with software engineering tasks. Use the instructions below and the tools available to you to assist the user. IMPORTANT: You must NEVER"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/default.txt",
+      "score": 5,
+      "matches": [
+        "are",
+        "code",
+        "source",
+        "where"
+      ],
+      "reason": "matched: are, code, source, where",
+      "bytes": 8528,
+      "estimated_tokens": 2132,
+      "imports": [],
+      "preview": "You are opencode, an interactive CLI tool that helps users with software engineering tasks. Use the instructions below and the tools available to you to assist the user. IMPORTANT: You must NEVER generate or guess URLs for the user unless y"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/gemini.txt",
+      "score": 5,
+      "matches": [
+        "are",
+        "code",
+        "source",
+        "where"
+      ],
+      "reason": "matched: are, code, source, where",
+      "bytes": 15372,
+      "estimated_tokens": 3843,
+      "imports": [],
+      "preview": "You are opencode, an interactive CLI agent specializing in software engineering tasks. Your primary goal is to help users safely and efficiently, adhering strictly to the following instructions and utilizing your available tools. # Core Man"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/meta.txt",
+      "score": 5,
+      "matches": [
+        "are",
+        "code",
+        "source",
+        "where"
+      ],
+      "reason": "matched: are, code, source, where",
+      "bytes": 9159,
+      "estimated_tokens": 2280,
+      "imports": [],
+      "preview": "You are OpenCode, a coding agent that helps users with software engineering tasks. You are powered by {{MODEL_NAME}}, a large language model trained by Meta MSL. Use the instructions below and the tools available to assist the user. # Commu"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/trinity.txt",
+      "score": 5,
+      "matches": [
+        "are",
+        "code",
+        "source",
+        "where"
+      ],
+      "reason": "matched: are, code, source, where",
+      "bytes": 7748,
+      "estimated_tokens": 1937,
+      "imports": [],
+      "preview": "You are opencode, an interactive CLI tool that helps users with software engineering tasks. Use the instructions below and the tools available to you to assist the user. # Tone and style You should be concise, direct, and to the point. When"
+    },
+    {
+      "path": "specs/tui-package.md",
+      "score": 5,
+      "matches": [
+        "are",
+        "code",
+        "source",
+        "where"
+      ],
+      "reason": "matched: are, code, source, where",
+      "bytes": 25002,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "# TUI Package Extraction ## Goal Move the canonical OpenCode terminal application from `packages/opencode/src/cli/cmd/tui` into a self-contained workspace package while the legacy CLI and the new CLI continue to use the same implementation."
+    },
+    {
+      "path": "specs/v2/schema-changelog.md",
+      "score": 5,
+      "matches": [
+        "are",
+        "enforced",
+        "permissions",
+        "source"
+      ],
+      "reason": "matched: are, enforced, permissions, source",
+      "bytes": 40158,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "# V2 Schema Changelog ## 2026-06-26: Add Finite Session History - Add `GET /api/session/:sessionID/history` and generated Promise, Effect, and legacy JavaScript client methods. - Page public durable Session events after an optional exclusiv"
+    },
+    {
+      "path": ".github/workflows/docs-update.yml",
+      "score": 4,
+      "matches": [
+        "are",
+        "permissions",
+        "where"
+      ],
+      "reason": "matched: are, permissions, where",
+      "bytes": 2896,
+      "estimated_tokens": 724,
+      "imports": [],
+      "preview": "name: docs-update on: schedule: - cron: \"0 */12 * * *\" workflow_dispatch: env: LOOKBACK_HOURS: 4 jobs: update-docs: if: github.repository == 'sst/opencode' runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: id-token: write contents: write p"
+    }
+  ],
+  "roles": {
+    "explore": {
+      "goal": "Trace implementation, agents, tools, commands, and permissions.",
+      "files": []
+    },
+    "scout": {
+      "goal": "Compare documentation and configuration with the implementation.",
+      "files": []
+    },
+    "review": {
+      "goal": "Inspect tests, integrations, APIs, and supporting modules.",
+      "files": [
+        {
+          "path": "packages/llm/AGENTS.md",
+          "score": 7,
+          "matches": [
+            "are",
+            "code",
+            "enforced",
+            "permissions",
+            "source",
+            "where"
+          ],
+          "reason": "matched: are, code, enforced, permissions, source, where",
+          "bytes": 24684,
+          "estimated_tokens": 4000,
+          "imports": [],
+          "preview": "# LLM Package Guide ## Effect - Prefer `HttpClient.HttpClient` / `HttpClientResponse.HttpClientResponse` over web `fetch` / `Response` at package boundaries. - Use `Stream.Stream` for streaming data flow. Avoid ad hoc async generators or ma"
+        },
+        {
+          "path": "AGENTS.md",
+          "score": 6,
+          "matches": [
+            "are",
+            "code",
+            "permissions",
+            "source",
+            "where"
+          ],
+          "reason": "matched: are, code, permissions, source, where",
+          "bytes": 8748,
+          "estimated_tokens": 2187,
+          "imports": [],
+          "preview": "- To regenerate the legacy JavaScript SDK, run `./packages/sdk/js/script/build.ts`. - After changing the public Protocol or Server `HttpApi`, run `bun run generate` from `packages/client`. Do not edit `src/generated` or `src/generated-effec"
+        },
+        {
+          "path": "packages/core/src/plugin/skill/customize-opencode.md",
+          "score": 6,
+          "matches": [
+            "are",
+            "code",
+            "permissions",
+            "source",
+            "where"
+          ],
+          "reason": "matched: are, code, permissions, source, where",
+          "bytes": 16072,
+          "estimated_tokens": 4000,
+          "imports": [
+            "import type { Plugin } from \"@opencode-ai/plugin\""
+          ],
+          "preview": "<!-- Built-in skill. Name and description are registered in code at packages/core/src/plugin/skill.ts and CUSTOMIZE_OPENCODE_SKILL_DESCRIPTION). The body below becomes the skill's content. --> # Customizing opencode opencode validates its o"
+        },
+        {
+          "path": "specs/v2/catalog-config-plugin-lifecycle.md",
+          "score": 6,
+          "matches": [
+            "are",
+            "code",
+            "permissions",
+            "source",
+            "where"
+          ],
+          "reason": "matched: are, code, permissions, source, where",
+          "bytes": 10851,
+          "estimated_tokens": 2647,
+          "imports": [],
+          "preview": "# Catalog / Config / Plugin Lifecycle Options Status: current core has selected replayable Location-scoped Catalog transforms, aligned with option B. Reload/watch behavior and deferred external plugin activation remain design work; the opti"
+        },
+        {
+          "path": ".github/workflows/docs-locale-sync.yml",
+          "score": 5,
+          "matches": [
+            "are",
+            "code",
+            "permissions",
+            "source"
+          ],
+          "reason": "matched: are, code, permissions, source",
+          "bytes": 3969,
+          "estimated_tokens": 992,
+          "imports": [],
+          "preview": "name: docs-locale-sync on: push: branches: - dev paths: - packages/web/src/content/docs/*.mdx jobs: sync-locales: if: false #if: github.actor != 'opencode-agent[bot]' runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: write steps:"
+        },
+        {
+          "path": ".github/workflows/pr-standards.yml",
+          "score": 5,
+          "matches": [
+            "are",
+            "code",
+            "permissions",
+            "where"
+          ],
+          "reason": "matched: are, code, permissions, where",
+          "bytes": 14743,
+          "estimated_tokens": 3685,
+          "imports": [],
+          "preview": "name: pr-standards on: pull_request_target: types: [opened, edited, synchronize] jobs: check-standards: runs-on: ubuntu-latest permissions: contents: read pull-requests: write steps: - name: Check PR standards uses: actions/github-script@f2"
+        }
+      ]
+    }
+  },
+  "next_action": "Give each role its assigned evidence, collect findings, and compare overlap."
+}

@@ -1,0 +1,517 @@
+{
+  "question": "How does OpenCode select repository context?",
+  "repository": "githubrepo_pulls/opencode",
+  "repository_summary": {
+    "candidate_files": 3950,
+    "selected_files": 20,
+    "broad_estimated_tokens": 10314702,
+    "focused_estimated_tokens": 48239,
+    "estimated_token_reduction_percent": 99.5
+  },
+  "selected_evidence": [
+    {
+      "path": ".github/workflows/duplicate-issues.yml",
+      "score": 5,
+      "matches": [
+        "context",
+        "opencode",
+        "repository",
+        "select"
+      ],
+      "reason": "matched: context, opencode, repository, select",
+      "bytes": 9845,
+      "estimated_tokens": 2461,
+      "imports": [],
+      "preview": "name: duplicate-issues on: issues: types: [opened, edited] jobs: check-duplicates: if: github.event.action == 'opened' runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: read issues: write steps: - name: Checkout repository uses: "
+    },
+    {
+      "path": ".github/workflows/pr-standards.yml",
+      "score": 5,
+      "matches": [
+        "context",
+        "opencode",
+        "repository",
+        "select"
+      ],
+      "reason": "matched: context, opencode, repository, select",
+      "bytes": 14743,
+      "estimated_tokens": 3685,
+      "imports": [],
+      "preview": "name: pr-standards on: pull_request_target: types: [opened, edited, synchronize] jobs: check-standards: runs-on: ubuntu-latest permissions: contents: read pull-requests: write steps: - name: Check PR standards uses: actions/github-script@f2"
+    },
+    {
+      "path": "github/README.md",
+      "score": 5,
+      "matches": [
+        "context",
+        "opencode",
+        "repository",
+        "select"
+      ],
+      "reason": "matched: context, opencode, repository, select",
+      "bytes": 6017,
+      "estimated_tokens": 1504,
+      "imports": [],
+      "preview": "# opencode GitHub Action A GitHub Action that integrates [opencode](https://opencode.ai) directly into your GitHub workflow. Mention `/opencode` in your comment, and opencode will execute tasks within your GitHub Actions runner. ## Features"
+    },
+    {
+      "path": ".github/workflows/pr-management.yml",
+      "score": 4,
+      "matches": [
+        "context",
+        "opencode",
+        "repository"
+      ],
+      "reason": "matched: context, opencode, repository",
+      "bytes": 3313,
+      "estimated_tokens": 828,
+      "imports": [],
+      "preview": "name: pr-management on: pull_request_target: types: [opened] jobs: check-duplicates: runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: read pull-requests: write steps: - name: Checkout repository uses: actions/checkout@34e114876b"
+    },
+    {
+      "path": ".github/workflows/review.yml",
+      "score": 4,
+      "matches": [
+        "context",
+        "opencode",
+        "repository"
+      ],
+      "reason": "matched: context, opencode, repository",
+      "bytes": 3993,
+      "estimated_tokens": 998,
+      "imports": [],
+      "preview": "name: review on: issue_comment: types: [created] jobs: check-guidelines: if: | github.event.issue.pull_request && startsWith(github.event.comment.body, '/review') && contains(fromJson('[\"OWNER\",\"MEMBER\"]'), github.event.comment.author_assoc"
+    },
+    {
+      "path": "CONTEXT.md",
+      "score": 4,
+      "matches": [
+        "context",
+        "opencode",
+        "select"
+      ],
+      "reason": "matched: context, opencode, select",
+      "bytes": 32094,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "# OpenCode Session Runtime OpenCode sessions preserve durable conversational history while assembling the runtime context an agent needs to act correctly in its current environment. ## Language **System Context**: The structured collection "
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "score": 4,
+      "matches": [
+        "context",
+        "opencode",
+        "repository"
+      ],
+      "reason": "matched: context, opencode, repository",
+      "bytes": 10347,
+      "estimated_tokens": 2585,
+      "imports": [],
+      "preview": "# Contributing to OpenCode We want to make it easy for you to contribute to OpenCode. Here are the most common type of changes that get merged: - Bug fixes - Additional LSPs / Formatters - Improvements to LLM performance - Support for new p"
+    },
+    {
+      "path": "packages/app/AGENTS.md",
+      "score": 4,
+      "matches": [
+        "context",
+        "opencode",
+        "select"
+      ],
+      "reason": "matched: context, opencode, select",
+      "bytes": 4570,
+      "estimated_tokens": 1141,
+      "imports": [],
+      "preview": "## Priorities - Prioritise, in this order: stability, simplicity, performance. - Before changing session or timeline code, record a production benchmark baseline and compare it after the change. ## Debugging - NEVER try to restart the app, "
+    },
+    {
+      "path": "packages/app/V1_API_MIGRATION.md",
+      "score": 4,
+      "matches": [
+        "context",
+        "opencode",
+        "repository"
+      ],
+      "reason": "matched: context, opencode, repository",
+      "bytes": 10763,
+      "estimated_tokens": 2690,
+      "imports": [],
+      "preview": "# V1 API Migration Checklist The app is currently hybrid. In this document, V1 refers to the legacy unprefixed server APIs used by `@opencode-ai/sdk/v2`, despite the SDK package name. ## Events - [x] Replace `GET /global/event` with `GET /a"
+    },
+    {
+      "path": "packages/app/src/components/prompt-input-v2.tsx",
+      "score": 4,
+      "matches": [
+        "context",
+        "opencode",
+        "repository",
+        "select"
+      ],
+      "reason": "matched: context, opencode, repository, select",
+      "bytes": 21690,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import { ImagePreview } from \"@opencode-ai/ui/image-preview\"",
+        "import { useDialog } from \"@opencode-ai/ui/context/dialog\"",
+        "import { ProviderIcon } from \"@opencode-ai/ui/provider-icon\"",
+        "import { ButtonV2 } from \"@opencode-ai/ui/v2/button-v2\"",
+        "import { Icon } from \"@opencode-ai/ui/v2/icon\"",
+        "import { KeybindV2 } from \"@opencode-ai/ui/v2/keybind-v2\"",
+        "import { TooltipV2 } from \"@opencode-ai/ui/v2/tooltip-v2\"",
+        "import type { ReferenceInfo } from \"@opencode-ai/sdk/v2/client\"",
+        "import { createEffect, createMemo, on, Show } from \"solid-js\"",
+        "import { ModelSelectorPopoverV2 } from \"@/components/dialog-select-model\""
+      ],
+      "preview": "import { ImagePreview } from \"@opencode-ai/ui/image-preview\" import { useDialog } from \"@opencode-ai/ui/context/dialog\" import { ProviderIcon } from \"@opencode-ai/ui/provider-icon\" import { ButtonV2 } from \"@opencode-ai/ui/v2/button-v2\" imp"
+    },
+    {
+      "path": "packages/core/src/plugin/command/initialize.txt",
+      "score": 4,
+      "matches": [
+        "context",
+        "opencode",
+        "repository"
+      ],
+      "reason": "matched: context, opencode, repository",
+      "bytes": 3420,
+      "estimated_tokens": 855,
+      "imports": [],
+      "preview": "Create or update `AGENTS.md` for this repository. The goal is a compact instruction file that helps future OpenCode sessions avoid mistakes and ramp up quickly. Every line should answer: \"Would an agent likely miss this without help?\" If no"
+    },
+    {
+      "path": "packages/core/src/plugin/skill/customize-opencode.md",
+      "score": 4,
+      "matches": [
+        "context",
+        "opencode",
+        "repository"
+      ],
+      "reason": "matched: context, opencode, repository",
+      "bytes": 16072,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import type { Plugin } from \"@opencode-ai/plugin\""
+      ],
+      "preview": "<!-- Built-in skill. Name and description are registered in code at packages/core/src/plugin/skill.ts and CUSTOMIZE_OPENCODE_SKILL_DESCRIPTION). The body below becomes the skill's content. --> # Customizing opencode opencode validates its o"
+    },
+    {
+      "path": "packages/opencode/src/cli/cmd/github.handler.ts",
+      "score": 4,
+      "matches": [
+        "context",
+        "opencode",
+        "repository",
+        "select"
+      ],
+      "reason": "matched: context, opencode, repository, select",
+      "bytes": 55222,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import path from \"path\"",
+        "import { exec } from \"child_process\"",
+        "import { Filesystem } from \"@/util/filesystem\"",
+        "import * as prompts from \"@clack/prompts\"",
+        "import { map, pipe, sortBy, values } from \"remeda\"",
+        "import { Octokit } from \"@octokit/rest\"",
+        "import { graphql } from \"@octokit/graphql\"",
+        "import * as core from \"@actions/core\"",
+        "import * as github from \"@actions/github\"",
+        "import type { Context } from \"@actions/github/lib/context\""
+      ],
+      "preview": "import path from \"path\" import { exec } from \"child_process\" import { Filesystem } from \"@/util/filesystem\" import * as prompts from \"@clack/prompts\" import { map, pipe, sortBy, values } from \"remeda\" import { Octokit } from \"@octokit/rest\""
+    },
+    {
+      "path": "packages/opencode/src/command/template/initialize.txt",
+      "score": 4,
+      "matches": [
+        "context",
+        "opencode",
+        "repository"
+      ],
+      "reason": "matched: context, opencode, repository",
+      "bytes": 3492,
+      "estimated_tokens": 873,
+      "imports": [],
+      "preview": "Create or update `AGENTS.md` for this repository. The goal is a compact instruction file that helps future OpenCode sessions avoid mistakes and ramp up quickly. Every line should answer: \"Would an agent likely miss this without help?\" If no"
+    },
+    {
+      "path": "packages/opencode/src/project/project.ts",
+      "score": 4,
+      "matches": [
+        "context",
+        "opencode",
+        "repository",
+        "select"
+      ],
+      "reason": "matched: context, opencode, repository, select",
+      "bytes": 18291,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import { LayerNode } from \"@opencode-ai/core/effect/layer-node\"",
+        "import { and, eq, sql } from \"drizzle-orm\"",
+        "import { Database } from \"@opencode-ai/core/database/database\"",
+        "import { ProjectDirectoryTable, ProjectTable } from \"@opencode-ai/core/project/sql\"",
+        "import { ProjectDirectories } from \"@opencode-ai/core/project/directories\"",
+        "import { SessionTable } from \"@opencode-ai/core/session/sql\"",
+        "import { WorkspaceTable } from \"@opencode-ai/core/control-plane/workspace.sql\"",
+        "import { Flag } from \"@opencode-ai/core/flag/flag\"",
+        "import { GlobalBus } from \"@/bus/global\"",
+        "import { which } from \"@opencode-ai/core/util/which\""
+      ],
+      "preview": "import { LayerNode } from \"@opencode-ai/core/effect/layer-node\" import { and, eq, sql } from \"drizzle-orm\" import { Database } from \"@opencode-ai/core/database/database\" import { ProjectDirectoryTable, ProjectTable } from \"@opencode-ai/core"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/default.txt",
+      "score": 4,
+      "matches": [
+        "context",
+        "opencode",
+        "repository"
+      ],
+      "reason": "matched: context, opencode, repository",
+      "bytes": 8528,
+      "estimated_tokens": 2132,
+      "imports": [],
+      "preview": "You are opencode, an interactive CLI tool that helps users with software engineering tasks. Use the instructions below and the tools available to you to assist the user. IMPORTANT: You must NEVER generate or guess URLs for the user unless y"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/trinity.txt",
+      "score": 4,
+      "matches": [
+        "context",
+        "opencode",
+        "repository"
+      ],
+      "reason": "matched: context, opencode, repository",
+      "bytes": 7748,
+      "estimated_tokens": 1937,
+      "imports": [],
+      "preview": "You are opencode, an interactive CLI tool that helps users with software engineering tasks. Use the instructions below and the tools available to you to assist the user. # Tone and style You should be concise, direct, and to the point. When"
+    },
+    {
+      "path": "packages/opencode/src/tool/task.txt",
+      "score": 4,
+      "matches": [
+        "context",
+        "opencode",
+        "select"
+      ],
+      "reason": "matched: context, opencode, select",
+      "bytes": 2305,
+      "estimated_tokens": 576,
+      "imports": [],
+      "preview": "Launch a new agent to handle complex, multistep tasks autonomously. When using the Task tool, you must specify a subagent_type parameter to select which agent type to use. When NOT to use the Task tool: - If you want to read a specific file"
+    },
+    {
+      "path": "packages/opencode/test/AGENTS.md",
+      "score": 4,
+      "matches": [
+        "context",
+        "opencode",
+        "repository"
+      ],
+      "reason": "matched: context, opencode, repository",
+      "bytes": 7914,
+      "estimated_tokens": 1974,
+      "imports": [
+        "import { tmpdir } from \"./fixture/fixture\"",
+        "import { describe, expect } from \"bun:test\"",
+        "import { Effect, Layer } from \"effect\"",
+        "import { testEffect } from \"../lib/effect\"",
+        "import { TestInstance } from \"../fixture/fixture\"",
+        "import { Effect, Layer } from \"effect\"",
+        "import { Account } from \"@/account/account\""
+      ],
+      "preview": "# Test Fixtures Guide ## Temporary Directory Fixture The `tmpdir` function in `fixture/fixture.ts` creates temporary directories for tests with automatic cleanup. ### Basic Usage ```typescript import { tmpdir } from \"./fixture/fixture\" test"
+    },
+    {
+      "path": "packages/opencode/test/tool/fixtures/models-api.json",
+      "score": 4,
+      "matches": [
+        "context",
+        "opencode",
+        "repository"
+      ],
+      "reason": "matched: context, opencode, repository",
+      "bytes": 4951522,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "{ \"requesty\": { \"id\": \"requesty\", \"env\": [\"REQUESTY_API_KEY\"], \"npm\": \"@ai-sdk/openai-compatible\", \"api\": \"https://router.requesty.ai/v1\", \"name\": \"Requesty\", \"doc\": \"https://requesty.ai/solution/llm-routing/models\", \"models\": { \"xai/grok-4"
+    }
+  ],
+  "roles": {
+    "explore": {
+      "goal": "Trace implementation, agents, tools, commands, and permissions.",
+      "files": [
+        {
+          "path": "packages/core/src/plugin/command/initialize.txt",
+          "score": 4,
+          "matches": [
+            "context",
+            "opencode",
+            "repository"
+          ],
+          "reason": "matched: context, opencode, repository",
+          "bytes": 3420,
+          "estimated_tokens": 855,
+          "imports": [],
+          "preview": "Create or update `AGENTS.md` for this repository. The goal is a compact instruction file that helps future OpenCode sessions avoid mistakes and ramp up quickly. Every line should answer: \"Would an agent likely miss this without help?\" If no"
+        },
+        {
+          "path": "packages/opencode/src/command/template/initialize.txt",
+          "score": 4,
+          "matches": [
+            "context",
+            "opencode",
+            "repository"
+          ],
+          "reason": "matched: context, opencode, repository",
+          "bytes": 3492,
+          "estimated_tokens": 873,
+          "imports": [],
+          "preview": "Create or update `AGENTS.md` for this repository. The goal is a compact instruction file that helps future OpenCode sessions avoid mistakes and ramp up quickly. Every line should answer: \"Would an agent likely miss this without help?\" If no"
+        },
+        {
+          "path": "packages/opencode/src/tool/task.txt",
+          "score": 4,
+          "matches": [
+            "context",
+            "opencode",
+            "select"
+          ],
+          "reason": "matched: context, opencode, select",
+          "bytes": 2305,
+          "estimated_tokens": 576,
+          "imports": [],
+          "preview": "Launch a new agent to handle complex, multistep tasks autonomously. When using the Task tool, you must specify a subagent_type parameter to select which agent type to use. When NOT to use the Task tool: - If you want to read a specific file"
+        },
+        {
+          "path": "packages/opencode/test/tool/fixtures/models-api.json",
+          "score": 4,
+          "matches": [
+            "context",
+            "opencode",
+            "repository"
+          ],
+          "reason": "matched: context, opencode, repository",
+          "bytes": 4951522,
+          "estimated_tokens": 4000,
+          "imports": [],
+          "preview": "{ \"requesty\": { \"id\": \"requesty\", \"env\": [\"REQUESTY_API_KEY\"], \"npm\": \"@ai-sdk/openai-compatible\", \"api\": \"https://router.requesty.ai/v1\", \"name\": \"Requesty\", \"doc\": \"https://requesty.ai/solution/llm-routing/models\", \"models\": { \"xai/grok-4"
+        }
+      ]
+    },
+    "scout": {
+      "goal": "Compare documentation and configuration with the implementation.",
+      "files": [
+        {
+          "path": "github/README.md",
+          "score": 5,
+          "matches": [
+            "context",
+            "opencode",
+            "repository",
+            "select"
+          ],
+          "reason": "matched: context, opencode, repository, select",
+          "bytes": 6017,
+          "estimated_tokens": 1504,
+          "imports": [],
+          "preview": "# opencode GitHub Action A GitHub Action that integrates [opencode](https://opencode.ai) directly into your GitHub workflow. Mention `/opencode` in your comment, and opencode will execute tasks within your GitHub Actions runner. ## Features"
+        }
+      ]
+    },
+    "review": {
+      "goal": "Inspect tests, integrations, APIs, and supporting modules.",
+      "files": [
+        {
+          "path": ".github/workflows/duplicate-issues.yml",
+          "score": 5,
+          "matches": [
+            "context",
+            "opencode",
+            "repository",
+            "select"
+          ],
+          "reason": "matched: context, opencode, repository, select",
+          "bytes": 9845,
+          "estimated_tokens": 2461,
+          "imports": [],
+          "preview": "name: duplicate-issues on: issues: types: [opened, edited] jobs: check-duplicates: if: github.event.action == 'opened' runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: read issues: write steps: - name: Checkout repository uses: "
+        },
+        {
+          "path": ".github/workflows/pr-standards.yml",
+          "score": 5,
+          "matches": [
+            "context",
+            "opencode",
+            "repository",
+            "select"
+          ],
+          "reason": "matched: context, opencode, repository, select",
+          "bytes": 14743,
+          "estimated_tokens": 3685,
+          "imports": [],
+          "preview": "name: pr-standards on: pull_request_target: types: [opened, edited, synchronize] jobs: check-standards: runs-on: ubuntu-latest permissions: contents: read pull-requests: write steps: - name: Check PR standards uses: actions/github-script@f2"
+        },
+        {
+          "path": ".github/workflows/pr-management.yml",
+          "score": 4,
+          "matches": [
+            "context",
+            "opencode",
+            "repository"
+          ],
+          "reason": "matched: context, opencode, repository",
+          "bytes": 3313,
+          "estimated_tokens": 828,
+          "imports": [],
+          "preview": "name: pr-management on: pull_request_target: types: [opened] jobs: check-duplicates: runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: read pull-requests: write steps: - name: Checkout repository uses: actions/checkout@34e114876b"
+        },
+        {
+          "path": ".github/workflows/review.yml",
+          "score": 4,
+          "matches": [
+            "context",
+            "opencode",
+            "repository"
+          ],
+          "reason": "matched: context, opencode, repository",
+          "bytes": 3993,
+          "estimated_tokens": 998,
+          "imports": [],
+          "preview": "name: review on: issue_comment: types: [created] jobs: check-guidelines: if: | github.event.issue.pull_request && startsWith(github.event.comment.body, '/review') && contains(fromJson('[\"OWNER\",\"MEMBER\"]'), github.event.comment.author_assoc"
+        },
+        {
+          "path": "CONTEXT.md",
+          "score": 4,
+          "matches": [
+            "context",
+            "opencode",
+            "select"
+          ],
+          "reason": "matched: context, opencode, select",
+          "bytes": 32094,
+          "estimated_tokens": 4000,
+          "imports": [],
+          "preview": "# OpenCode Session Runtime OpenCode sessions preserve durable conversational history while assembling the runtime context an agent needs to act correctly in its current environment. ## Language **System Context**: The structured collection "
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "score": 4,
+          "matches": [
+            "context",
+            "opencode",
+            "repository"
+          ],
+          "reason": "matched: context, opencode, repository",
+          "bytes": 10347,
+          "estimated_tokens": 2585,
+          "imports": [],
+          "preview": "# Contributing to OpenCode We want to make it easy for you to contribute to OpenCode. Here are the most common type of changes that get merged: - Bug fixes - Additional LSPs / Formatters - Improvements to LLM performance - Support for new p"
+        }
+      ]
+    }
+  },
+  "next_action": "Give each role its assigned evidence, collect findings, and compare overlap."
+}

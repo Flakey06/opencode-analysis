@@ -1,0 +1,485 @@
+{
+  "question": "How are file edits and shell commands approved?",
+  "repository": "githubrepo_pulls/opencode",
+  "repository_summary": {
+    "candidate_files": 3950,
+    "selected_files": 20,
+    "broad_estimated_tokens": 10314702,
+    "focused_estimated_tokens": 40368,
+    "estimated_token_reduction_percent": 99.6
+  },
+  "selected_evidence": [
+    {
+      "path": "packages/opencode/src/session/prompt/codex.txt",
+      "score": 7,
+      "matches": [
+        "approved",
+        "are",
+        "commands",
+        "edits",
+        "file",
+        "shell"
+      ],
+      "reason": "matched: approved, are, commands, edits, file, shell",
+      "bytes": 7390,
+      "estimated_tokens": 1840,
+      "imports": [],
+      "preview": "You are OpenCode, the best coding agent on the planet. You are an interactive CLI tool that helps users with software engineering tasks. Use the instructions below and the tools available to you to assist the user. ## Editing constraints - "
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/gpt.txt",
+      "score": 7,
+      "matches": [
+        "approved",
+        "are",
+        "commands",
+        "edits",
+        "file",
+        "shell"
+      ],
+      "reason": "matched: approved, are, commands, edits, file, shell",
+      "bytes": 9284,
+      "estimated_tokens": 2318,
+      "imports": [],
+      "preview": "You are OpenCode, You and the user share the same workspace and collaborate to achieve the user's goals. You are a deeply pragmatic, effective software engineer. You take engineering quality seriously, and collaboration comes through as dir"
+    },
+    {
+      "path": "packages/core/src/plugin/skill/customize-opencode.md",
+      "score": 6,
+      "matches": [
+        "are",
+        "commands",
+        "edits",
+        "file",
+        "shell"
+      ],
+      "reason": "matched: are, commands, edits, file, shell",
+      "bytes": 16072,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import type { Plugin } from \"@opencode-ai/plugin\""
+      ],
+      "preview": "<!-- Built-in skill. Name and description are registered in code at packages/core/src/plugin/skill.ts and CUSTOMIZE_OPENCODE_SKILL_DESCRIPTION). The body below becomes the skill's content. --> # Customizing opencode opencode validates its o"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/gemini.txt",
+      "score": 6,
+      "matches": [
+        "approved",
+        "are",
+        "commands",
+        "file",
+        "shell"
+      ],
+      "reason": "matched: approved, are, commands, file, shell",
+      "bytes": 15372,
+      "estimated_tokens": 3843,
+      "imports": [],
+      "preview": "You are opencode, an interactive CLI agent specializing in software engineering tasks. Your primary goal is to help users safely and efficiently, adhering strictly to the following instructions and utilizing your available tools. # Core Man"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/gpt-astra.txt",
+      "score": 6,
+      "matches": [
+        "are",
+        "commands",
+        "edits",
+        "file",
+        "shell"
+      ],
+      "reason": "matched: are, commands, edits, file, shell",
+      "bytes": 4078,
+      "estimated_tokens": 1019,
+      "imports": [],
+      "preview": "You are an AI agent powered by OpenCode, a coding agent harness. Help the user accomplish their goals using the tools you have available. # Harness - Responses are rendered as GitHub-flavored Markdown. - `<system-reminder>` blocks are harne"
+    },
+    {
+      "path": ".github/workflows/docs-locale-sync.yml",
+      "score": 5,
+      "matches": [
+        "are",
+        "edits",
+        "file",
+        "shell"
+      ],
+      "reason": "matched: are, edits, file, shell",
+      "bytes": 3969,
+      "estimated_tokens": 992,
+      "imports": [],
+      "preview": "name: docs-locale-sync on: push: branches: - dev paths: - packages/web/src/content/docs/*.mdx jobs: sync-locales: if: false #if: github.actor != 'opencode-agent[bot]' runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: write steps:"
+    },
+    {
+      "path": "README.md",
+      "score": 5,
+      "matches": [
+        "are",
+        "commands",
+        "edits",
+        "file"
+      ],
+      "reason": "matched: are, commands, edits, file",
+      "bytes": 5402,
+      "estimated_tokens": 1329,
+      "imports": [],
+      "preview": "<p align=\"center\"> <a href=\"https://opencode.ai\"> <picture> <source srcset=\"packages/console/app/src/asset/logo-ornate-dark.svg\" media=\"(prefers-color-scheme: dark)\"> <source srcset=\"packages/console/app/src/asset/logo-ornate-light.svg\" med"
+    },
+    {
+      "path": "SECURITY.md",
+      "score": 5,
+      "matches": [
+        "are",
+        "commands",
+        "file",
+        "shell"
+      ],
+      "reason": "matched: are, commands, file, shell",
+      "bytes": 2661,
+      "estimated_tokens": 665,
+      "imports": [],
+      "preview": "# Security ## IMPORTANT We do not accept AI generated security reports. We receive a large number of these and we absolutely do not have the resources to review them all. If you submit one that will be an automatic ban from the project. ## "
+    },
+    {
+      "path": "packages/app/V1_API_MIGRATION.md",
+      "score": 5,
+      "matches": [
+        "are",
+        "commands",
+        "file",
+        "shell"
+      ],
+      "reason": "matched: are, commands, file, shell",
+      "bytes": 10763,
+      "estimated_tokens": 2690,
+      "imports": [],
+      "preview": "# V1 API Migration Checklist The app is currently hybrid. In this document, V1 refers to the legacy unprefixed server APIs used by `@opencode-ai/sdk/v2`, despite the SDK package name. ## Events - [x] Replace `GET /global/event` with `GET /a"
+    },
+    {
+      "path": "packages/opencode/specs/tui-plugins.md",
+      "score": 5,
+      "matches": [
+        "are",
+        "commands",
+        "edits",
+        "file"
+      ],
+      "reason": "matched: are, commands, edits, file",
+      "bytes": 26987,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import type { TuiPlugin, TuiPluginModule } from \"@opencode-ai/plugin/tui\"",
+        "import { onCleanup } from \"solid-js\""
+      ],
+      "preview": "# TUI plugins Technical reference for the current TUI plugin system. ## Overview - TUI plugin config lives in `tui.json`. - Author package entrypoint is `@opencode-ai/plugin/tui`. - Internal plugins load inside the CLI app the same way exte"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/anthropic.txt",
+      "score": 5,
+      "matches": [
+        "are",
+        "commands",
+        "file",
+        "shell"
+      ],
+      "reason": "matched: are, commands, file, shell",
+      "bytes": 8212,
+      "estimated_tokens": 2053,
+      "imports": [],
+      "preview": "You are OpenCode, the best coding agent on the planet. You are an interactive CLI tool that helps users with software engineering tasks. Use the instructions below and the tools available to you to assist the user. IMPORTANT: You must NEVER"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/build-switch.txt",
+      "score": 5,
+      "matches": [
+        "are",
+        "commands",
+        "file",
+        "shell"
+      ],
+      "reason": "matched: are, commands, file, shell",
+      "bytes": 233,
+      "estimated_tokens": 58,
+      "imports": [],
+      "preview": "<system-reminder> Your operational mode has changed from plan to build. You are no longer in read-only mode. You are permitted to make file changes, run shell commands, and utilize your arsenal of tools as needed. </system-reminder>"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/kimi.txt",
+      "score": 5,
+      "matches": [
+        "are",
+        "commands",
+        "file",
+        "shell"
+      ],
+      "reason": "matched: are, commands, file, shell",
+      "bytes": 8695,
+      "estimated_tokens": 2170,
+      "imports": [],
+      "preview": "You are OpenCode, an interactive general AI agent running on a user's computer. Your primary goal is to help users with software engineering tasks by taking action \u2014 use the tools available to you to make real changes on the user's system. "
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/meta.txt",
+      "score": 5,
+      "matches": [
+        "are",
+        "commands",
+        "file",
+        "shell"
+      ],
+      "reason": "matched: are, commands, file, shell",
+      "bytes": 9159,
+      "estimated_tokens": 2280,
+      "imports": [],
+      "preview": "You are OpenCode, a coding agent that helps users with software engineering tasks. You are powered by {{MODEL_NAME}}, a large language model trained by Meta MSL. Use the instructions below and the tools available to assist the user. # Commu"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/plan.txt",
+      "score": 5,
+      "matches": [
+        "are",
+        "commands",
+        "edits",
+        "file"
+      ],
+      "reason": "matched: are, commands, edits, file",
+      "bytes": 1484,
+      "estimated_tokens": 371,
+      "imports": [],
+      "preview": "<system-reminder> # Plan Mode - System Reminder CRITICAL: Plan mode ACTIVE - you are in READ-ONLY phase. STRICTLY FORBIDDEN: ANY file edits, modifications, or system changes. Do NOT use sed, tee, echo, cat, or ANY other bash command to mani"
+    },
+    {
+      "path": "script/translate-app.md",
+      "score": 5,
+      "matches": [
+        "are",
+        "commands",
+        "file",
+        "shell"
+      ],
+      "reason": "matched: are, commands, file, shell",
+      "bytes": 2498,
+      "estimated_tokens": 624,
+      "imports": [],
+      "preview": "Translate the product app locale `$1` from the English source dictionaries. English is the read-only source of truth. Its copy is intentional and must never be modified, rewritten, or \"improved.\" The translation request below contains the l"
+    },
+    {
+      "path": "specs/v2/config.md",
+      "score": 5,
+      "matches": [
+        "are",
+        "commands",
+        "file",
+        "shell"
+      ],
+      "reason": "matched: are, commands, file, shell",
+      "bytes": 29396,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "# V2 Config Review This document breaks the legacy configuration schema into small review groups. Work through one group at a time and decide whether each field should be ported as-is, removed, or redesigned for v2. ## Status Labels - `pend"
+    },
+    {
+      "path": "specs/v2/schema-changelog.md",
+      "score": 5,
+      "matches": [
+        "approved",
+        "are",
+        "file",
+        "shell"
+      ],
+      "reason": "matched: approved, are, file, shell",
+      "bytes": 40158,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "# V2 Schema Changelog ## 2026-06-26: Add Finite Session History - Add `GET /api/session/:sessionID/history` and generated Promise, Effect, and legacy JavaScript client methods. - Page public durable Session events after an optional exclusiv"
+    },
+    {
+      "path": "specs/v2/todo.md",
+      "score": 5,
+      "matches": [
+        "are",
+        "commands",
+        "file",
+        "shell"
+      ],
+      "reason": "matched: are, commands, file, shell",
+      "bytes": 7057,
+      "estimated_tokens": 1764,
+      "imports": [],
+      "preview": "# TODO ok we need to work towards a launch of v2 so we can get out of this rebuild phase ## Post-Hono cleanup - Kit The opencode server has moved to the Effect HttpApi backend. Remaining work is mostly cleanup: delete compatibility shims, s"
+    },
+    {
+      "path": ".opencode/agent/triage.md",
+      "score": 4,
+      "matches": [
+        "are",
+        "file",
+        "shell"
+      ],
+      "reason": "matched: are, file, shell",
+      "bytes": 1411,
+      "estimated_tokens": 352,
+      "imports": [],
+      "preview": "--- mode: primary hidden: true model: opencode/gpt-6-luna color: \"#44BA81\" tools: \"*\": false \"github-triage\": true --- You are a triage agent responsible for triaging github issues. Use your github-triage tool to triage issues. This file is"
+    }
+  ],
+  "roles": {
+    "explore": {
+      "goal": "Trace implementation, agents, tools, commands, and permissions.",
+      "files": [
+        {
+          "path": ".opencode/agent/triage.md",
+          "score": 4,
+          "matches": [
+            "are",
+            "file",
+            "shell"
+          ],
+          "reason": "matched: are, file, shell",
+          "bytes": 1411,
+          "estimated_tokens": 352,
+          "imports": [],
+          "preview": "--- mode: primary hidden: true model: opencode/gpt-6-luna color: \"#44BA81\" tools: \"*\": false \"github-triage\": true --- You are a triage agent responsible for triaging github issues. Use your github-triage tool to triage issues. This file is"
+        }
+      ]
+    },
+    "scout": {
+      "goal": "Compare documentation and configuration with the implementation.",
+      "files": [
+        {
+          "path": "README.md",
+          "score": 5,
+          "matches": [
+            "are",
+            "commands",
+            "edits",
+            "file"
+          ],
+          "reason": "matched: are, commands, edits, file",
+          "bytes": 5402,
+          "estimated_tokens": 1329,
+          "imports": [],
+          "preview": "<p align=\"center\"> <a href=\"https://opencode.ai\"> <picture> <source srcset=\"packages/console/app/src/asset/logo-ornate-dark.svg\" media=\"(prefers-color-scheme: dark)\"> <source srcset=\"packages/console/app/src/asset/logo-ornate-light.svg\" med"
+        },
+        {
+          "path": "specs/v2/config.md",
+          "score": 5,
+          "matches": [
+            "are",
+            "commands",
+            "file",
+            "shell"
+          ],
+          "reason": "matched: are, commands, file, shell",
+          "bytes": 29396,
+          "estimated_tokens": 4000,
+          "imports": [],
+          "preview": "# V2 Config Review This document breaks the legacy configuration schema into small review groups. Work through one group at a time and decide whether each field should be ported as-is, removed, or redesigned for v2. ## Status Labels - `pend"
+        }
+      ]
+    },
+    "review": {
+      "goal": "Inspect tests, integrations, APIs, and supporting modules.",
+      "files": [
+        {
+          "path": "packages/opencode/src/session/prompt/codex.txt",
+          "score": 7,
+          "matches": [
+            "approved",
+            "are",
+            "commands",
+            "edits",
+            "file",
+            "shell"
+          ],
+          "reason": "matched: approved, are, commands, edits, file, shell",
+          "bytes": 7390,
+          "estimated_tokens": 1840,
+          "imports": [],
+          "preview": "You are OpenCode, the best coding agent on the planet. You are an interactive CLI tool that helps users with software engineering tasks. Use the instructions below and the tools available to you to assist the user. ## Editing constraints - "
+        },
+        {
+          "path": "packages/opencode/src/session/prompt/gpt.txt",
+          "score": 7,
+          "matches": [
+            "approved",
+            "are",
+            "commands",
+            "edits",
+            "file",
+            "shell"
+          ],
+          "reason": "matched: approved, are, commands, edits, file, shell",
+          "bytes": 9284,
+          "estimated_tokens": 2318,
+          "imports": [],
+          "preview": "You are OpenCode, You and the user share the same workspace and collaborate to achieve the user's goals. You are a deeply pragmatic, effective software engineer. You take engineering quality seriously, and collaboration comes through as dir"
+        },
+        {
+          "path": "packages/core/src/plugin/skill/customize-opencode.md",
+          "score": 6,
+          "matches": [
+            "are",
+            "commands",
+            "edits",
+            "file",
+            "shell"
+          ],
+          "reason": "matched: are, commands, edits, file, shell",
+          "bytes": 16072,
+          "estimated_tokens": 4000,
+          "imports": [
+            "import type { Plugin } from \"@opencode-ai/plugin\""
+          ],
+          "preview": "<!-- Built-in skill. Name and description are registered in code at packages/core/src/plugin/skill.ts and CUSTOMIZE_OPENCODE_SKILL_DESCRIPTION). The body below becomes the skill's content. --> # Customizing opencode opencode validates its o"
+        },
+        {
+          "path": "packages/opencode/src/session/prompt/gemini.txt",
+          "score": 6,
+          "matches": [
+            "approved",
+            "are",
+            "commands",
+            "file",
+            "shell"
+          ],
+          "reason": "matched: approved, are, commands, file, shell",
+          "bytes": 15372,
+          "estimated_tokens": 3843,
+          "imports": [],
+          "preview": "You are opencode, an interactive CLI agent specializing in software engineering tasks. Your primary goal is to help users safely and efficiently, adhering strictly to the following instructions and utilizing your available tools. # Core Man"
+        },
+        {
+          "path": "packages/opencode/src/session/prompt/gpt-astra.txt",
+          "score": 6,
+          "matches": [
+            "are",
+            "commands",
+            "edits",
+            "file",
+            "shell"
+          ],
+          "reason": "matched: are, commands, edits, file, shell",
+          "bytes": 4078,
+          "estimated_tokens": 1019,
+          "imports": [],
+          "preview": "You are an AI agent powered by OpenCode, a coding agent harness. Help the user accomplish their goals using the tools you have available. # Harness - Responses are rendered as GitHub-flavored Markdown. - `<system-reminder>` blocks are harne"
+        },
+        {
+          "path": ".github/workflows/docs-locale-sync.yml",
+          "score": 5,
+          "matches": [
+            "are",
+            "edits",
+            "file",
+            "shell"
+          ],
+          "reason": "matched: are, edits, file, shell",
+          "bytes": 3969,
+          "estimated_tokens": 992,
+          "imports": [],
+          "preview": "name: docs-locale-sync on: push: branches: - dev paths: - packages/web/src/content/docs/*.mdx jobs: sync-locales: if: false #if: github.actor != 'opencode-agent[bot]' runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: write steps:"
+        }
+      ]
+    }
+  },
+  "next_action": "Give each role its assigned evidence, collect findings, and compare overlap."
+}

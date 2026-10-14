@@ -1,0 +1,470 @@
+{
+  "question": "How are tool permissions and approvals enforced?",
+  "repository": "githubrepo_pulls/opencode",
+  "repository_summary": {
+    "candidate_files": 3950,
+    "selected_files": 20,
+    "broad_estimated_tokens": 10314702,
+    "focused_estimated_tokens": 41864,
+    "estimated_token_reduction_percent": 99.6
+  },
+  "selected_evidence": [
+    {
+      "path": "specs/v2/schema-changelog.md",
+      "score": 6,
+      "matches": [
+        "approvals",
+        "are",
+        "enforced",
+        "permissions",
+        "tool"
+      ],
+      "reason": "matched: approvals, are, enforced, permissions, tool",
+      "bytes": 40158,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "# V2 Schema Changelog ## 2026-06-26: Add Finite Session History - Add `GET /api/session/:sessionID/history` and generated Promise, Effect, and legacy JavaScript client methods. - Page public durable Session events after an optional exclusiv"
+    },
+    {
+      "path": "packages/llm/AGENTS.md",
+      "score": 5,
+      "matches": [
+        "are",
+        "enforced",
+        "permissions",
+        "tool"
+      ],
+      "reason": "matched: are, enforced, permissions, tool",
+      "bytes": 24684,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "# LLM Package Guide ## Effect - Prefer `HttpClient.HttpClient` / `HttpClientResponse.HttpClientResponse` over web `fetch` / `Response` at package boundaries. - Use `Stream.Stream` for streaming data flow. Avoid ad hoc async generators or ma"
+    },
+    {
+      "path": ".github/workflows/docs-locale-sync.yml",
+      "score": 4,
+      "matches": [
+        "are",
+        "permissions",
+        "tool"
+      ],
+      "reason": "matched: are, permissions, tool",
+      "bytes": 3969,
+      "estimated_tokens": 992,
+      "imports": [],
+      "preview": "name: docs-locale-sync on: push: branches: - dev paths: - packages/web/src/content/docs/*.mdx jobs: sync-locales: if: false #if: github.actor != 'opencode-agent[bot]' runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: write steps:"
+    },
+    {
+      "path": "AGENTS.md",
+      "score": 4,
+      "matches": [
+        "are",
+        "permissions",
+        "tool"
+      ],
+      "reason": "matched: are, permissions, tool",
+      "bytes": 8748,
+      "estimated_tokens": 2187,
+      "imports": [],
+      "preview": "- To regenerate the legacy JavaScript SDK, run `./packages/sdk/js/script/build.ts`. - After changing the public Protocol or Server `HttpApi`, run `bun run generate` from `packages/client`. Do not edit `src/generated` or `src/generated-effec"
+    },
+    {
+      "path": "packages/core/src/plugin/skill/customize-opencode.md",
+      "score": 4,
+      "matches": [
+        "are",
+        "permissions",
+        "tool"
+      ],
+      "reason": "matched: are, permissions, tool",
+      "bytes": 16072,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import type { Plugin } from \"@opencode-ai/plugin\""
+      ],
+      "preview": "<!-- Built-in skill. Name and description are registered in code at packages/core/src/plugin/skill.ts and CUSTOMIZE_OPENCODE_SKILL_DESCRIPTION). The body below becomes the skill's content. --> # Customizing opencode opencode validates its o"
+    },
+    {
+      "path": "packages/core/src/tool/AGENTS.md",
+      "score": 4,
+      "matches": [
+        "are",
+        "permissions",
+        "tool"
+      ],
+      "reason": "matched: are, permissions, tool",
+      "bytes": 3743,
+      "estimated_tokens": 935,
+      "imports": [],
+      "preview": "# Core Tool Architecture This folder owns Core's one local tool representation, process and Location registration, effective lookup, and settlement. ## Representations - `tool.ts` defines the opaque canonical `Tool.make({ description, input"
+    },
+    {
+      "path": "packages/llm/README.md",
+      "score": 4,
+      "matches": [
+        "are",
+        "enforced",
+        "tool"
+      ],
+      "reason": "matched: are, enforced, tool",
+      "bytes": 6806,
+      "estimated_tokens": 1692,
+      "imports": [
+        "import { Effect } from \"effect\"",
+        "import { LLM, LLMClient } from \"@opencode-ai/llm\"",
+        "import { OpenAI } from \"@opencode-ai/llm/providers\"",
+        "import { OpenAI, CloudflareAIGateway } from \"@opencode-ai/llm/providers\""
+      ],
+      "preview": "# @opencode-ai/llm Schema-first LLM core for opencode. One typed request, response, event, and tool language; provider quirks live in adapters, not in calling code. ```ts import { Effect } from \"effect\" import { LLM, LLMClient } from \"@open"
+    },
+    {
+      "path": "specs/v2/session.md",
+      "score": 4,
+      "matches": [
+        "are",
+        "permissions",
+        "tool"
+      ],
+      "reason": "matched: are, permissions, tool",
+      "bytes": 28965,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "# Session API ## Current V2 Core Slice The Effect-native core facade treats prompt recording and execution as separate responsibilities: ```text sessions.create({ id?, location, ... }) -> omitted ID generates one internal Session ID -> supp"
+    },
+    {
+      "path": ".github/workflows/docs-update.yml",
+      "score": 3,
+      "matches": [
+        "are",
+        "permissions"
+      ],
+      "reason": "matched: are, permissions",
+      "bytes": 2896,
+      "estimated_tokens": 724,
+      "imports": [],
+      "preview": "name: docs-update on: schedule: - cron: \"0 */12 * * *\" workflow_dispatch: env: LOOKBACK_HOURS: 4 jobs: update-docs: if: github.repository == 'sst/opencode' runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: id-token: write contents: write p"
+    },
+    {
+      "path": ".github/workflows/duplicate-issues.yml",
+      "score": 3,
+      "matches": [
+        "are",
+        "permissions"
+      ],
+      "reason": "matched: are, permissions",
+      "bytes": 9845,
+      "estimated_tokens": 2461,
+      "imports": [],
+      "preview": "name: duplicate-issues on: issues: types: [opened, edited] jobs: check-duplicates: if: github.event.action == 'opened' runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: read issues: write steps: - name: Checkout repository uses: "
+    },
+    {
+      "path": ".github/workflows/pr-standards.yml",
+      "score": 3,
+      "matches": [
+        "are",
+        "permissions"
+      ],
+      "reason": "matched: are, permissions",
+      "bytes": 14743,
+      "estimated_tokens": 3685,
+      "imports": [],
+      "preview": "name: pr-standards on: pull_request_target: types: [opened, edited, synchronize] jobs: check-standards: runs-on: ubuntu-latest permissions: contents: read pull-requests: write steps: - name: Check PR standards uses: actions/github-script@f2"
+    },
+    {
+      "path": ".github/workflows/review.yml",
+      "score": 3,
+      "matches": [
+        "are",
+        "permissions"
+      ],
+      "reason": "matched: are, permissions",
+      "bytes": 3993,
+      "estimated_tokens": 998,
+      "imports": [],
+      "preview": "name: review on: issue_comment: types: [created] jobs: check-guidelines: if: | github.event.issue.pull_request && startsWith(github.event.comment.body, '/review') && contains(fromJson('[\"OWNER\",\"MEMBER\"]'), github.event.comment.author_assoc"
+    },
+    {
+      "path": ".opencode/agent/duplicate-pr.md",
+      "score": 3,
+      "matches": [
+        "are",
+        "tool"
+      ],
+      "reason": "matched: are, tool",
+      "bytes": 924,
+      "estimated_tokens": 231,
+      "imports": [],
+      "preview": "--- mode: primary hidden: true model: opencode/claude-haiku-4-5 color: \"#E67E22\" tools: \"*\": false \"github-pr-search\": true --- You are a duplicate PR detection agent. When a PR is opened, your job is to search for potentially duplicate or "
+    },
+    {
+      "path": ".opencode/agent/triage.md",
+      "score": 3,
+      "matches": [
+        "are",
+        "tool"
+      ],
+      "reason": "matched: are, tool",
+      "bytes": 1411,
+      "estimated_tokens": 352,
+      "imports": [],
+      "preview": "--- mode: primary hidden: true model: opencode/gpt-6-luna color: \"#44BA81\" tools: \"*\": false \"github-triage\": true --- You are a triage agent responsible for triaging github issues. Use your github-triage tool to triage issues. This file is"
+    },
+    {
+      "path": ".opencode/command/learn.md",
+      "score": 3,
+      "matches": [
+        "are",
+        "tool"
+      ],
+      "reason": "matched: are, tool",
+      "bytes": 1628,
+      "estimated_tokens": 405,
+      "imports": [],
+      "preview": "--- description: Extract non-obvious learnings from session to AGENTS.md files to build codebase understanding --- Analyze this session and extract non-obvious learnings to add to AGENTS.md files. AGENTS.md files can exist at any directory "
+    },
+    {
+      "path": "CONTEXT.md",
+      "score": 3,
+      "matches": [
+        "are",
+        "tool"
+      ],
+      "reason": "matched: are, tool",
+      "bytes": 32094,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "# OpenCode Session Runtime OpenCode sessions preserve durable conversational history while assembling the runtime context an agent needs to act correctly in its current environment. ## Language **System Context**: The structured collection "
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "score": 3,
+      "matches": [
+        "are",
+        "enforced"
+      ],
+      "reason": "matched: are, enforced",
+      "bytes": 10347,
+      "estimated_tokens": 2585,
+      "imports": [],
+      "preview": "# Contributing to OpenCode We want to make it easy for you to contribute to OpenCode. Here are the most common type of changes that get merged: - Bug fixes - Additional LSPs / Formatters - Improvements to LLM performance - Support for new p"
+    },
+    {
+      "path": "packages/app/AGENTS.md",
+      "score": 3,
+      "matches": [
+        "are",
+        "tool"
+      ],
+      "reason": "matched: are, tool",
+      "bytes": 4570,
+      "estimated_tokens": 1141,
+      "imports": [],
+      "preview": "## Priorities - Prioritise, in this order: stability, simplicity, performance. - Before changing session or timeline code, record a production benchmark baseline and compare it after the change. ## Debugging - NEVER try to restart the app, "
+    },
+    {
+      "path": "packages/app/V1_API_MIGRATION.md",
+      "score": 3,
+      "matches": [
+        "are",
+        "permissions"
+      ],
+      "reason": "matched: are, permissions",
+      "bytes": 10763,
+      "estimated_tokens": 2690,
+      "imports": [],
+      "preview": "# V1 API Migration Checklist The app is currently hybrid. In this document, V1 refers to the legacy unprefixed server APIs used by `@opencode-ai/sdk/v2`, despite the SDK package name. ## Events - [x] Replace `GET /global/event` with `GET /a"
+    },
+    {
+      "path": "packages/codemode/AGENTS.md",
+      "score": 3,
+      "matches": [
+        "are",
+        "tool"
+      ],
+      "reason": "matched: are, tool",
+      "bytes": 3145,
+      "estimated_tokens": 786,
+      "imports": [],
+      "preview": "# @opencode-ai/codemode - This local package owns confined execution over explicit schema-described tools. Applications own authorization, persistence, external authority, and tool-specific delivery semantics. - Do not add a speculative gen"
+    }
+  ],
+  "roles": {
+    "explore": {
+      "goal": "Trace implementation, agents, tools, commands, and permissions.",
+      "files": [
+        {
+          "path": "packages/core/src/tool/AGENTS.md",
+          "score": 4,
+          "matches": [
+            "are",
+            "permissions",
+            "tool"
+          ],
+          "reason": "matched: are, permissions, tool",
+          "bytes": 3743,
+          "estimated_tokens": 935,
+          "imports": [],
+          "preview": "# Core Tool Architecture This folder owns Core's one local tool representation, process and Location registration, effective lookup, and settlement. ## Representations - `tool.ts` defines the opaque canonical `Tool.make({ description, input"
+        },
+        {
+          "path": ".opencode/agent/duplicate-pr.md",
+          "score": 3,
+          "matches": [
+            "are",
+            "tool"
+          ],
+          "reason": "matched: are, tool",
+          "bytes": 924,
+          "estimated_tokens": 231,
+          "imports": [],
+          "preview": "--- mode: primary hidden: true model: opencode/claude-haiku-4-5 color: \"#E67E22\" tools: \"*\": false \"github-pr-search\": true --- You are a duplicate PR detection agent. When a PR is opened, your job is to search for potentially duplicate or "
+        },
+        {
+          "path": ".opencode/agent/triage.md",
+          "score": 3,
+          "matches": [
+            "are",
+            "tool"
+          ],
+          "reason": "matched: are, tool",
+          "bytes": 1411,
+          "estimated_tokens": 352,
+          "imports": [],
+          "preview": "--- mode: primary hidden: true model: opencode/gpt-6-luna color: \"#44BA81\" tools: \"*\": false \"github-triage\": true --- You are a triage agent responsible for triaging github issues. Use your github-triage tool to triage issues. This file is"
+        },
+        {
+          "path": ".opencode/command/learn.md",
+          "score": 3,
+          "matches": [
+            "are",
+            "tool"
+          ],
+          "reason": "matched: are, tool",
+          "bytes": 1628,
+          "estimated_tokens": 405,
+          "imports": [],
+          "preview": "--- description: Extract non-obvious learnings from session to AGENTS.md files to build codebase understanding --- Analyze this session and extract non-obvious learnings to add to AGENTS.md files. AGENTS.md files can exist at any directory "
+        }
+      ]
+    },
+    "scout": {
+      "goal": "Compare documentation and configuration with the implementation.",
+      "files": [
+        {
+          "path": "packages/llm/README.md",
+          "score": 4,
+          "matches": [
+            "are",
+            "enforced",
+            "tool"
+          ],
+          "reason": "matched: are, enforced, tool",
+          "bytes": 6806,
+          "estimated_tokens": 1692,
+          "imports": [
+            "import { Effect } from \"effect\"",
+            "import { LLM, LLMClient } from \"@opencode-ai/llm\"",
+            "import { OpenAI } from \"@opencode-ai/llm/providers\"",
+            "import { OpenAI, CloudflareAIGateway } from \"@opencode-ai/llm/providers\""
+          ],
+          "preview": "# @opencode-ai/llm Schema-first LLM core for opencode. One typed request, response, event, and tool language; provider quirks live in adapters, not in calling code. ```ts import { Effect } from \"effect\" import { LLM, LLMClient } from \"@open"
+        }
+      ]
+    },
+    "review": {
+      "goal": "Inspect tests, integrations, APIs, and supporting modules.",
+      "files": [
+        {
+          "path": "specs/v2/schema-changelog.md",
+          "score": 6,
+          "matches": [
+            "approvals",
+            "are",
+            "enforced",
+            "permissions",
+            "tool"
+          ],
+          "reason": "matched: approvals, are, enforced, permissions, tool",
+          "bytes": 40158,
+          "estimated_tokens": 4000,
+          "imports": [],
+          "preview": "# V2 Schema Changelog ## 2026-06-26: Add Finite Session History - Add `GET /api/session/:sessionID/history` and generated Promise, Effect, and legacy JavaScript client methods. - Page public durable Session events after an optional exclusiv"
+        },
+        {
+          "path": "packages/llm/AGENTS.md",
+          "score": 5,
+          "matches": [
+            "are",
+            "enforced",
+            "permissions",
+            "tool"
+          ],
+          "reason": "matched: are, enforced, permissions, tool",
+          "bytes": 24684,
+          "estimated_tokens": 4000,
+          "imports": [],
+          "preview": "# LLM Package Guide ## Effect - Prefer `HttpClient.HttpClient` / `HttpClientResponse.HttpClientResponse` over web `fetch` / `Response` at package boundaries. - Use `Stream.Stream` for streaming data flow. Avoid ad hoc async generators or ma"
+        },
+        {
+          "path": ".github/workflows/docs-locale-sync.yml",
+          "score": 4,
+          "matches": [
+            "are",
+            "permissions",
+            "tool"
+          ],
+          "reason": "matched: are, permissions, tool",
+          "bytes": 3969,
+          "estimated_tokens": 992,
+          "imports": [],
+          "preview": "name: docs-locale-sync on: push: branches: - dev paths: - packages/web/src/content/docs/*.mdx jobs: sync-locales: if: false #if: github.actor != 'opencode-agent[bot]' runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: write steps:"
+        },
+        {
+          "path": "AGENTS.md",
+          "score": 4,
+          "matches": [
+            "are",
+            "permissions",
+            "tool"
+          ],
+          "reason": "matched: are, permissions, tool",
+          "bytes": 8748,
+          "estimated_tokens": 2187,
+          "imports": [],
+          "preview": "- To regenerate the legacy JavaScript SDK, run `./packages/sdk/js/script/build.ts`. - After changing the public Protocol or Server `HttpApi`, run `bun run generate` from `packages/client`. Do not edit `src/generated` or `src/generated-effec"
+        },
+        {
+          "path": "packages/core/src/plugin/skill/customize-opencode.md",
+          "score": 4,
+          "matches": [
+            "are",
+            "permissions",
+            "tool"
+          ],
+          "reason": "matched: are, permissions, tool",
+          "bytes": 16072,
+          "estimated_tokens": 4000,
+          "imports": [
+            "import type { Plugin } from \"@opencode-ai/plugin\""
+          ],
+          "preview": "<!-- Built-in skill. Name and description are registered in code at packages/core/src/plugin/skill.ts and CUSTOMIZE_OPENCODE_SKILL_DESCRIPTION). The body below becomes the skill's content. --> # Customizing opencode opencode validates its o"
+        },
+        {
+          "path": "specs/v2/session.md",
+          "score": 4,
+          "matches": [
+            "are",
+            "permissions",
+            "tool"
+          ],
+          "reason": "matched: are, permissions, tool",
+          "bytes": 28965,
+          "estimated_tokens": 4000,
+          "imports": [],
+          "preview": "# Session API ## Current V2 Core Slice The Effect-native core facade treats prompt recording and execution as separate responsibilities: ```text sessions.create({ id?, location, ... }) -> omitted ID generates one internal Session ID -> supp"
+        }
+      ]
+    }
+  },
+  "next_action": "Give each role its assigned evidence, collect findings, and compare overlap."
+}

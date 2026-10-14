@@ -1,0 +1,553 @@
+{
+  "question": "How does a user switch between Plan and Build modes?",
+  "repository": "githubrepo_pulls/opencode",
+  "repository_summary": {
+    "candidate_files": 3950,
+    "selected_files": 20,
+    "broad_estimated_tokens": 10314702,
+    "focused_estimated_tokens": 50555,
+    "estimated_token_reduction_percent": 99.5
+  },
+  "selected_evidence": [
+    {
+      "path": "README.md",
+      "score": 6,
+      "matches": [
+        "between",
+        "build",
+        "plan",
+        "switch",
+        "user"
+      ],
+      "reason": "matched: between, build, plan, switch, user",
+      "bytes": 5402,
+      "estimated_tokens": 1329,
+      "imports": [],
+      "preview": "<p align=\"center\"> <a href=\"https://opencode.ai\"> <picture> <source srcset=\"packages/console/app/src/asset/logo-ornate-dark.svg\" media=\"(prefers-color-scheme: dark)\"> <source srcset=\"packages/console/app/src/asset/logo-ornate-light.svg\" med"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/meta.txt",
+      "score": 6,
+      "matches": [
+        "between",
+        "build",
+        "plan",
+        "switch",
+        "user"
+      ],
+      "reason": "matched: between, build, plan, switch, user",
+      "bytes": 9159,
+      "estimated_tokens": 2280,
+      "imports": [],
+      "preview": "You are OpenCode, a coding agent that helps users with software engineering tasks. You are powered by {{MODEL_NAME}}, a large language model trained by Meta MSL. Use the instructions below and the tools available to assist the user. # Commu"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/anthropic.txt",
+      "score": 5,
+      "matches": [
+        "between",
+        "build",
+        "plan",
+        "user"
+      ],
+      "reason": "matched: between, build, plan, user",
+      "bytes": 8212,
+      "estimated_tokens": 2053,
+      "imports": [],
+      "preview": "You are OpenCode, the best coding agent on the planet. You are an interactive CLI tool that helps users with software engineering tasks. Use the instructions below and the tools available to you to assist the user. IMPORTANT: You must NEVER"
+    },
+    {
+      "path": "packages/opencode/src/tool/plan-exit.txt",
+      "score": 5,
+      "matches": [
+        "build",
+        "plan",
+        "switch",
+        "user"
+      ],
+      "reason": "matched: build, plan, switch, user",
+      "bytes": 579,
+      "estimated_tokens": 144,
+      "imports": [],
+      "preview": "Use this tool when you have completed the planning phase and are ready to exit plan agent. This tool will ask the user if they want to switch to build agent to start implementing the plan. Call this tool: - After you have written a complete"
+    },
+    {
+      "path": "packages/plugin/src/v2/effect/PLAN.md",
+      "score": 5,
+      "matches": [
+        "between",
+        "build",
+        "plan",
+        "user"
+      ],
+      "reason": "matched: between, build, plan, user",
+      "bytes": 15875,
+      "estimated_tokens": 3962,
+      "imports": [],
+      "preview": "# V2 Plugin System Implementation Plan ## Status This document describes the agreed target design for the V2 plugin system. It is an implementation plan, not documentation for the current API. ## Goals - Internal and external plugins use th"
+    },
+    {
+      "path": "packages/tui/src/feature-plugins/home/tips-view.tsx",
+      "score": 5,
+      "matches": [
+        "between",
+        "build",
+        "modes",
+        "plan",
+        "switch"
+      ],
+      "reason": "matched: between, build, modes, plan, switch",
+      "bytes": 16097,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import type { TuiPluginApi } from \"@opencode-ai/plugin/tui\"",
+        "import { createMemo, For, type Accessor } from \"solid-js\"",
+        "import { DEFAULT_THEMES, useTheme } from \"../../context/theme\"",
+        "import { useCommandShortcut } from \"../../keymap\""
+      ],
+      "preview": "import type { TuiPluginApi } from \"@opencode-ai/plugin/tui\" import { createMemo, For, type Accessor } from \"solid-js\" import { DEFAULT_THEMES, useTheme } from \"../../context/theme\" import { useCommandShortcut } from \"../../keymap\" const the"
+    },
+    {
+      "path": "packages/core/src/plugin/skill/customize-opencode.md",
+      "score": 4,
+      "matches": [
+        "build",
+        "plan",
+        "user"
+      ],
+      "reason": "matched: build, plan, user",
+      "bytes": 16072,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import type { Plugin } from \"@opencode-ai/plugin\""
+      ],
+      "preview": "<!-- Built-in skill. Name and description are registered in code at packages/core/src/plugin/skill.ts and CUSTOMIZE_OPENCODE_SKILL_DESCRIPTION). The body below becomes the skill's content. --> # Customizing opencode opencode validates its o"
+    },
+    {
+      "path": "packages/core/test/session-create.test.ts",
+      "score": 4,
+      "matches": [
+        "build",
+        "plan",
+        "switch",
+        "user"
+      ],
+      "reason": "matched: build, plan, switch, user",
+      "bytes": 16418,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import { describe, expect } from \"bun:test\"",
+        "import path from \"path\"",
+        "import { Effect, Layer, Stream } from \"effect\"",
+        "import { AgentV2 } from \"@opencode-ai/core/agent\"",
+        "import { asc, eq } from \"drizzle-orm\"",
+        "import { Database } from \"@opencode-ai/core/database/database\"",
+        "import { AppNodeBuilder } from \"@opencode-ai/core/effect/app-node-builder\"",
+        "import { LayerNode } from \"@opencode-ai/core/effect/layer-node\"",
+        "import { EventV2 } from \"@opencode-ai/core/event\"",
+        "import { EventTable } from \"@opencode-ai/core/event/sql\""
+      ],
+      "preview": "import { describe, expect } from \"bun:test\" import path from \"path\" import { Effect, Layer, Stream } from \"effect\" import { AgentV2 } from \"@opencode-ai/core/agent\" import { asc, eq } from \"drizzle-orm\" import { Database } from \"@opencode-a"
+    },
+    {
+      "path": "packages/llm/DESIGN.md",
+      "score": 4,
+      "matches": [
+        "between",
+        "switch",
+        "user"
+      ],
+      "reason": "matched: between, switch, user",
+      "bytes": 33051,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import { Effect } from \"effect\"",
+        "import { LLM } from \"@opencode-ai/ai\"",
+        "import { OpenAI } from \"@opencode-ai/ai/providers/openai\"",
+        "import { OpenAI } from \"@opencode-ai/ai/providers/openai\"",
+        "import { Message } from \"@opencode-ai/ai\"",
+        "import { Effect, Schema } from \"effect\"",
+        "import { LLM, Tool } from \"@opencode-ai/ai\""
+      ],
+      "preview": "# AI Library Design > Discussion draft. This document describes the intended replacement for the > current private `@opencode-ai/llm` API. Names and exact TypeScript signatures > are illustrative until implementation, but the domain boundar"
+    },
+    {
+      "path": "packages/opencode/specs/effect/error-boundaries-plan.md",
+      "score": 4,
+      "matches": [
+        "build",
+        "plan",
+        "user"
+      ],
+      "reason": "matched: build, plan, user",
+      "bytes": 7283,
+      "estimated_tokens": 1813,
+      "imports": [],
+      "preview": "# Error Boundaries Plan Plan for removing `NamedError` as connective tissue while keeping public wire contracts stable. ## Desired Shape ```text Domain/service error Schema.TaggedErrorClass - catchable with catchTag / catchTags - appears in"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/copilot-gpt-5.txt",
+      "score": 4,
+      "matches": [
+        "build",
+        "plan",
+        "user"
+      ],
+      "reason": "matched: build, plan, user",
+      "bytes": 14241,
+      "estimated_tokens": 3558,
+      "imports": [],
+      "preview": "You are an expert AI programming assistant Your name is opencode Keep your answers short and impersonal. <gptAgentInstructions> You are a highly sophisticated coding agent with expert-level knowledge across programming languages and framewo"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/gemini.txt",
+      "score": 4,
+      "matches": [
+        "build",
+        "plan",
+        "user"
+      ],
+      "reason": "matched: build, plan, user",
+      "bytes": 15372,
+      "estimated_tokens": 3843,
+      "imports": [],
+      "preview": "You are opencode, an interactive CLI agent specializing in software engineering tasks. Your primary goal is to help users safely and efficiently, adhering strictly to the following instructions and utilizing your available tools. # Core Man"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/gpt.txt",
+      "score": 4,
+      "matches": [
+        "build",
+        "plan",
+        "user"
+      ],
+      "reason": "matched: build, plan, user",
+      "bytes": 9284,
+      "estimated_tokens": 2318,
+      "imports": [],
+      "preview": "You are OpenCode, You and the user share the same workspace and collaborate to achieve the user's goals. You are a deeply pragmatic, effective software engineer. You take engineering quality seriously, and collaboration comes through as dir"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/kimi.txt",
+      "score": 4,
+      "matches": [
+        "build",
+        "plan",
+        "user"
+      ],
+      "reason": "matched: build, plan, user",
+      "bytes": 8695,
+      "estimated_tokens": 2170,
+      "imports": [],
+      "preview": "You are OpenCode, an interactive general AI agent running on a user's computer. Your primary goal is to help users with software engineering tasks by taking action \u2014 use the tools available to you to make real changes on the user's system. "
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/plan-mode.txt",
+      "score": 4,
+      "matches": [
+        "build",
+        "plan",
+        "user"
+      ],
+      "reason": "matched: build, plan, user",
+      "bytes": 4547,
+      "estimated_tokens": 1136,
+      "imports": [],
+      "preview": "<system-reminder> Plan mode is active. The user indicated that they do not want you to execute yet -- you MUST NOT make any edits (with the exception of the plan file mentioned below), run any non-readonly tools (including changing configs "
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/plan-reminder-anthropic.txt",
+      "score": 4,
+      "matches": [
+        "build",
+        "plan",
+        "user"
+      ],
+      "reason": "matched: build, plan, user",
+      "bytes": 4056,
+      "estimated_tokens": 1014,
+      "imports": [],
+      "preview": "<system-reminder> # Plan Mode - System Reminder Plan mode is active. The user indicated that they do not want you to execute yet -- you MUST NOT make any edits (with the exception of the plan file mentioned below), run any non-readonly tool"
+    },
+    {
+      "path": "packages/opencode/src/tool/plan-enter.txt",
+      "score": 4,
+      "matches": [
+        "plan",
+        "switch",
+        "user"
+      ],
+      "reason": "matched: plan, switch, user",
+      "bytes": 613,
+      "estimated_tokens": 153,
+      "imports": [],
+      "preview": "Use this tool to suggest switching to plan agent when the user's request would benefit from planning before implementation. If they explicitly mention wanting to create a plan ALWAYS call this tool first. This tool will ask the user if they"
+    },
+    {
+      "path": "packages/opencode/src/tool/plan.ts",
+      "score": 4,
+      "matches": [
+        "build",
+        "plan",
+        "switch",
+        "user"
+      ],
+      "reason": "matched: build, plan, switch, user",
+      "bytes": 3131,
+      "estimated_tokens": 782,
+      "imports": [
+        "import path from \"path\"",
+        "import { SessionV1 } from \"@opencode-ai/core/v1/session\"",
+        "import { Effect, Schema } from \"effect\"",
+        "import * as Tool from \"./tool\"",
+        "import { Question } from \"../question\"",
+        "import { Session } from \"@/session/session\"",
+        "import { MessageV2 } from \"../session/message-v2\"",
+        "import { Provider } from \"@/provider/provider\"",
+        "import { InstanceState } from \"@/effect/instance-state\"",
+        "import { MessageID, PartID } from \"../session/schema\""
+      ],
+      "preview": "import path from \"path\" import { SessionV1 } from \"@opencode-ai/core/v1/session\" import { Effect, Schema } from \"effect\" import * as Tool from \"./tool\" import { Question } from \"../question\" import { Session } from \"@/session/session\" impor"
+    },
+    {
+      "path": "packages/opencode/test/cli/run/session-replay.test.ts",
+      "score": 4,
+      "matches": [
+        "between",
+        "build",
+        "plan",
+        "user"
+      ],
+      "reason": "matched: between, build, plan, user",
+      "bytes": 16211,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import { describe, expect, test } from \"bun:test\"",
+        "import { replayLocalRows, replaySession } from \"@/cli/cmd/run/session-replay\"",
+        "import type { SessionMessages } from \"@/cli/cmd/run/session.shared\"",
+        "import type { RunProvider } from \"@/cli/cmd/run/types\""
+      ],
+      "preview": "import { describe, expect, test } from \"bun:test\" import { replayLocalRows, replaySession } from \"@/cli/cmd/run/session-replay\" import type { SessionMessages } from \"@/cli/cmd/run/session.shared\" import type { RunProvider } from \"@/cli/cmd/"
+    },
+    {
+      "path": "packages/session-ui/src/components/timeline-playground.stories.tsx",
+      "score": 4,
+      "matches": [
+        "between",
+        "build",
+        "plan",
+        "user"
+      ],
+      "reason": "matched: between, build, plan, user",
+      "bytes": 67207,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import { createSignal, createMemo, createEffect, on, For, Show, batch } from \"solid-js\"",
+        "import { createStore, produce } from \"solid-js/store\"",
+        "import type {",
+        "import { DataProvider } from \"../context/data\"",
+        "import { FileComponentProvider } from \"@opencode-ai/ui/context/file\"",
+        "import { SessionTurn } from \"./session-turn\""
+      ],
+      "preview": "// @ts-nocheck import { createSignal, createMemo, createEffect, on, For, Show, batch } from \"solid-js\" import { createStore, produce } from \"solid-js/store\" import type { Message, UserMessage, AssistantMessage, Part, TextPart, ReasoningPart"
+    }
+  ],
+  "roles": {
+    "explore": {
+      "goal": "Trace implementation, agents, tools, commands, and permissions.",
+      "files": [
+        {
+          "path": "packages/opencode/src/tool/plan-exit.txt",
+          "score": 5,
+          "matches": [
+            "build",
+            "plan",
+            "switch",
+            "user"
+          ],
+          "reason": "matched: build, plan, switch, user",
+          "bytes": 579,
+          "estimated_tokens": 144,
+          "imports": [],
+          "preview": "Use this tool when you have completed the planning phase and are ready to exit plan agent. This tool will ask the user if they want to switch to build agent to start implementing the plan. Call this tool: - After you have written a complete"
+        },
+        {
+          "path": "packages/opencode/src/tool/plan-enter.txt",
+          "score": 4,
+          "matches": [
+            "plan",
+            "switch",
+            "user"
+          ],
+          "reason": "matched: plan, switch, user",
+          "bytes": 613,
+          "estimated_tokens": 153,
+          "imports": [],
+          "preview": "Use this tool to suggest switching to plan agent when the user's request would benefit from planning before implementation. If they explicitly mention wanting to create a plan ALWAYS call this tool first. This tool will ask the user if they"
+        },
+        {
+          "path": "packages/opencode/src/tool/plan.ts",
+          "score": 4,
+          "matches": [
+            "build",
+            "plan",
+            "switch",
+            "user"
+          ],
+          "reason": "matched: build, plan, switch, user",
+          "bytes": 3131,
+          "estimated_tokens": 782,
+          "imports": [
+            "import path from \"path\"",
+            "import { SessionV1 } from \"@opencode-ai/core/v1/session\"",
+            "import { Effect, Schema } from \"effect\"",
+            "import * as Tool from \"./tool\"",
+            "import { Question } from \"../question\"",
+            "import { Session } from \"@/session/session\"",
+            "import { MessageV2 } from \"../session/message-v2\"",
+            "import { Provider } from \"@/provider/provider\"",
+            "import { InstanceState } from \"@/effect/instance-state\"",
+            "import { MessageID, PartID } from \"../session/schema\""
+          ],
+          "preview": "import path from \"path\" import { SessionV1 } from \"@opencode-ai/core/v1/session\" import { Effect, Schema } from \"effect\" import * as Tool from \"./tool\" import { Question } from \"../question\" import { Session } from \"@/session/session\" impor"
+        }
+      ]
+    },
+    "scout": {
+      "goal": "Compare documentation and configuration with the implementation.",
+      "files": [
+        {
+          "path": "README.md",
+          "score": 6,
+          "matches": [
+            "between",
+            "build",
+            "plan",
+            "switch",
+            "user"
+          ],
+          "reason": "matched: between, build, plan, switch, user",
+          "bytes": 5402,
+          "estimated_tokens": 1329,
+          "imports": [],
+          "preview": "<p align=\"center\"> <a href=\"https://opencode.ai\"> <picture> <source srcset=\"packages/console/app/src/asset/logo-ornate-dark.svg\" media=\"(prefers-color-scheme: dark)\"> <source srcset=\"packages/console/app/src/asset/logo-ornate-light.svg\" med"
+        }
+      ]
+    },
+    "review": {
+      "goal": "Inspect tests, integrations, APIs, and supporting modules.",
+      "files": [
+        {
+          "path": "packages/opencode/src/session/prompt/meta.txt",
+          "score": 6,
+          "matches": [
+            "between",
+            "build",
+            "plan",
+            "switch",
+            "user"
+          ],
+          "reason": "matched: between, build, plan, switch, user",
+          "bytes": 9159,
+          "estimated_tokens": 2280,
+          "imports": [],
+          "preview": "You are OpenCode, a coding agent that helps users with software engineering tasks. You are powered by {{MODEL_NAME}}, a large language model trained by Meta MSL. Use the instructions below and the tools available to assist the user. # Commu"
+        },
+        {
+          "path": "packages/opencode/src/session/prompt/anthropic.txt",
+          "score": 5,
+          "matches": [
+            "between",
+            "build",
+            "plan",
+            "user"
+          ],
+          "reason": "matched: between, build, plan, user",
+          "bytes": 8212,
+          "estimated_tokens": 2053,
+          "imports": [],
+          "preview": "You are OpenCode, the best coding agent on the planet. You are an interactive CLI tool that helps users with software engineering tasks. Use the instructions below and the tools available to you to assist the user. IMPORTANT: You must NEVER"
+        },
+        {
+          "path": "packages/plugin/src/v2/effect/PLAN.md",
+          "score": 5,
+          "matches": [
+            "between",
+            "build",
+            "plan",
+            "user"
+          ],
+          "reason": "matched: between, build, plan, user",
+          "bytes": 15875,
+          "estimated_tokens": 3962,
+          "imports": [],
+          "preview": "# V2 Plugin System Implementation Plan ## Status This document describes the agreed target design for the V2 plugin system. It is an implementation plan, not documentation for the current API. ## Goals - Internal and external plugins use th"
+        },
+        {
+          "path": "packages/tui/src/feature-plugins/home/tips-view.tsx",
+          "score": 5,
+          "matches": [
+            "between",
+            "build",
+            "modes",
+            "plan",
+            "switch"
+          ],
+          "reason": "matched: between, build, modes, plan, switch",
+          "bytes": 16097,
+          "estimated_tokens": 4000,
+          "imports": [
+            "import type { TuiPluginApi } from \"@opencode-ai/plugin/tui\"",
+            "import { createMemo, For, type Accessor } from \"solid-js\"",
+            "import { DEFAULT_THEMES, useTheme } from \"../../context/theme\"",
+            "import { useCommandShortcut } from \"../../keymap\""
+          ],
+          "preview": "import type { TuiPluginApi } from \"@opencode-ai/plugin/tui\" import { createMemo, For, type Accessor } from \"solid-js\" import { DEFAULT_THEMES, useTheme } from \"../../context/theme\" import { useCommandShortcut } from \"../../keymap\" const the"
+        },
+        {
+          "path": "packages/core/src/plugin/skill/customize-opencode.md",
+          "score": 4,
+          "matches": [
+            "build",
+            "plan",
+            "user"
+          ],
+          "reason": "matched: build, plan, user",
+          "bytes": 16072,
+          "estimated_tokens": 4000,
+          "imports": [
+            "import type { Plugin } from \"@opencode-ai/plugin\""
+          ],
+          "preview": "<!-- Built-in skill. Name and description are registered in code at packages/core/src/plugin/skill.ts and CUSTOMIZE_OPENCODE_SKILL_DESCRIPTION). The body below becomes the skill's content. --> # Customizing opencode opencode validates its o"
+        },
+        {
+          "path": "packages/core/test/session-create.test.ts",
+          "score": 4,
+          "matches": [
+            "build",
+            "plan",
+            "switch",
+            "user"
+          ],
+          "reason": "matched: build, plan, switch, user",
+          "bytes": 16418,
+          "estimated_tokens": 4000,
+          "imports": [
+            "import { describe, expect } from \"bun:test\"",
+            "import path from \"path\"",
+            "import { Effect, Layer, Stream } from \"effect\"",
+            "import { AgentV2 } from \"@opencode-ai/core/agent\"",
+            "import { asc, eq } from \"drizzle-orm\"",
+            "import { Database } from \"@opencode-ai/core/database/database\"",
+            "import { AppNodeBuilder } from \"@opencode-ai/core/effect/app-node-builder\"",
+            "import { LayerNode } from \"@opencode-ai/core/effect/layer-node\"",
+            "import { EventV2 } from \"@opencode-ai/core/event\"",
+            "import { EventTable } from \"@opencode-ai/core/event/sql\""
+          ],
+          "preview": "import { describe, expect } from \"bun:test\" import path from \"path\" import { Effect, Layer, Stream } from \"effect\" import { AgentV2 } from \"@opencode-ai/core/agent\" import { asc, eq } from \"drizzle-orm\" import { Database } from \"@opencode-a"
+        }
+      ]
+    }
+  },
+  "next_action": "Give each role its assigned evidence, collect findings, and compare overlap."
+}

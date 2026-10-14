@@ -1,0 +1,553 @@
+{
+  "question": "How are primary agents and subagents defined?",
+  "repository": "githubrepo_pulls/opencode",
+  "repository_summary": {
+    "candidate_files": 3950,
+    "selected_files": 20,
+    "broad_estimated_tokens": 10314702,
+    "focused_estimated_tokens": 39700,
+    "estimated_token_reduction_percent": 99.6
+  },
+  "selected_evidence": [
+    {
+      "path": ".github/workflows/docs-locale-sync.yml",
+      "score": 5,
+      "matches": [
+        "are",
+        "defined",
+        "primary",
+        "subagents"
+      ],
+      "reason": "matched: are, defined, primary, subagents",
+      "bytes": 3969,
+      "estimated_tokens": 992,
+      "imports": [],
+      "preview": "name: docs-locale-sync on: push: branches: - dev paths: - packages/web/src/content/docs/*.mdx jobs: sync-locales: if: false #if: github.actor != 'opencode-agent[bot]' runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: write steps:"
+    },
+    {
+      "path": "packages/opencode/test/agent/agent.test.ts",
+      "score": 5,
+      "matches": [
+        "agents",
+        "are",
+        "defined",
+        "primary",
+        "subagents"
+      ],
+      "reason": "matched: agents, are, defined, primary, subagents",
+      "bytes": 20609,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import { afterEach, expect } from \"bun:test\"",
+        "import { LayerNode } from \"@opencode-ai/core/effect/layer-node\"",
+        "import { Cause, Effect, Exit, Layer } from \"effect\"",
+        "import path from \"path\"",
+        "import { disposeAllInstances, TestInstance } from \"../fixture/fixture\"",
+        "import { testEffect } from \"../lib/effect\"",
+        "import { Agent } from \"../../src/agent/agent\"",
+        "import { Auth } from \"../../src/auth\"",
+        "import { Config } from \"../../src/config/config\"",
+        "import { RuntimeFlags } from \"../../src/effect/runtime-flags\""
+      ],
+      "preview": "import { afterEach, expect } from \"bun:test\" import { LayerNode } from \"@opencode-ai/core/effect/layer-node\" import { Cause, Effect, Exit, Layer } from \"effect\" import path from \"path\" import { disposeAllInstances, TestInstance } from \"../f"
+    },
+    {
+      "path": "packages/core/src/plugin/command/review.txt",
+      "score": 4,
+      "matches": [
+        "agents",
+        "are",
+        "primary"
+      ],
+      "reason": "matched: agents, are, primary",
+      "bytes": 4550,
+      "estimated_tokens": 1136,
+      "imports": [],
+      "preview": "You are a code reviewer. Your job is to review code changes and provide actionable feedback. --- Input: $ARGUMENTS --- ## Determining What to Review Based on the input provided, determine which type of review to perform: 1. **No arguments ("
+    },
+    {
+      "path": "packages/core/src/plugin/skill/customize-opencode.md",
+      "score": 4,
+      "matches": [
+        "agents",
+        "are",
+        "primary"
+      ],
+      "reason": "matched: agents, are, primary",
+      "bytes": 16072,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import type { Plugin } from \"@opencode-ai/plugin\""
+      ],
+      "preview": "<!-- Built-in skill. Name and description are registered in code at packages/core/src/plugin/skill.ts and CUSTOMIZE_OPENCODE_SKILL_DESCRIPTION). The body below becomes the skill's content. --> # Customizing opencode opencode validates its o"
+    },
+    {
+      "path": "packages/core/src/v1/config/config.ts",
+      "score": 4,
+      "matches": [
+        "agents",
+        "are",
+        "primary",
+        "subagents"
+      ],
+      "reason": "matched: agents, are, primary, subagents",
+      "bytes": 9934,
+      "estimated_tokens": 2483,
+      "imports": [
+        "import { Schema } from \"effect\"",
+        "import { NonNegativeInt, PositiveInt, type DeepMutable } from \"../../schema\"",
+        "import { ConfigExperimental } from \"../../config/experimental\"",
+        "import { ConfigReference } from \"../../config/reference\"",
+        "import { ConfigAgentV1 } from \"./agent\"",
+        "import { ConfigAttachmentV1 } from \"./attachment\"",
+        "import { ConfigCommandV1 } from \"./command\"",
+        "import { ConfigFormatterV1 } from \"./formatter\"",
+        "import { ConfigLayoutV1 } from \"./layout\"",
+        "import { ConfigLSPV1 } from \"./lsp\""
+      ],
+      "preview": "export * as ConfigV1 from \"./config\" import { Schema } from \"effect\" import { NonNegativeInt, PositiveInt, type DeepMutable } from \"../../schema\" import { ConfigExperimental } from \"../../config/experimental\" import { ConfigReference } from"
+    },
+    {
+      "path": "packages/llm/AGENTS.md",
+      "score": 4,
+      "matches": [
+        "agents",
+        "are",
+        "primary"
+      ],
+      "reason": "matched: agents, are, primary",
+      "bytes": 24684,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "# LLM Package Guide ## Effect - Prefer `HttpClient.HttpClient` / `HttpClientResponse.HttpClientResponse` over web `fetch` / `Response` at package boundaries. - Use `Stream.Stream` for streaming data flow. Avoid ad hoc async generators or ma"
+    },
+    {
+      "path": "packages/opencode/src/agent/generate.txt",
+      "score": 4,
+      "matches": [
+        "agents",
+        "are",
+        "primary"
+      ],
+      "reason": "matched: agents, are, primary",
+      "bytes": 4994,
+      "estimated_tokens": 1248,
+      "imports": [],
+      "preview": "You are an elite AI agent architect specializing in crafting high-performance agent configurations. Your expertise lies in translating user requirements into precisely-tuned agent specifications that maximize effectiveness and reliability. "
+    },
+    {
+      "path": "packages/opencode/src/command/template/review.txt",
+      "score": 4,
+      "matches": [
+        "agents",
+        "are",
+        "primary"
+      ],
+      "reason": "matched: agents, are, primary",
+      "bytes": 4707,
+      "estimated_tokens": 1176,
+      "imports": [],
+      "preview": "You are a code reviewer. Your job is to review code changes and provide actionable feedback. --- Input: $ARGUMENTS --- ## Determining What to Review Based on the input provided, determine which type of review to perform: 1. **No arguments ("
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/default.txt",
+      "score": 4,
+      "matches": [
+        "agents",
+        "are",
+        "defined"
+      ],
+      "reason": "matched: agents, are, defined",
+      "bytes": 8528,
+      "estimated_tokens": 2132,
+      "imports": [],
+      "preview": "You are opencode, an interactive CLI tool that helps users with software engineering tasks. Use the instructions below and the tools available to you to assist the user. IMPORTANT: You must NEVER generate or guess URLs for the user unless y"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/gpt-astra.txt",
+      "score": 4,
+      "matches": [
+        "agents",
+        "are",
+        "subagents"
+      ],
+      "reason": "matched: agents, are, subagents",
+      "bytes": 4078,
+      "estimated_tokens": 1019,
+      "imports": [],
+      "preview": "You are an AI agent powered by OpenCode, a coding agent harness. Help the user accomplish their goals using the tools you have available. # Harness - Responses are rendered as GitHub-flavored Markdown. - `<system-reminder>` blocks are harne"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/gpt.txt",
+      "score": 4,
+      "matches": [
+        "agents",
+        "are",
+        "primary"
+      ],
+      "reason": "matched: agents, are, primary",
+      "bytes": 9284,
+      "estimated_tokens": 2318,
+      "imports": [],
+      "preview": "You are OpenCode, You and the user share the same workspace and collaborate to achieve the user's goals. You are a deeply pragmatic, effective software engineer. You take engineering quality seriously, and collaboration comes through as dir"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/kimi.txt",
+      "score": 4,
+      "matches": [
+        "agents",
+        "are",
+        "primary"
+      ],
+      "reason": "matched: agents, are, primary",
+      "bytes": 8695,
+      "estimated_tokens": 2170,
+      "imports": [],
+      "preview": "You are OpenCode, an interactive general AI agent running on a user's computer. Your primary goal is to help users with software engineering tasks by taking action \u2014 use the tools available to you to make real changes on the user's system. "
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/trinity.txt",
+      "score": 4,
+      "matches": [
+        "agents",
+        "are",
+        "defined"
+      ],
+      "reason": "matched: agents, are, defined",
+      "bytes": 7748,
+      "estimated_tokens": 1937,
+      "imports": [],
+      "preview": "You are opencode, an interactive CLI tool that helps users with software engineering tasks. Use the instructions below and the tools available to you to assist the user. # Tone and style You should be concise, direct, and to the point. When"
+    },
+    {
+      "path": ".opencode/agent/duplicate-pr.md",
+      "score": 3,
+      "matches": [
+        "are",
+        "primary"
+      ],
+      "reason": "matched: are, primary",
+      "bytes": 924,
+      "estimated_tokens": 231,
+      "imports": [],
+      "preview": "--- mode: primary hidden: true model: opencode/claude-haiku-4-5 color: \"#E67E22\" tools: \"*\": false \"github-pr-search\": true --- You are a duplicate PR detection agent. When a PR is opened, your job is to search for potentially duplicate or "
+    },
+    {
+      "path": ".opencode/agent/triage.md",
+      "score": 3,
+      "matches": [
+        "are",
+        "primary"
+      ],
+      "reason": "matched: are, primary",
+      "bytes": 1411,
+      "estimated_tokens": 352,
+      "imports": [],
+      "preview": "--- mode: primary hidden: true model: opencode/gpt-6-luna color: \"#44BA81\" tools: \"*\": false \"github-triage\": true --- You are a triage agent responsible for triaging github issues. Use your github-triage tool to triage issues. This file is"
+    },
+    {
+      "path": ".opencode/command/learn.md",
+      "score": 3,
+      "matches": [
+        "agents",
+        "are"
+      ],
+      "reason": "matched: agents, are",
+      "bytes": 1628,
+      "estimated_tokens": 405,
+      "imports": [],
+      "preview": "--- description: Extract non-obvious learnings from session to AGENTS.md files to build codebase understanding --- Analyze this session and extract non-obvious learnings to add to AGENTS.md files. AGENTS.md files can exist at any directory "
+    },
+    {
+      "path": "AGENTS.md",
+      "score": 3,
+      "matches": [
+        "agents",
+        "are"
+      ],
+      "reason": "matched: agents, are",
+      "bytes": 8748,
+      "estimated_tokens": 2187,
+      "imports": [],
+      "preview": "- To regenerate the legacy JavaScript SDK, run `./packages/sdk/js/script/build.ts`. - After changing the public Protocol or Server `HttpApi`, run `bun run generate` from `packages/client`. Do not edit `src/generated` or `src/generated-effec"
+    },
+    {
+      "path": "CONTEXT.md",
+      "score": 3,
+      "matches": [
+        "agents",
+        "are"
+      ],
+      "reason": "matched: agents, are",
+      "bytes": 32094,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "# OpenCode Session Runtime OpenCode sessions preserve durable conversational history while assembling the runtime context an agent needs to act correctly in its current environment. ## Language **System Context**: The structured collection "
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "score": 3,
+      "matches": [
+        "agents",
+        "are"
+      ],
+      "reason": "matched: agents, are",
+      "bytes": 10347,
+      "estimated_tokens": 2585,
+      "imports": [],
+      "preview": "# Contributing to OpenCode We want to make it easy for you to contribute to OpenCode. Here are the most common type of changes that get merged: - Bug fixes - Additional LSPs / Formatters - Improvements to LLM performance - Support for new p"
+    },
+    {
+      "path": "README.md",
+      "score": 3,
+      "matches": [
+        "agents",
+        "are"
+      ],
+      "reason": "matched: agents, are",
+      "bytes": 5402,
+      "estimated_tokens": 1329,
+      "imports": [],
+      "preview": "<p align=\"center\"> <a href=\"https://opencode.ai\"> <picture> <source srcset=\"packages/console/app/src/asset/logo-ornate-dark.svg\" media=\"(prefers-color-scheme: dark)\"> <source srcset=\"packages/console/app/src/asset/logo-ornate-light.svg\" med"
+    }
+  ],
+  "roles": {
+    "explore": {
+      "goal": "Trace implementation, agents, tools, commands, and permissions.",
+      "files": [
+        {
+          "path": "packages/opencode/test/agent/agent.test.ts",
+          "score": 5,
+          "matches": [
+            "agents",
+            "are",
+            "defined",
+            "primary",
+            "subagents"
+          ],
+          "reason": "matched: agents, are, defined, primary, subagents",
+          "bytes": 20609,
+          "estimated_tokens": 4000,
+          "imports": [
+            "import { afterEach, expect } from \"bun:test\"",
+            "import { LayerNode } from \"@opencode-ai/core/effect/layer-node\"",
+            "import { Cause, Effect, Exit, Layer } from \"effect\"",
+            "import path from \"path\"",
+            "import { disposeAllInstances, TestInstance } from \"../fixture/fixture\"",
+            "import { testEffect } from \"../lib/effect\"",
+            "import { Agent } from \"../../src/agent/agent\"",
+            "import { Auth } from \"../../src/auth\"",
+            "import { Config } from \"../../src/config/config\"",
+            "import { RuntimeFlags } from \"../../src/effect/runtime-flags\""
+          ],
+          "preview": "import { afterEach, expect } from \"bun:test\" import { LayerNode } from \"@opencode-ai/core/effect/layer-node\" import { Cause, Effect, Exit, Layer } from \"effect\" import path from \"path\" import { disposeAllInstances, TestInstance } from \"../f"
+        },
+        {
+          "path": "packages/core/src/plugin/command/review.txt",
+          "score": 4,
+          "matches": [
+            "agents",
+            "are",
+            "primary"
+          ],
+          "reason": "matched: agents, are, primary",
+          "bytes": 4550,
+          "estimated_tokens": 1136,
+          "imports": [],
+          "preview": "You are a code reviewer. Your job is to review code changes and provide actionable feedback. --- Input: $ARGUMENTS --- ## Determining What to Review Based on the input provided, determine which type of review to perform: 1. **No arguments ("
+        },
+        {
+          "path": "packages/opencode/src/agent/generate.txt",
+          "score": 4,
+          "matches": [
+            "agents",
+            "are",
+            "primary"
+          ],
+          "reason": "matched: agents, are, primary",
+          "bytes": 4994,
+          "estimated_tokens": 1248,
+          "imports": [],
+          "preview": "You are an elite AI agent architect specializing in crafting high-performance agent configurations. Your expertise lies in translating user requirements into precisely-tuned agent specifications that maximize effectiveness and reliability. "
+        },
+        {
+          "path": "packages/opencode/src/command/template/review.txt",
+          "score": 4,
+          "matches": [
+            "agents",
+            "are",
+            "primary"
+          ],
+          "reason": "matched: agents, are, primary",
+          "bytes": 4707,
+          "estimated_tokens": 1176,
+          "imports": [],
+          "preview": "You are a code reviewer. Your job is to review code changes and provide actionable feedback. --- Input: $ARGUMENTS --- ## Determining What to Review Based on the input provided, determine which type of review to perform: 1. **No arguments ("
+        },
+        {
+          "path": ".opencode/agent/duplicate-pr.md",
+          "score": 3,
+          "matches": [
+            "are",
+            "primary"
+          ],
+          "reason": "matched: are, primary",
+          "bytes": 924,
+          "estimated_tokens": 231,
+          "imports": [],
+          "preview": "--- mode: primary hidden: true model: opencode/claude-haiku-4-5 color: \"#E67E22\" tools: \"*\": false \"github-pr-search\": true --- You are a duplicate PR detection agent. When a PR is opened, your job is to search for potentially duplicate or "
+        },
+        {
+          "path": ".opencode/agent/triage.md",
+          "score": 3,
+          "matches": [
+            "are",
+            "primary"
+          ],
+          "reason": "matched: are, primary",
+          "bytes": 1411,
+          "estimated_tokens": 352,
+          "imports": [],
+          "preview": "--- mode: primary hidden: true model: opencode/gpt-6-luna color: \"#44BA81\" tools: \"*\": false \"github-triage\": true --- You are a triage agent responsible for triaging github issues. Use your github-triage tool to triage issues. This file is"
+        }
+      ]
+    },
+    "scout": {
+      "goal": "Compare documentation and configuration with the implementation.",
+      "files": [
+        {
+          "path": "packages/core/src/v1/config/config.ts",
+          "score": 4,
+          "matches": [
+            "agents",
+            "are",
+            "primary",
+            "subagents"
+          ],
+          "reason": "matched: agents, are, primary, subagents",
+          "bytes": 9934,
+          "estimated_tokens": 2483,
+          "imports": [
+            "import { Schema } from \"effect\"",
+            "import { NonNegativeInt, PositiveInt, type DeepMutable } from \"../../schema\"",
+            "import { ConfigExperimental } from \"../../config/experimental\"",
+            "import { ConfigReference } from \"../../config/reference\"",
+            "import { ConfigAgentV1 } from \"./agent\"",
+            "import { ConfigAttachmentV1 } from \"./attachment\"",
+            "import { ConfigCommandV1 } from \"./command\"",
+            "import { ConfigFormatterV1 } from \"./formatter\"",
+            "import { ConfigLayoutV1 } from \"./layout\"",
+            "import { ConfigLSPV1 } from \"./lsp\""
+          ],
+          "preview": "export * as ConfigV1 from \"./config\" import { Schema } from \"effect\" import { NonNegativeInt, PositiveInt, type DeepMutable } from \"../../schema\" import { ConfigExperimental } from \"../../config/experimental\" import { ConfigReference } from"
+        },
+        {
+          "path": "README.md",
+          "score": 3,
+          "matches": [
+            "agents",
+            "are"
+          ],
+          "reason": "matched: agents, are",
+          "bytes": 5402,
+          "estimated_tokens": 1329,
+          "imports": [],
+          "preview": "<p align=\"center\"> <a href=\"https://opencode.ai\"> <picture> <source srcset=\"packages/console/app/src/asset/logo-ornate-dark.svg\" media=\"(prefers-color-scheme: dark)\"> <source srcset=\"packages/console/app/src/asset/logo-ornate-light.svg\" med"
+        }
+      ]
+    },
+    "review": {
+      "goal": "Inspect tests, integrations, APIs, and supporting modules.",
+      "files": [
+        {
+          "path": ".github/workflows/docs-locale-sync.yml",
+          "score": 5,
+          "matches": [
+            "are",
+            "defined",
+            "primary",
+            "subagents"
+          ],
+          "reason": "matched: are, defined, primary, subagents",
+          "bytes": 3969,
+          "estimated_tokens": 992,
+          "imports": [],
+          "preview": "name: docs-locale-sync on: push: branches: - dev paths: - packages/web/src/content/docs/*.mdx jobs: sync-locales: if: false #if: github.actor != 'opencode-agent[bot]' runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: write steps:"
+        },
+        {
+          "path": "packages/core/src/plugin/skill/customize-opencode.md",
+          "score": 4,
+          "matches": [
+            "agents",
+            "are",
+            "primary"
+          ],
+          "reason": "matched: agents, are, primary",
+          "bytes": 16072,
+          "estimated_tokens": 4000,
+          "imports": [
+            "import type { Plugin } from \"@opencode-ai/plugin\""
+          ],
+          "preview": "<!-- Built-in skill. Name and description are registered in code at packages/core/src/plugin/skill.ts and CUSTOMIZE_OPENCODE_SKILL_DESCRIPTION). The body below becomes the skill's content. --> # Customizing opencode opencode validates its o"
+        },
+        {
+          "path": "packages/llm/AGENTS.md",
+          "score": 4,
+          "matches": [
+            "agents",
+            "are",
+            "primary"
+          ],
+          "reason": "matched: agents, are, primary",
+          "bytes": 24684,
+          "estimated_tokens": 4000,
+          "imports": [],
+          "preview": "# LLM Package Guide ## Effect - Prefer `HttpClient.HttpClient` / `HttpClientResponse.HttpClientResponse` over web `fetch` / `Response` at package boundaries. - Use `Stream.Stream` for streaming data flow. Avoid ad hoc async generators or ma"
+        },
+        {
+          "path": "packages/opencode/src/session/prompt/default.txt",
+          "score": 4,
+          "matches": [
+            "agents",
+            "are",
+            "defined"
+          ],
+          "reason": "matched: agents, are, defined",
+          "bytes": 8528,
+          "estimated_tokens": 2132,
+          "imports": [],
+          "preview": "You are opencode, an interactive CLI tool that helps users with software engineering tasks. Use the instructions below and the tools available to you to assist the user. IMPORTANT: You must NEVER generate or guess URLs for the user unless y"
+        },
+        {
+          "path": "packages/opencode/src/session/prompt/gpt-astra.txt",
+          "score": 4,
+          "matches": [
+            "agents",
+            "are",
+            "subagents"
+          ],
+          "reason": "matched: agents, are, subagents",
+          "bytes": 4078,
+          "estimated_tokens": 1019,
+          "imports": [],
+          "preview": "You are an AI agent powered by OpenCode, a coding agent harness. Help the user accomplish their goals using the tools you have available. # Harness - Responses are rendered as GitHub-flavored Markdown. - `<system-reminder>` blocks are harne"
+        },
+        {
+          "path": "packages/opencode/src/session/prompt/gpt.txt",
+          "score": 4,
+          "matches": [
+            "agents",
+            "are",
+            "primary"
+          ],
+          "reason": "matched: agents, are, primary",
+          "bytes": 9284,
+          "estimated_tokens": 2318,
+          "imports": [],
+          "preview": "You are OpenCode, You and the user share the same workspace and collaborate to achieve the user's goals. You are a deeply pragmatic, effective software engineer. You take engineering quality seriously, and collaboration comes through as dir"
+        }
+      ]
+    }
+  },
+  "next_action": "Give each role its assigned evidence, collect findings, and compare overlap."
+}

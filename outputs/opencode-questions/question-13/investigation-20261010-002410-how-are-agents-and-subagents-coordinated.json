@@ -1,0 +1,517 @@
+{
+  "question": "How are agents and subagents coordinated?",
+  "repository": "githubrepo_pulls/opencode",
+  "repository_summary": {
+    "candidate_files": 3950,
+    "selected_files": 20,
+    "broad_estimated_tokens": 10314702,
+    "focused_estimated_tokens": 37130,
+    "estimated_token_reduction_percent": 99.6
+  },
+  "selected_evidence": [
+    {
+      "path": "packages/opencode/src/session/prompt/gpt-astra.txt",
+      "score": 4,
+      "matches": [
+        "agents",
+        "are",
+        "subagents"
+      ],
+      "reason": "matched: agents, are, subagents",
+      "bytes": 4078,
+      "estimated_tokens": 1019,
+      "imports": [],
+      "preview": "You are an AI agent powered by OpenCode, a coding agent harness. Help the user accomplish their goals using the tools you have available. # Harness - Responses are rendered as GitHub-flavored Markdown. - `<system-reminder>` blocks are harne"
+    },
+    {
+      "path": ".github/workflows/docs-locale-sync.yml",
+      "score": 3,
+      "matches": [
+        "are",
+        "subagents"
+      ],
+      "reason": "matched: are, subagents",
+      "bytes": 3969,
+      "estimated_tokens": 992,
+      "imports": [],
+      "preview": "name: docs-locale-sync on: push: branches: - dev paths: - packages/web/src/content/docs/*.mdx jobs: sync-locales: if: false #if: github.actor != 'opencode-agent[bot]' runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: write steps:"
+    },
+    {
+      "path": ".opencode/command/learn.md",
+      "score": 3,
+      "matches": [
+        "agents",
+        "are"
+      ],
+      "reason": "matched: agents, are",
+      "bytes": 1628,
+      "estimated_tokens": 405,
+      "imports": [],
+      "preview": "--- description: Extract non-obvious learnings from session to AGENTS.md files to build codebase understanding --- Analyze this session and extract non-obvious learnings to add to AGENTS.md files. AGENTS.md files can exist at any directory "
+    },
+    {
+      "path": "AGENTS.md",
+      "score": 3,
+      "matches": [
+        "agents",
+        "are"
+      ],
+      "reason": "matched: agents, are",
+      "bytes": 8748,
+      "estimated_tokens": 2187,
+      "imports": [],
+      "preview": "- To regenerate the legacy JavaScript SDK, run `./packages/sdk/js/script/build.ts`. - After changing the public Protocol or Server `HttpApi`, run `bun run generate` from `packages/client`. Do not edit `src/generated` or `src/generated-effec"
+    },
+    {
+      "path": "CONTEXT.md",
+      "score": 3,
+      "matches": [
+        "agents",
+        "are"
+      ],
+      "reason": "matched: agents, are",
+      "bytes": 32094,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "# OpenCode Session Runtime OpenCode sessions preserve durable conversational history while assembling the runtime context an agent needs to act correctly in its current environment. ## Language **System Context**: The structured collection "
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "score": 3,
+      "matches": [
+        "agents",
+        "are"
+      ],
+      "reason": "matched: agents, are",
+      "bytes": 10347,
+      "estimated_tokens": 2585,
+      "imports": [],
+      "preview": "# Contributing to OpenCode We want to make it easy for you to contribute to OpenCode. Here are the most common type of changes that get merged: - Bug fixes - Additional LSPs / Formatters - Improvements to LLM performance - Support for new p"
+    },
+    {
+      "path": "README.md",
+      "score": 3,
+      "matches": [
+        "agents",
+        "are"
+      ],
+      "reason": "matched: agents, are",
+      "bytes": 5402,
+      "estimated_tokens": 1329,
+      "imports": [],
+      "preview": "<p align=\"center\"> <a href=\"https://opencode.ai\"> <picture> <source srcset=\"packages/console/app/src/asset/logo-ornate-dark.svg\" media=\"(prefers-color-scheme: dark)\"> <source srcset=\"packages/console/app/src/asset/logo-ornate-light.svg\" med"
+    },
+    {
+      "path": "packages/app/AGENTS.md",
+      "score": 3,
+      "matches": [
+        "agents",
+        "are"
+      ],
+      "reason": "matched: agents, are",
+      "bytes": 4570,
+      "estimated_tokens": 1141,
+      "imports": [],
+      "preview": "## Priorities - Prioritise, in this order: stability, simplicity, performance. - Before changing session or timeline code, record a production benchmark baseline and compare it after the change. ## Debugging - NEVER try to restart the app, "
+    },
+    {
+      "path": "packages/codemode/AGENTS.md",
+      "score": 3,
+      "matches": [
+        "agents",
+        "are"
+      ],
+      "reason": "matched: agents, are",
+      "bytes": 3145,
+      "estimated_tokens": 786,
+      "imports": [],
+      "preview": "# @opencode-ai/codemode - This local package owns confined execution over explicit schema-described tools. Applications own authorization, persistence, external authority, and tool-specific delivery semantics. - Do not add a speculative gen"
+    },
+    {
+      "path": "packages/core/src/plugin/command/initialize.txt",
+      "score": 3,
+      "matches": [
+        "agents",
+        "are"
+      ],
+      "reason": "matched: agents, are",
+      "bytes": 3420,
+      "estimated_tokens": 855,
+      "imports": [],
+      "preview": "Create or update `AGENTS.md` for this repository. The goal is a compact instruction file that helps future OpenCode sessions avoid mistakes and ramp up quickly. Every line should answer: \"Would an agent likely miss this without help?\" If no"
+    },
+    {
+      "path": "packages/core/src/plugin/command/review.txt",
+      "score": 3,
+      "matches": [
+        "agents",
+        "are"
+      ],
+      "reason": "matched: agents, are",
+      "bytes": 4550,
+      "estimated_tokens": 1136,
+      "imports": [],
+      "preview": "You are a code reviewer. Your job is to review code changes and provide actionable feedback. --- Input: $ARGUMENTS --- ## Determining What to Review Based on the input provided, determine which type of review to perform: 1. **No arguments ("
+    },
+    {
+      "path": "packages/core/src/plugin/skill/customize-opencode.md",
+      "score": 3,
+      "matches": [
+        "agents",
+        "are"
+      ],
+      "reason": "matched: agents, are",
+      "bytes": 16072,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import type { Plugin } from \"@opencode-ai/plugin\""
+      ],
+      "preview": "<!-- Built-in skill. Name and description are registered in code at packages/core/src/plugin/skill.ts and CUSTOMIZE_OPENCODE_SKILL_DESCRIPTION). The body below becomes the skill's content. --> # Customizing opencode opencode validates its o"
+    },
+    {
+      "path": "packages/core/src/tool/AGENTS.md",
+      "score": 3,
+      "matches": [
+        "agents",
+        "are"
+      ],
+      "reason": "matched: agents, are",
+      "bytes": 3743,
+      "estimated_tokens": 935,
+      "imports": [],
+      "preview": "# Core Tool Architecture This folder owns Core's one local tool representation, process and Location registration, effective lookup, and settlement. ## Representations - `tool.ts` defines the opaque canonical `Tool.make({ description, input"
+    },
+    {
+      "path": "packages/core/src/v1/config/config.ts",
+      "score": 3,
+      "matches": [
+        "agents",
+        "are",
+        "subagents"
+      ],
+      "reason": "matched: agents, are, subagents",
+      "bytes": 9934,
+      "estimated_tokens": 2483,
+      "imports": [
+        "import { Schema } from \"effect\"",
+        "import { NonNegativeInt, PositiveInt, type DeepMutable } from \"../../schema\"",
+        "import { ConfigExperimental } from \"../../config/experimental\"",
+        "import { ConfigReference } from \"../../config/reference\"",
+        "import { ConfigAgentV1 } from \"./agent\"",
+        "import { ConfigAttachmentV1 } from \"./attachment\"",
+        "import { ConfigCommandV1 } from \"./command\"",
+        "import { ConfigFormatterV1 } from \"./formatter\"",
+        "import { ConfigLayoutV1 } from \"./layout\"",
+        "import { ConfigLSPV1 } from \"./lsp\""
+      ],
+      "preview": "export * as ConfigV1 from \"./config\" import { Schema } from \"effect\" import { NonNegativeInt, PositiveInt, type DeepMutable } from \"../../schema\" import { ConfigExperimental } from \"../../config/experimental\" import { ConfigReference } from"
+    },
+    {
+      "path": "packages/llm/AGENTS.md",
+      "score": 3,
+      "matches": [
+        "agents",
+        "are"
+      ],
+      "reason": "matched: agents, are",
+      "bytes": 24684,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "# LLM Package Guide ## Effect - Prefer `HttpClient.HttpClient` / `HttpClientResponse.HttpClientResponse` over web `fetch` / `Response` at package boundaries. - Use `Stream.Stream` for streaming data flow. Avoid ad hoc async generators or ma"
+    },
+    {
+      "path": "packages/llm/README.md",
+      "score": 3,
+      "matches": [
+        "agents",
+        "are"
+      ],
+      "reason": "matched: agents, are",
+      "bytes": 6806,
+      "estimated_tokens": 1692,
+      "imports": [
+        "import { Effect } from \"effect\"",
+        "import { LLM, LLMClient } from \"@opencode-ai/llm\"",
+        "import { OpenAI } from \"@opencode-ai/llm/providers\"",
+        "import { OpenAI, CloudflareAIGateway } from \"@opencode-ai/llm/providers\""
+      ],
+      "preview": "# @opencode-ai/llm Schema-first LLM core for opencode. One typed request, response, event, and tool language; provider quirks live in adapters, not in calling code. ```ts import { Effect } from \"effect\" import { LLM, LLMClient } from \"@open"
+    },
+    {
+      "path": "packages/opencode/AGENTS.md",
+      "score": 3,
+      "matches": [
+        "agents",
+        "are"
+      ],
+      "reason": "matched: agents, are",
+      "bytes": 6453,
+      "estimated_tokens": 1611,
+      "imports": [
+        "import { Foo } from \"@/foo/foo\"",
+        "import { SessionRetry } from \"@/session/retry\"",
+        "import { SessionStatus } from \"@/session/status\""
+      ],
+      "preview": "# opencode database guide ## Database - **Schema**: Drizzle schema lives in `packages/core/src/**/*.sql.ts`. - **Migrations**: database migrations live in `packages/core` and are applied by core. ## Development server - Running `bun dev` fr"
+    },
+    {
+      "path": "packages/opencode/specs/effect/errors.md",
+      "score": 3,
+      "matches": [
+        "agents",
+        "are"
+      ],
+      "reason": "matched: agents, are",
+      "bytes": 8113,
+      "estimated_tokens": 2027,
+      "imports": [],
+      "preview": "# Typed Error Migration This note expands the `ERR`, `RENDER`, and `HTTP` tracks from [`todo.md`](./todo.md). It is the current reference for expected failures, typed service errors, and HTTP error boundaries. For the migration architecture"
+    },
+    {
+      "path": "packages/opencode/specs/effect/todo.md",
+      "score": 3,
+      "matches": [
+        "are",
+        "subagents"
+      ],
+      "reason": "matched: are, subagents",
+      "bytes": 10841,
+      "estimated_tokens": 2699,
+      "imports": [
+        "import it."
+      ],
+      "preview": "# Effect TODO Short roadmap for Effect cleanup in `packages/opencode`. Current patterns and examples live in [`guide.md`](./guide.md). Error boundary migration details live in [`error-boundaries-plan.md`](./error-boundaries-plan.md). Test m"
+    },
+    {
+      "path": "packages/opencode/src/agent/generate.txt",
+      "score": 3,
+      "matches": [
+        "agents",
+        "are"
+      ],
+      "reason": "matched: agents, are",
+      "bytes": 4994,
+      "estimated_tokens": 1248,
+      "imports": [],
+      "preview": "You are an elite AI agent architect specializing in crafting high-performance agent configurations. Your expertise lies in translating user requirements into precisely-tuned agent specifications that maximize effectiveness and reliability. "
+    }
+  ],
+  "roles": {
+    "explore": {
+      "goal": "Trace implementation, agents, tools, commands, and permissions.",
+      "files": [
+        {
+          "path": ".opencode/command/learn.md",
+          "score": 3,
+          "matches": [
+            "agents",
+            "are"
+          ],
+          "reason": "matched: agents, are",
+          "bytes": 1628,
+          "estimated_tokens": 405,
+          "imports": [],
+          "preview": "--- description: Extract non-obvious learnings from session to AGENTS.md files to build codebase understanding --- Analyze this session and extract non-obvious learnings to add to AGENTS.md files. AGENTS.md files can exist at any directory "
+        },
+        {
+          "path": "packages/core/src/plugin/command/initialize.txt",
+          "score": 3,
+          "matches": [
+            "agents",
+            "are"
+          ],
+          "reason": "matched: agents, are",
+          "bytes": 3420,
+          "estimated_tokens": 855,
+          "imports": [],
+          "preview": "Create or update `AGENTS.md` for this repository. The goal is a compact instruction file that helps future OpenCode sessions avoid mistakes and ramp up quickly. Every line should answer: \"Would an agent likely miss this without help?\" If no"
+        },
+        {
+          "path": "packages/core/src/plugin/command/review.txt",
+          "score": 3,
+          "matches": [
+            "agents",
+            "are"
+          ],
+          "reason": "matched: agents, are",
+          "bytes": 4550,
+          "estimated_tokens": 1136,
+          "imports": [],
+          "preview": "You are a code reviewer. Your job is to review code changes and provide actionable feedback. --- Input: $ARGUMENTS --- ## Determining What to Review Based on the input provided, determine which type of review to perform: 1. **No arguments ("
+        },
+        {
+          "path": "packages/core/src/tool/AGENTS.md",
+          "score": 3,
+          "matches": [
+            "agents",
+            "are"
+          ],
+          "reason": "matched: agents, are",
+          "bytes": 3743,
+          "estimated_tokens": 935,
+          "imports": [],
+          "preview": "# Core Tool Architecture This folder owns Core's one local tool representation, process and Location registration, effective lookup, and settlement. ## Representations - `tool.ts` defines the opaque canonical `Tool.make({ description, input"
+        },
+        {
+          "path": "packages/opencode/src/agent/generate.txt",
+          "score": 3,
+          "matches": [
+            "agents",
+            "are"
+          ],
+          "reason": "matched: agents, are",
+          "bytes": 4994,
+          "estimated_tokens": 1248,
+          "imports": [],
+          "preview": "You are an elite AI agent architect specializing in crafting high-performance agent configurations. Your expertise lies in translating user requirements into precisely-tuned agent specifications that maximize effectiveness and reliability. "
+        }
+      ]
+    },
+    "scout": {
+      "goal": "Compare documentation and configuration with the implementation.",
+      "files": [
+        {
+          "path": "README.md",
+          "score": 3,
+          "matches": [
+            "agents",
+            "are"
+          ],
+          "reason": "matched: agents, are",
+          "bytes": 5402,
+          "estimated_tokens": 1329,
+          "imports": [],
+          "preview": "<p align=\"center\"> <a href=\"https://opencode.ai\"> <picture> <source srcset=\"packages/console/app/src/asset/logo-ornate-dark.svg\" media=\"(prefers-color-scheme: dark)\"> <source srcset=\"packages/console/app/src/asset/logo-ornate-light.svg\" med"
+        },
+        {
+          "path": "packages/core/src/v1/config/config.ts",
+          "score": 3,
+          "matches": [
+            "agents",
+            "are",
+            "subagents"
+          ],
+          "reason": "matched: agents, are, subagents",
+          "bytes": 9934,
+          "estimated_tokens": 2483,
+          "imports": [
+            "import { Schema } from \"effect\"",
+            "import { NonNegativeInt, PositiveInt, type DeepMutable } from \"../../schema\"",
+            "import { ConfigExperimental } from \"../../config/experimental\"",
+            "import { ConfigReference } from \"../../config/reference\"",
+            "import { ConfigAgentV1 } from \"./agent\"",
+            "import { ConfigAttachmentV1 } from \"./attachment\"",
+            "import { ConfigCommandV1 } from \"./command\"",
+            "import { ConfigFormatterV1 } from \"./formatter\"",
+            "import { ConfigLayoutV1 } from \"./layout\"",
+            "import { ConfigLSPV1 } from \"./lsp\""
+          ],
+          "preview": "export * as ConfigV1 from \"./config\" import { Schema } from \"effect\" import { NonNegativeInt, PositiveInt, type DeepMutable } from \"../../schema\" import { ConfigExperimental } from \"../../config/experimental\" import { ConfigReference } from"
+        },
+        {
+          "path": "packages/llm/README.md",
+          "score": 3,
+          "matches": [
+            "agents",
+            "are"
+          ],
+          "reason": "matched: agents, are",
+          "bytes": 6806,
+          "estimated_tokens": 1692,
+          "imports": [
+            "import { Effect } from \"effect\"",
+            "import { LLM, LLMClient } from \"@opencode-ai/llm\"",
+            "import { OpenAI } from \"@opencode-ai/llm/providers\"",
+            "import { OpenAI, CloudflareAIGateway } from \"@opencode-ai/llm/providers\""
+          ],
+          "preview": "# @opencode-ai/llm Schema-first LLM core for opencode. One typed request, response, event, and tool language; provider quirks live in adapters, not in calling code. ```ts import { Effect } from \"effect\" import { LLM, LLMClient } from \"@open"
+        }
+      ]
+    },
+    "review": {
+      "goal": "Inspect tests, integrations, APIs, and supporting modules.",
+      "files": [
+        {
+          "path": "packages/opencode/src/session/prompt/gpt-astra.txt",
+          "score": 4,
+          "matches": [
+            "agents",
+            "are",
+            "subagents"
+          ],
+          "reason": "matched: agents, are, subagents",
+          "bytes": 4078,
+          "estimated_tokens": 1019,
+          "imports": [],
+          "preview": "You are an AI agent powered by OpenCode, a coding agent harness. Help the user accomplish their goals using the tools you have available. # Harness - Responses are rendered as GitHub-flavored Markdown. - `<system-reminder>` blocks are harne"
+        },
+        {
+          "path": ".github/workflows/docs-locale-sync.yml",
+          "score": 3,
+          "matches": [
+            "are",
+            "subagents"
+          ],
+          "reason": "matched: are, subagents",
+          "bytes": 3969,
+          "estimated_tokens": 992,
+          "imports": [],
+          "preview": "name: docs-locale-sync on: push: branches: - dev paths: - packages/web/src/content/docs/*.mdx jobs: sync-locales: if: false #if: github.actor != 'opencode-agent[bot]' runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: write steps:"
+        },
+        {
+          "path": "AGENTS.md",
+          "score": 3,
+          "matches": [
+            "agents",
+            "are"
+          ],
+          "reason": "matched: agents, are",
+          "bytes": 8748,
+          "estimated_tokens": 2187,
+          "imports": [],
+          "preview": "- To regenerate the legacy JavaScript SDK, run `./packages/sdk/js/script/build.ts`. - After changing the public Protocol or Server `HttpApi`, run `bun run generate` from `packages/client`. Do not edit `src/generated` or `src/generated-effec"
+        },
+        {
+          "path": "CONTEXT.md",
+          "score": 3,
+          "matches": [
+            "agents",
+            "are"
+          ],
+          "reason": "matched: agents, are",
+          "bytes": 32094,
+          "estimated_tokens": 4000,
+          "imports": [],
+          "preview": "# OpenCode Session Runtime OpenCode sessions preserve durable conversational history while assembling the runtime context an agent needs to act correctly in its current environment. ## Language **System Context**: The structured collection "
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "score": 3,
+          "matches": [
+            "agents",
+            "are"
+          ],
+          "reason": "matched: agents, are",
+          "bytes": 10347,
+          "estimated_tokens": 2585,
+          "imports": [],
+          "preview": "# Contributing to OpenCode We want to make it easy for you to contribute to OpenCode. Here are the most common type of changes that get merged: - Bug fixes - Additional LSPs / Formatters - Improvements to LLM performance - Support for new p"
+        },
+        {
+          "path": "packages/app/AGENTS.md",
+          "score": 3,
+          "matches": [
+            "agents",
+            "are"
+          ],
+          "reason": "matched: agents, are",
+          "bytes": 4570,
+          "estimated_tokens": 1141,
+          "imports": [],
+          "preview": "## Priorities - Prioritise, in this order: stability, simplicity, performance. - Before changing session or timeline code, record a production benchmark baseline and compare it after the change. ## Debugging - NEVER try to restart the app, "
+        }
+      ]
+    }
+  },
+  "next_action": "Give each role its assigned evidence, collect findings, and compare overlap."
+}

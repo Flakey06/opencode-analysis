@@ -1,0 +1,456 @@
+{
+  "question": "How is repository context passed to an agent?",
+  "repository": "githubrepo_pulls/opencode",
+  "repository_summary": {
+    "candidate_files": 3950,
+    "selected_files": 20,
+    "broad_estimated_tokens": 10314702,
+    "focused_estimated_tokens": 40321,
+    "estimated_token_reduction_percent": 99.6
+  },
+  "selected_evidence": [
+    {
+      "path": "packages/app/V1_API_MIGRATION.md",
+      "score": 4,
+      "matches": [
+        "agent",
+        "context",
+        "repository"
+      ],
+      "reason": "matched: agent, context, repository",
+      "bytes": 10763,
+      "estimated_tokens": 2690,
+      "imports": [],
+      "preview": "# V1 API Migration Checklist The app is currently hybrid. In this document, V1 refers to the legacy unprefixed server APIs used by `@opencode-ai/sdk/v2`, despite the SDK package name. ## Events - [x] Replace `GET /global/event` with `GET /a"
+    },
+    {
+      "path": "packages/core/src/plugin/command/initialize.txt",
+      "score": 4,
+      "matches": [
+        "agent",
+        "context",
+        "repository"
+      ],
+      "reason": "matched: agent, context, repository",
+      "bytes": 3420,
+      "estimated_tokens": 855,
+      "imports": [],
+      "preview": "Create or update `AGENTS.md` for this repository. The goal is a compact instruction file that helps future OpenCode sessions avoid mistakes and ramp up quickly. Every line should answer: \"Would an agent likely miss this without help?\" If no"
+    },
+    {
+      "path": "packages/core/src/plugin/skill/customize-opencode.md",
+      "score": 4,
+      "matches": [
+        "agent",
+        "context",
+        "repository"
+      ],
+      "reason": "matched: agent, context, repository",
+      "bytes": 16072,
+      "estimated_tokens": 4000,
+      "imports": [
+        "import type { Plugin } from \"@opencode-ai/plugin\""
+      ],
+      "preview": "<!-- Built-in skill. Name and description are registered in code at packages/core/src/plugin/skill.ts and CUSTOMIZE_OPENCODE_SKILL_DESCRIPTION). The body below becomes the skill's content. --> # Customizing opencode opencode validates its o"
+    },
+    {
+      "path": "packages/opencode/src/command/template/initialize.txt",
+      "score": 4,
+      "matches": [
+        "agent",
+        "context",
+        "repository"
+      ],
+      "reason": "matched: agent, context, repository",
+      "bytes": 3492,
+      "estimated_tokens": 873,
+      "imports": [],
+      "preview": "Create or update `AGENTS.md` for this repository. The goal is a compact instruction file that helps future OpenCode sessions avoid mistakes and ramp up quickly. Every line should answer: \"Would an agent likely miss this without help?\" If no"
+    },
+    {
+      "path": "packages/opencode/src/session/prompt/gemini.txt",
+      "score": 4,
+      "matches": [
+        "agent",
+        "context",
+        "passed"
+      ],
+      "reason": "matched: agent, context, passed",
+      "bytes": 15372,
+      "estimated_tokens": 3843,
+      "imports": [],
+      "preview": "You are opencode, an interactive CLI agent specializing in software engineering tasks. Your primary goal is to help users safely and efficiently, adhering strictly to the following instructions and utilizing your available tools. # Core Man"
+    },
+    {
+      "path": "packages/plugin/src/v2/effect/PLAN.md",
+      "score": 4,
+      "matches": [
+        "agent",
+        "context",
+        "repository"
+      ],
+      "reason": "matched: agent, context, repository",
+      "bytes": 15875,
+      "estimated_tokens": 3962,
+      "imports": [],
+      "preview": "# V2 Plugin System Implementation Plan ## Status This document describes the agreed target design for the V2 plugin system. It is an implementation plan, not documentation for the current API. ## Goals - Internal and external plugins use th"
+    },
+    {
+      "path": "perf/test-suite.md",
+      "score": 4,
+      "matches": [
+        "agent",
+        "passed",
+        "repository"
+      ],
+      "reason": "matched: agent, passed, repository",
+      "bytes": 20306,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "# Test Suite Speed ## Goal Speed up the `packages/opencode` test suite without reducing coverage or hiding failures. ## Benchmark Command Run from `packages/opencode`: ```sh bun run bench:test ``` The full-suite benchmark defaults to one me"
+    },
+    {
+      "path": "specs/v2/config.md",
+      "score": 4,
+      "matches": [
+        "agent",
+        "context",
+        "repository"
+      ],
+      "reason": "matched: agent, context, repository",
+      "bytes": 29396,
+      "estimated_tokens": 4000,
+      "imports": [],
+      "preview": "# V2 Config Review This document breaks the legacy configuration schema into small review groups. Work through one group at a time and decide whether each field should be ported as-is, removed, or redesigned for v2. ## Status Labels - `pend"
+    },
+    {
+      "path": "specs/v2/tools.md",
+      "score": 4,
+      "matches": [
+        "agent",
+        "context",
+        "passed"
+      ],
+      "reason": "matched: agent, context, passed",
+      "bytes": 9403,
+      "estimated_tokens": 2350,
+      "imports": [],
+      "preview": "# V2 Tools ## Design V2 has one opaque type for locally executable tools: ```ts type Definition<Input, Output> type AnyTool = Definition<any, any> const make: < Input extends Schema.Codec<any, any, never, never>, Output extends Schema.Codec"
+    },
+    {
+      "path": ".github/workflows/docs-locale-sync.yml",
+      "score": 3,
+      "matches": [
+        "agent",
+        "repository"
+      ],
+      "reason": "matched: agent, repository",
+      "bytes": 3969,
+      "estimated_tokens": 992,
+      "imports": [],
+      "preview": "name: docs-locale-sync on: push: branches: - dev paths: - packages/web/src/content/docs/*.mdx jobs: sync-locales: if: false #if: github.actor != 'opencode-agent[bot]' runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: write steps:"
+    },
+    {
+      "path": ".github/workflows/docs-update.yml",
+      "score": 3,
+      "matches": [
+        "agent",
+        "repository"
+      ],
+      "reason": "matched: agent, repository",
+      "bytes": 2896,
+      "estimated_tokens": 724,
+      "imports": [],
+      "preview": "name: docs-update on: schedule: - cron: \"0 */12 * * *\" workflow_dispatch: env: LOOKBACK_HOURS: 4 jobs: update-docs: if: github.repository == 'sst/opencode' runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: id-token: write contents: write p"
+    },
+    {
+      "path": ".github/workflows/duplicate-issues.yml",
+      "score": 3,
+      "matches": [
+        "context",
+        "repository"
+      ],
+      "reason": "matched: context, repository",
+      "bytes": 9845,
+      "estimated_tokens": 2461,
+      "imports": [],
+      "preview": "name: duplicate-issues on: issues: types: [opened, edited] jobs: check-duplicates: if: github.event.action == 'opened' runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: read issues: write steps: - name: Checkout repository uses: "
+    },
+    {
+      "path": ".github/workflows/nix-eval.yml",
+      "score": 3,
+      "matches": [
+        "passed",
+        "repository"
+      ],
+      "reason": "matched: passed, repository",
+      "bytes": 2743,
+      "estimated_tokens": 682,
+      "imports": [],
+      "preview": "name: nix-eval on: push: branches: [dev] pull_request: branches: [dev] workflow_dispatch: concurrency: group: ${{ github.workflow }}-${{ github.ref }} cancel-in-progress: true permissions: contents: read jobs: nix-eval: runs-on: blacksmith-"
+    },
+    {
+      "path": ".github/workflows/pr-management.yml",
+      "score": 3,
+      "matches": [
+        "context",
+        "repository"
+      ],
+      "reason": "matched: context, repository",
+      "bytes": 3313,
+      "estimated_tokens": 828,
+      "imports": [],
+      "preview": "name: pr-management on: pull_request_target: types: [opened] jobs: check-duplicates: runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: read pull-requests: write steps: - name: Checkout repository uses: actions/checkout@34e114876b"
+    },
+    {
+      "path": ".github/workflows/pr-standards.yml",
+      "score": 3,
+      "matches": [
+        "context",
+        "repository"
+      ],
+      "reason": "matched: context, repository",
+      "bytes": 14743,
+      "estimated_tokens": 3685,
+      "imports": [],
+      "preview": "name: pr-standards on: pull_request_target: types: [opened, edited, synchronize] jobs: check-standards: runs-on: ubuntu-latest permissions: contents: read pull-requests: write steps: - name: Check PR standards uses: actions/github-script@f2"
+    },
+    {
+      "path": ".github/workflows/review.yml",
+      "score": 3,
+      "matches": [
+        "context",
+        "repository"
+      ],
+      "reason": "matched: context, repository",
+      "bytes": 3993,
+      "estimated_tokens": 998,
+      "imports": [],
+      "preview": "name: review on: issue_comment: types: [created] jobs: check-guidelines: if: | github.event.issue.pull_request && startsWith(github.event.comment.body, '/review') && contains(fromJson('[\"OWNER\",\"MEMBER\"]'), github.event.comment.author_assoc"
+    },
+    {
+      "path": ".github/workflows/triage.yml",
+      "score": 3,
+      "matches": [
+        "agent",
+        "repository"
+      ],
+      "reason": "matched: agent, repository",
+      "bytes": 1739,
+      "estimated_tokens": 434,
+      "imports": [],
+      "preview": "name: triage on: issues: types: [opened] jobs: triage: runs-on: blacksmith-4vcpu-ubuntu-2404 permissions: contents: read issues: write steps: - name: Checkout repository uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3"
+    },
+    {
+      "path": ".opencode/agent/triage.md",
+      "score": 3,
+      "matches": [
+        "agent",
+        "context"
+      ],
+      "reason": "matched: agent, context",
+      "bytes": 1411,
+      "estimated_tokens": 352,
+      "imports": [],
+      "preview": "--- mode: primary hidden: true model: opencode/gpt-6-luna color: \"#44BA81\" tools: \"*\": false \"github-triage\": true --- You are a triage agent responsible for triaging github issues. Use your github-triage tool to triage issues. This file is"
+    },
+    {
+      "path": ".opencode/command/learn.md",
+      "score": 3,
+      "matches": [
+        "agent",
+        "context"
+      ],
+      "reason": "matched: agent, context",
+      "bytes": 1628,
+      "estimated_tokens": 405,
+      "imports": [],
+      "preview": "--- description: Extract non-obvious learnings from session to AGENTS.md files to build codebase understanding --- Analyze this session and extract non-obvious learnings to add to AGENTS.md files. AGENTS.md files can exist at any directory "
+    },
+    {
+      "path": "AGENTS.md",
+      "score": 3,
+      "matches": [
+        "agent",
+        "context"
+      ],
+      "reason": "matched: agent, context",
+      "bytes": 8748,
+      "estimated_tokens": 2187,
+      "imports": [],
+      "preview": "- To regenerate the legacy JavaScript SDK, run `./packages/sdk/js/script/build.ts`. - After changing the public Protocol or Server `HttpApi`, run `bun run generate` from `packages/client`. Do not edit `src/generated` or `src/generated-effec"
+    }
+  ],
+  "roles": {
+    "explore": {
+      "goal": "Trace implementation, agents, tools, commands, and permissions.",
+      "files": [
+        {
+          "path": "packages/core/src/plugin/command/initialize.txt",
+          "score": 4,
+          "matches": [
+            "agent",
+            "context",
+            "repository"
+          ],
+          "reason": "matched: agent, context, repository",
+          "bytes": 3420,
+          "estimated_tokens": 855,
+          "imports": [],
+          "preview": "Create or update `AGENTS.md` for this repository. The goal is a compact instruction file that helps future OpenCode sessions avoid mistakes and ramp up quickly. Every line should answer: \"Would an agent likely miss this without help?\" If no"
+        },
+        {
+          "path": "packages/opencode/src/command/template/initialize.txt",
+          "score": 4,
+          "matches": [
+            "agent",
+            "context",
+            "repository"
+          ],
+          "reason": "matched: agent, context, repository",
+          "bytes": 3492,
+          "estimated_tokens": 873,
+          "imports": [],
+          "preview": "Create or update `AGENTS.md` for this repository. The goal is a compact instruction file that helps future OpenCode sessions avoid mistakes and ramp up quickly. Every line should answer: \"Would an agent likely miss this without help?\" If no"
+        },
+        {
+          "path": ".opencode/agent/triage.md",
+          "score": 3,
+          "matches": [
+            "agent",
+            "context"
+          ],
+          "reason": "matched: agent, context",
+          "bytes": 1411,
+          "estimated_tokens": 352,
+          "imports": [],
+          "preview": "--- mode: primary hidden: true model: opencode/gpt-6-luna color: \"#44BA81\" tools: \"*\": false \"github-triage\": true --- You are a triage agent responsible for triaging github issues. Use your github-triage tool to triage issues. This file is"
+        },
+        {
+          "path": ".opencode/command/learn.md",
+          "score": 3,
+          "matches": [
+            "agent",
+            "context"
+          ],
+          "reason": "matched: agent, context",
+          "bytes": 1628,
+          "estimated_tokens": 405,
+          "imports": [],
+          "preview": "--- description: Extract non-obvious learnings from session to AGENTS.md files to build codebase understanding --- Analyze this session and extract non-obvious learnings to add to AGENTS.md files. AGENTS.md files can exist at any directory "
+        }
+      ]
+    },
+    "scout": {
+      "goal": "Compare documentation and configuration with the implementation.",
+      "files": [
+        {
+          "path": "specs/v2/config.md",
+          "score": 4,
+          "matches": [
+            "agent",
+            "context",
+            "repository"
+          ],
+          "reason": "matched: agent, context, repository",
+          "bytes": 29396,
+          "estimated_tokens": 4000,
+          "imports": [],
+          "preview": "# V2 Config Review This document breaks the legacy configuration schema into small review groups. Work through one group at a time and decide whether each field should be ported as-is, removed, or redesigned for v2. ## Status Labels - `pend"
+        }
+      ]
+    },
+    "review": {
+      "goal": "Inspect tests, integrations, APIs, and supporting modules.",
+      "files": [
+        {
+          "path": "packages/app/V1_API_MIGRATION.md",
+          "score": 4,
+          "matches": [
+            "agent",
+            "context",
+            "repository"
+          ],
+          "reason": "matched: agent, context, repository",
+          "bytes": 10763,
+          "estimated_tokens": 2690,
+          "imports": [],
+          "preview": "# V1 API Migration Checklist The app is currently hybrid. In this document, V1 refers to the legacy unprefixed server APIs used by `@opencode-ai/sdk/v2`, despite the SDK package name. ## Events - [x] Replace `GET /global/event` with `GET /a"
+        },
+        {
+          "path": "packages/core/src/plugin/skill/customize-opencode.md",
+          "score": 4,
+          "matches": [
+            "agent",
+            "context",
+            "repository"
+          ],
+          "reason": "matched: agent, context, repository",
+          "bytes": 16072,
+          "estimated_tokens": 4000,
+          "imports": [
+            "import type { Plugin } from \"@opencode-ai/plugin\""
+          ],
+          "preview": "<!-- Built-in skill. Name and description are registered in code at packages/core/src/plugin/skill.ts and CUSTOMIZE_OPENCODE_SKILL_DESCRIPTION). The body below becomes the skill's content. --> # Customizing opencode opencode validates its o"
+        },
+        {
+          "path": "packages/opencode/src/session/prompt/gemini.txt",
+          "score": 4,
+          "matches": [
+            "agent",
+            "context",
+            "passed"
+          ],
+          "reason": "matched: agent, context, passed",
+          "bytes": 15372,
+          "estimated_tokens": 3843,
+          "imports": [],
+          "preview": "You are opencode, an interactive CLI agent specializing in software engineering tasks. Your primary goal is to help users safely and efficiently, adhering strictly to the following instructions and utilizing your available tools. # Core Man"
+        },
+        {
+          "path": "packages/plugin/src/v2/effect/PLAN.md",
+          "score": 4,
+          "matches": [
+            "agent",
+            "context",
+            "repository"
+          ],
+          "reason": "matched: agent, context, repository",
+          "bytes": 15875,
+          "estimated_tokens": 3962,
+          "imports": [],
+          "preview": "# V2 Plugin System Implementation Plan ## Status This document describes the agreed target design for the V2 plugin system. It is an implementation plan, not documentation for the current API. ## Goals - Internal and external plugins use th"
+        },
+        {
+          "path": "perf/test-suite.md",
+          "score": 4,
+          "matches": [
+            "agent",
+            "passed",
+            "repository"
+          ],
+          "reason": "matched: agent, passed, repository",
+          "bytes": 20306,
+          "estimated_tokens": 4000,
+          "imports": [],
+          "preview": "# Test Suite Speed ## Goal Speed up the `packages/opencode` test suite without reducing coverage or hiding failures. ## Benchmark Command Run from `packages/opencode`: ```sh bun run bench:test ``` The full-suite benchmark defaults to one me"
+        },
+        {
+          "path": "specs/v2/tools.md",
+          "score": 4,
+          "matches": [
+            "agent",
+            "context",
+            "passed"
+          ],
+          "reason": "matched: agent, context, passed",
+          "bytes": 9403,
+          "estimated_tokens": 2350,
+          "imports": [],
+          "preview": "# V2 Tools ## Design V2 has one opaque type for locally executable tools: ```ts type Definition<Input, Output> type AnyTool = Definition<any, any> const make: < Input extends Schema.Codec<any, any, never, never>, Output extends Schema.Codec"
+        }
+      ]
+    }
+  },
+  "next_action": "Give each role its assigned evidence, collect findings, and compare overlap."
+}
